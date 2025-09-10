@@ -43,6 +43,8 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .blue-btn.contact-btn span {font-size: 1.6rem; font-weight: 700; line-height: 2.8rem;}
 .blue-btn.reward-btn {padding: 2rem 0; width: 100%; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
 .line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 3rem;}
+.sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 
 /* input */
 .search-input {width: 39.8rem; background-color: transparent; border: none; outline: none; color: #A09FA5; font-size: 2rem; font-weight: 500; line-height: 3rem;}
@@ -68,6 +70,8 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
     .blue-btn.contact-btn figure {width: 12px; height: 12px;}
     .blue-btn.contact-btn span {font-size: 12px; line-height: 26px;}
     .blue-btn.reward-btn {padding: 12px 0; font-size: 16px; line-height: 24px; border-radius: 12px;}
+    .yellow-btn {padding: 12px 0; font-size: 14px; line-height: 24px; border-radius: 12px;}
+    .sky-btn {padding: 12px 0; font-size: 14px; line-height: 24px; border-radius: 12px;}
 }
 
 @media screen and (max-width: 450px){
@@ -147,6 +151,15 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
     .exchange-list li .exchange-btn figure {width: 20px; height: 20px;}
     .exchange-list li .exchange-btn span {font-size: 12px; line-height: 18px;}
     .exchange-list li .exchange-btn figure.heat {width: 12px; height: 12px;}
+}
+
+/* 문의하기 모달 */
+.req-modal {max-width: 82.4rem; width: 100%;}
+.modal-buttons {display: flex; align-items: center; column-gap: 2rem;}
+.modal-buttons a {width: calc(50% - 1rem);}
+
+@media screen and (max-width: 768px) {
+    .req-modal {max-width: 370px; padding: 20px;}
 }
 
 /* ============================== [ 모바일용 메뉴 ] ========================================================================================== */
