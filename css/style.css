@@ -221,6 +221,31 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
     .section-title a figure {width: 20px; height: 20px;}
 }
 
+/* 로그인 후 섹션 */
+.suggest-section {margin-top: 12.6rem;}
+.suggest-section .section-title {margin-bottom: 0;}
+.suggest-container {width: 100%; background-color: #1B202A; border-radius: 2rem; padding: 4rem; display: flex; flex-direction: column; row-gap: 8rem;}
+.suggest-check-box {display: flex; flex-direction: column; row-gap: 8rem; align-items: center; justify-content: center;}
+.suggest-check-box > figure {width: 10.4rem; height: 7.7rem;}
+.connect-container {padding: 2rem; background-color: #121721; border-radius: 1.6rem; display: flex; align-items: center; width: 100%; justify-content: space-between;}
+.connect-container .connect-text-group {display: flex; flex-direction: column;}
+.connect-container .connect-text-group .connect-title {display: flex; align-items: center; column-gap: 0.4rem;}
+.connect-container .connect-text-group .connect-title figure {width: 2.4rem; height: 2.4rem;}
+.connect-container .connect-text-group .connect-title span {color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 2.4rem; padding-top: 0.3rem;}
+.connect-container .connect-text-group p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.connect-container > figure {width: 2.4rem; height: 2.4rem;}
+
+@media screen and (max-width: 768px) {
+    .suggest-section .section-title h2 {font-size: 16px; line-height: 24px;}
+    .suggest-container {row-gap: 40px; padding: 20px;}
+    .suggest-check-box {row-gap: 40px;}
+    .suggest-check-box > figure {width: 60px; height: 44px;}
+    .connect-container .connect-text-group .connect-title figure {width: 20px; height: 20px;}
+    .connect-container .connect-text-group .connect-title span {font-size: 14px;}
+    .connect-container .connect-text-group p {display: none;}
+    .connect-container > figure {width: 20px; height: 20px;}
+}
+
 .events-list {display: flex; align-items: center; width: 100%; column-gap: 2rem;}
 .events-list li {width: 33%;}
 
