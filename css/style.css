@@ -41,6 +41,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .blue-btn.contact-btn {display: flex; align-items: center; column-gap: 0.8rem;}
 .blue-btn.contact-btn figure {width: 2.4rem; height: 2.4rem;}
 .blue-btn.contact-btn span {font-size: 1.6rem; font-weight: 700; line-height: 2.8rem;}
+.blue-btn.reward-btn {padding: 2rem 0; width: 100%; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
 .line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
 
 /* input */
@@ -66,6 +67,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
     .blue-btn.contact-btn {padding: 4px 12px; border-radius: 40px;}
     .blue-btn.contact-btn figure {width: 12px; height: 12px;}
     .blue-btn.contact-btn span {font-size: 12px; line-height: 26px;}
+    .blue-btn.reward-btn {padding: 12px 0; font-size: 16px; line-height: 24px; border-radius: 12px;}
 }
 
 @media screen and (max-width: 450px){
@@ -246,6 +248,55 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
     .connect-container > figure {width: 20px; height: 20px;}
 }
 
+/* 연동성공 섹션 */
+.connect-section {width: 100%;}
+.connect-wrapper {display: flex; align-items: stretch; column-gap: 2rem; width: 100%;}
+.connect-left {width: 40%; display: flex; flex-direction: column; row-gap: 2rem;}
+.connect-card {padding: 4rem; border-radius: 2rem; background-color: #1B202A;}
+.reward-box {display: flex; flex-direction: column; row-gap: 4rem;}
+.reward-box .reward-title {color: #A09FA5; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
+.reward-box .reward-value-box {display: flex; align-items: flex-end; column-gap: 1rem;}
+.reward-box .reward-value-box .reward-value {color: #F4F5F7; font-size: 4.8rem; font-weight: 700; line-height: 7.2rem;}
+.reward-box .reward-value-box .reward-unit {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem; padding-bottom: 1.5rem;}
+.payback-box {display: flex; align-items: center; justify-content: space-between;}
+.payback-box span {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
+.connect-right {width: 60%;}
+.my-exchange-box {display: flex; flex-direction: column; row-gap: 4rem;}
+.exchange-title {display: flex; align-items: center; justify-content: space-between;}
+.exchange-title > span {color: #A09FA5; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
+.exchange-title a {display: flex; align-items: center; column-gap: 0.4rem;}
+.exchange-title a span {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 3.6rem;}
+.exchange-title a figure {width: 1.6rem; height: 1.6rem;}
+.my-exchange-list {display: flex; align-items: center; flex-wrap: wrap; gap: 2rem;}
+.my-exchange-list li {width: calc(50% - 1rem); padding: 2rem; display: flex; align-items: center; column-gap: 1.2rem;}
+.my-exchange-list li figure {width: 4rem; height: 4rem;}
+.my-exchange-list li .my-value-box {display: flex; flex-direction: column;}
+.my-exchange-list li .my-value-box .my-uid {color: #F4F5F7; font-size: 1.4rem; font-weight: 500; line-height: 1;}
+.my-exchange-list li .my-value-box .my-value {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
+
+@media screen and (max-width: 768px){
+    .connect-section {padding-right: 20px;}
+    .connect-wrapper {flex-direction: column; row-gap: 20px;}
+    .connect-left {width: 100%;}
+    .connect-card {padding: 20px;}
+    .reward-box {row-gap: 20px;}
+    .reward-box .reward-title {font-size: 20px; line-height: 30px;}
+    .reward-box .reward-value-box .reward-value {font-size: 32px; line-height: 48px;}
+    .reward-box .reward-value-box .reward-unit {font-size: 16px; line-height: 36px; padding-bottom: 2px;}
+    .payback-box span {font-size: 20px; line-height: 30px;}
+    .connect-right {width: 100%;}
+    .my-exchange-box {row-gap: 40px;}
+    .exchange-title > span {font-size: 20px; line-height: 30px;}
+    .exchange-title a span {font-size: 14px; line-height: 36px;}
+    .exchange-title a figure {width: 12px; height: 12px;}
+    .my-exchange-list {gap: 20px;}
+    .my-exchange-list li {width: 100%; padding: 12px; column-gap: 8px;}
+    .my-exchange-list li figure {width: 40px; height: 40px;}
+    .my-exchange-list li .my-value-box .my-uid {font-size: 10px; line-height: 15px;}
+    .my-exchange-list li .my-value-box .my-value {font-size: 14px; line-height: 21px;}
+}
+
+/* 이벤트 섹션 */
 .events-list {display: flex; align-items: center; width: 100%; column-gap: 2rem;}
 .events-list li {width: 33%;}
 
