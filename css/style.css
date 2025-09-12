@@ -35,25 +35,37 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 /* 컬러 */
 .highlight-blue {color: #0084FF;}
 
+/* font weight */
+.bold-txt {font-weight: 900;}
+
 /* 버튼 */
-.blue-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.blue-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem; text-align: center;}
 .blue-btn.search-btn {border-radius: 100%; padding: 1.2rem;}
 .blue-btn.contact-btn {display: flex; align-items: center; column-gap: 0.8rem;}
 .blue-btn.contact-btn figure {width: 2.4rem; height: 2.4rem;}
 .blue-btn.contact-btn span {font-size: 1.6rem; font-weight: 700; line-height: 2.8rem;}
-.blue-btn.reward-btn {padding: 2rem 0; width: 100%; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
+.blue-btn.reward-btn {padding: 2rem 0; width: 100%; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem; display: flex; align-items: center; justify-content: center;}
 .blue-btn.paste-btn {padding: 0.8rem 1.2rem; font-size: 1.2rem; font-weight: 700; line-height: 1.8rem; border-radius: 1.2rem;}
+.blue-btn.withdrawal-btn {padding: 2rem 0; width: 100%; font-size: 2rem; color: #fff; font-weight: 700; line-height: 150%;}
+.blue-btn:disabled {background-color: #203453; color: #0084FF;}
+.dark-blue-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: #203453; color: #0084FF; font-size: 2rem; font-weight: 700; line-height: 150%; text-align: center;}
 .line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.line-btn.help-btn {padding: 1.2rem 2rem; border-radius: 8rem; width: fit-content; color: #0084FF; font-size: 2rem; line-height: 150%;}
 .yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
+.max-btn {background-color: transparent; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1; position: absolute; top: 50%; transform:translateY(-50%); right: 2rem;}
+.dark-btn {padding: 2rem 0; border-radius: 2rem; background-color: #121721; font-size: 2rem; font-weight: 700; line-height: 3rem; color: #F4F5F7; display: flex; align-items: center; justify-content: center; text-align: center;}
 
 /* input */
-.search-input {width: 39.8rem; background-color: transparent; border: none; outline: none; color: #A09FA5; font-size: 2rem; font-weight: 500; line-height: 3rem;}
+.input-group {position: relative;}
+.search-input {width: 39.8rem; background-color: transparent; border: none; outline: none; color: #F4F5F7; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.search-input::placeholder {color: #A09FA5;}
 .input-field {padding: 1.2rem 2rem; background-color: #121721; border-radius: 3rem; outline: none; border: none; width: 100%; color: #F4F5F7;}
 .input-field::placeholder {color: #A09FA5;}
 .input-code-digit {background-color: transparent; outline: none; border: none; border-bottom: 1px solid #3182F6; width: 5rem; color: #F4F5F7; padding: 2rem 0; text-align: center; font-size: 1.6rem; font-weight: 500;}
 .input-field-line {padding: 1.2rem 2rem; border-radius: 2rem; border: 1px solid #595B63; background-color: #121721; width: 100%; font-size: 1.6rem; height: 6rem; color: #F4F5F7; font-size: 1.6rem; font-weight: 500;}
 .input-field-line::placeholder {color: #A09FA5; font-weight: 500;}
+.input-field-line.withdrawal {border: 1px solid #3182F6;}
 
 /* checkbox */
 input[type="checkbox"].basic-chk {position: absolute; opacity: 0; width: 0; height: 0;}
@@ -168,6 +180,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .exchange-list {display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; width: 100%;}
 .exchange-list li {width: calc(25% - 0.9rem);}
 .exchange-list li .exchange-btn {width: 100%; display: flex; align-items: center; column-gap: 1.2rem; background-color: #121721; padding: 2rem; border-radius: 1.2rem;}
+.exchange-list li .exchange-btn.selected {outline: 1px solid #3182F6; background-color: #203453;}
 .exchange-list li .exchange-btn figure {width: 3.2rem; height: 3.2rem; border-radius: 100%; overflow: hidden;}
 .exchange-list li .exchange-btn figure.heat {width: 2rem; height: 2rem;}
 .exchange-list li .exchange-btn span {color: #F4F5F7; font-size: 1.6rem; font-weight: 600;}
@@ -598,3 +611,55 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .success-container a.blue-btn {padding: 12px 20px; font-size: 12px; border-radius: 20px;}
     .success-container a.blue-btn.inquiry {padding: 12px 24px;}
 }
+
+/* ============================== [ 출금하기 ] ========================================================================================== */
+.withdrawal-content {max-width: 90.4rem; width: 100%; margin-bottom: 20rem;}
+.withdrawal-wrapper {padding: 4rem; border-radius: 3.2rem; background-color: #1B202A;}
+.withdrawal-wrapper .section-title {display: flex; flex-direction: column; row-gap: 0.8rem; align-items: center; justify-content: center; margin-bottom: 4rem;}
+.withdrawal-wrapper .section-title h2 {color: #F4F5F7; text-align: center; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.withdrawal-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.withdrawal-wrapper .account-info {display: flex; align-items: center; justify-content: flex-start; padding: 2rem 2rem 4rem 2rem; column-gap: 1.2rem;}
+.withdrawal-wrapper .account-info figure {width: 4rem; height: 4rem;}
+.withdrawal-wrapper .account-info .account-txt-box {display: flex; flex-direction: column;}
+.withdrawal-wrapper .account-info .account-txt-box .account-uid {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 1;}
+.withdrawal-wrapper .account-info .account-txt-box .account-value {color: #F4F5F7; font-size: 2rem; font-weight: 600; line-height: 150%; position: relative;}
+.withdrawal-wrapper .account-info .account-txt-box .account-value::after {content: 'USDT'; padding-left: 0.5rem;}
+.withdrawal-wrapper .btn-group {margin-top: 12rem;}
+
+@media screen and (max-width: 768px) {
+    .withdrawal-content {padding: 0 2rem;}
+}
+
+/* ============================== [ 연동하기 ] ========================================================================================== */
+/* step1 (초기화면) */
+.connect-content {max-width: 90.4rem; width: 100%; margin-bottom: 20rem;}
+.connect-wrapper {padding: 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 8rem;}
+.connect-wrapper .section-title {display: flex; flex-direction: column; row-gap: 0.8rem; align-items: flex-start; margin-bottom: 0;}
+.connect-wrapper .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem;}
+.connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
+
+@media screen and (max-width: 768px) {
+    .connect-content {padding: 0 2rem;}
+}
+
+/* step2-1 : 예 누르면 나오는 페이지 */
+.uid-input-box {display: flex; align-items: center; column-gap: 1.2rem; border-radius: 2rem; border: 1px solid #3182F6; background-color: #1B202A; width: 100%; padding: 2rem; height: 7.3rem;}
+.uid-input-box .ex-select-box a {display: flex; align-items: center; column-gap: 1.2rem;}
+.uid-input-box .ex-select-box a .logo {width: 5rem; height: 5rem;}
+.exp-uid-box {display: flex; flex-direction: column; row-gap: 2rem; margin-bottom: 16rem;}
+.exp-uid-box h3 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%; text-align: center;}
+.exp-uid-box .exp-img-box {border-radius: 2rem; background: #CBE4FF; padding: 1.2rem 0; display: flex; align-items: center; justify-content: center;}
+.exp-uid-box .exp-img-box figure {width: 30.6rem;}
+.btn-group.btn-one button {width: 100%;}
+.btn-group.btn-one a {width: 100%;}
+
+/* step2-2 : 아니요 누르면 나오는 페이지 */
+
+/* 연동실패 connect_failed */
+.connect-wrapper.failed .section-title {text-align: center; justify-content: center; align-items: center;}
+.connect-wrapper.failed .section-title h2 .user-uid:before {content: "'";}
+.connect-wrapper.failed .section-title h2 .user-uid:after {content: "'";}
+.connect-wrapper.failed .exp-box {display: flex; align-items: center; justify-content: center; row-gap: 4rem; border-radius: 2rem; background: #121721; padding: 8rem 0;}
+.connect-wrapper.failed .exp-box h3 {color: #0084FF; text-align: center; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
