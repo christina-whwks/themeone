@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테마원 - 1등 수수료 페이백 플랫폼</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation Header -->
+        <nav class="main-navigation">
+            <div class="nav-content">
+                <div class="nav-left">
+                    <div class="logo-container">
+                        <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <ul class="nav-menu">
+                        <li><a href="#" class="nav-link">페이백 테스트</a></li>
+                        <li><a href="#" class="nav-link">서비스 소개</a></li>
+                        <li><a href="#" class="nav-link">봇 소개</a></li>
+                        <li><a href="partnership.html" class="nav-link">제휴문의</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="#"><figure><img src="img/icon/account_circle.svg" alt=""></figure></a>
+                    <a href="#" class="pc"><figure><img src="img/icon/language.svg" alt=""></figure></a>
+                    <a href="#" class="mobile" id="mobileMenu"><figure><img src="img/icon/dehaze.svg" alt=""></figure></a>
+                </div>
+            </div>
+            <!-- 모바일용 메뉴 -->
+            <div class="mobile-menu" id="mobileMenuPanel">
+                <div class="mobile-menu-header">
+                    <div class="logo-container">
+                        <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                    </div>
+                    <button class="mobile-menu-close" id="mobileMenuClose">
+                        <figure><img src="img/icon/close.svg" alt=""></figure>
+                    </button>
+                </div>
+                <ul class="mobile-menu-list">
+                    <li><a href="#" class="mobile-nav-link">페이백 테스트</a></li>
+                    <li><a href="#" class="mobile-nav-link">서비스 소개</a></li>
+                    <li><a href="#" class="mobile-nav-link">봇 소개</a></li>
+                    <li><a href="partnership.html" class="mobile-nav-link">제휴문의</a></li>
+                </ul>
+                <div class="mobile-buttons">
+                    <a href="#"><figure><img src="img/icon/language.svg" alt=""></figure><span>언어 변경</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="sub-content mypage-content">
+            <div class="user-info-container">
+                <figure><img src="img/user_profile.svg" alt=""></figure>
+                <div class="user-info-txt">
+                    <span class="user-id">xpakd***@naver.com</span>
+                    <div class="user-num-txt">
+                        <p>회원번호 : <span class="user-num">10038900</span></p>
+                        <button type="button" class="trans-btn" id="copyBtn"><figure><img src="img/icon/content_copy.svg" alt=""></figure></button>
+                    </div>
+                </div>
+            </div>
+            <div class="mypage-menu-container">
+                <ul class="mypage-menu-list">
+                    <li>
+                        <a href="#">
+                            <figure><img src="img/icon/redeem.svg" alt=""></figure>
+                            <span>쿠폰</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure><img src="img/icon/mail.svg" alt=""></figure>
+                            <span>친구초대</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure><img src="img/icon/trophy.svg" alt=""></figure>
+                            <span>페이백 랭킹</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure><img src="img/icon/data_usage.svg" alt=""></figure>
+                            <span>나의 리워드</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mypage-menu-container">
+                <ul class="mypage-submenu-list">
+                    <li>
+                        <a href="#">
+                            <div class="submenu-box">
+                                <div class="submenu-title">
+                                    <figure><img src="img/icon/lock.svg" alt=""></figure>
+                                    <span>비밀번호 변경</span>
+                                </div>
+                                <p>회원님의 비밀번호를 변경할 수 있어요.</p>
+                            </div>
+                            <div class="submenu-arrow">
+                                <figure><img src="img/icon/arrow_forward_ios.svg" alt=""></figure>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- 연동 전이면 data-modal="connectModal" / 연동 중이면 data-modal="disconnectModal" 로 바꿔주세요. -->
+                        <a href="#" data-modal="disconnectModal">
+                            <div class="submenu-box">
+                                <div class="submenu-title">
+                                    <figure><img src="img/icon/google.svg" alt=""></figure>
+                                    <span>구글 OTP</span>
+                                </div>
+                                <p>구글 OTP를 사용해서 보다 안전하게 관리가 가능해요.</p>
+                            </div>
+                            <div class="submenu-arrow">
+                                <span>연동 전</span>
+                                <!-- 연동중 -->
+                                <!-- <span class="after">연동중</span> -->
+                                <figure><img src="img/icon/arrow_forward_ios.svg" alt=""></figure>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-modal="reqModal">
+                            <div class="submenu-box">
+                                <div class="submenu-title">
+                                    <figure><img src="img/icon/contact_phone.svg" alt=""></figure>
+                                    <span>고객센터 연결</span>
+                                </div>
+                                <p>테마원에서 발생하는 문제를 빠르게 해결하세요.</p>
+                            </div>
+                            <div class="submenu-arrow">
+                                <figure><img src="img/icon/arrow_forward_ios.svg" alt=""></figure>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mypage_setting.html">
+                            <div class="submenu-box">
+                                <div class="submenu-title">
+                                    <figure><img src="img/icon/manufacturing.svg" alt=""></figure>
+                                    <span>설정</span>
+                                </div>
+                                <p>알림설정, 이용약관, 개인정보 처리방침, 로그아웃, 회원탈퇴</p>
+                            </div>
+                            <div class="submenu-arrow">
+                                <figure><img src="img/icon/arrow_forward_ios.svg" alt=""></figure>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">이용약관</a>
+                        <a href="#">위치기반서비스 이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                        </div>
+                        <div class="info-box">
+                            <p class="contact-info">제휴제안&광고문의: 테마원@테마원.com <br class="mobile">고객센터: cs@테마원.com</p>
+                            <p class="company-details">상호명 : (주)테마원 ㅣ 대표 홍길동 ㅣ 사업자등록번호 000-00-00000</p>
+                            <p class="address-info">주소 : 서울시 서울구 서울로 101, 1층 ㅣ 전화 : 1000-0000 & 000-0000-0000</p>
+                            <p class="copyright">Copyright (주)테더마이너스원. ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="social-icons">
+                        <a href="#"><figure><img src="img/icon/insta.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/in.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/x.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/youtube.svg" alt=""></figure></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 구글 OTP 모달 -->
+    <div class="bg"></div>
+    <div class="modal connect-modal" id="connectModal">
+        <div class="inner">
+            <div class="modal-header">
+                <h5>구글 OTP 연동</h5>
+                <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
+            </div>
+            <div class="modal-body">
+                <div class="otp-container">
+                    <div class="otp-step-box">
+                        <span>1. 구글 OTP 다운로드</span>
+                        <div class="otp-content">
+                            <div class="link-group">
+                                <a href="#" class="dark-btn apple">
+                                    <figure><img src="img/icon/apple.svg" alt=""></figure>
+                                    <span>App Store</span>
+                                </a>
+                                <a href="#" class="dark-btn google">
+                                    <figure><img src="img/icon/playstore.svg" alt=""></figure>
+                                    <span>Google Play</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="otp-step-box">
+                        <span>2. 구글 OTP내에서 ‘+’버튼 누르고 QR코드 스캔 또는 설정 키 입력</span>
+                        <div class="otp-content">
+                            <div class="qr-code-box">
+                                <figure><img src="img/qr_code.png" alt=""></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="otp-step-box">
+                        <span>3. 구글 OPT 인증 번호 입력</span>
+                        <div class="otp-content">
+                            <div class="code-wrapper">
+                                <div class="code-input-group">
+                                    <div class="code-input-field active">
+                                        <input type="text" maxlength="1" class="input-code-digit" aria-label="첫 번째 자리" placeholder="0">
+                                    </div>
+                                    <div class="code-input-field">
+                                        <input type="text" maxlength="1" class="input-code-digit" aria-label="두 번째 자리" placeholder="0">
+                                    </div>
+                                    <div class="code-input-field">
+                                        <input type="text" maxlength="1" class="input-code-digit" aria-label="세 번째 자리" placeholder="0">
+                                    </div>
+                                    <div class="code-input-field">
+                                        <input type="text" maxlength="1" class="input-code-digit" aria-label="네 번째 자리" placeholder="0">
+                                    </div>
+                                    <div class="code-input-field">
+                                        <input type="text" maxlength="1" class="input-code-digit" aria-label="다섯 번째 자리" placeholder="0">
+                                    </div>
+                                    <div class="code-input-field">
+                                        <input type="text" maxlength="1" class="input-code-digit" aria-label="여섯 번째 자리" placeholder="0">
+                                    </div>
+                                </div>
+                                <div class="paste-container">
+                                    <button type="button" class="blue-btn paste-btn">붙여넣기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 구글 OTP 연동 해제 모달 -->
+    <div class="modal dis-modal" id="disconnectModal">
+        <div class="inner">
+            <div class="modal-header modal-header-v2">
+                <figure><img src="img/icon/google.svg" alt=""></figure>
+                <h5>구글 OTP가<br> 현재 연동 중인 상태입니다.<br><span class="highlight-red">연동 해제</span> 하시겠습니까?</h5>
+            </div>
+            <div class="modal-body">
+                <div class="modal-buttons">
+                    <a href="#" class="dark-btn close">닫기</a>
+                    <a href="#" class="red-btn" data-modal="emailAuthModal">해제</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 인증번호 모달 -->
+    <div class="modal email-modal" id="emailAuthModal">
+        <div class="inner">
+            <div class="modal-header">
+                <h5>인증번호 6자리를 입력해주세요</h5>
+                <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
+            </div>
+            <div class="modal-body">
+                <div class="auth-container">
+                    <div class="email-box">
+                        <span class="user-email">tether1@naver.com</span>
+                    </div>
+                    <div class="code-wrapper">
+                        <div class="code-input-group">
+                            <div class="code-input-field active">
+                                <input type="text" maxlength="1" class="input-code-digit" aria-label="첫 번째 자리">
+                            </div>
+                            <div class="code-input-field">
+                                <input type="text" maxlength="1" class="input-code-digit" aria-label="두 번째 자리">
+                            </div>
+                            <div class="code-input-field">
+                                <input type="text" maxlength="1" class="input-code-digit" aria-label="세 번째 자리">
+                            </div>
+                            <div class="code-input-field">
+                                <input type="text" maxlength="1" class="input-code-digit" aria-label="네 번째 자리">
+                            </div>
+                            <div class="code-input-field">
+                                <input type="text" maxlength="1" class="input-code-digit" aria-label="다섯 번째 자리">
+                            </div>
+                            <div class="code-input-field">
+                                <input type="text" maxlength="1" class="input-code-digit" aria-label="여섯 번째 자리">
+                            </div>
+                        </div>
+                        <div class="paste-container">
+                            <button type="button" class="blue-btn paste-btn">붙여넣기</button>
+                        </div>
+                        <div class="message-container">
+                            <p>인증번호가 오지 않았다면, <br>
+                                <span class="time highlight-blue">60초</span> 뒤에 나오는 다시보내기 버튼을 눌러주세요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 문의하기 모달 -->
+    <div class="modal req-modal" id="reqModal">
+        <div class="inner">
+            <div class="modal-header">
+                <h5>고객센터 문의</h5>
+                <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
+            </div>
+            <div class="modal-body">
+                <div class="modal-buttons">
+                    <a href="#" class="yellow-btn">카카오톡으로 문의하기</a>
+                    <a href="#" class="sky-btn">텔레그램으로 문의하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/modal.js"></script>
+    <script src="js/mobile_menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const copyBtn = document.getElementById('copyBtn');
+            
+            copyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 버튼 텍스트(초대코드) 가져오기
+                const inviteCode = this.textContent.trim();
+                
+                // 클립보드에 복사
+                navigator.clipboard.writeText(inviteCode).catch(function(err) {
+                    // 구형 브라우저용 대체 방법
+                    const textArea = document.createElement("textarea");
+                    textArea.value = inviteCode;
+                    textArea.style.position = "fixed";
+                    textArea.style.opacity = "0";
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
