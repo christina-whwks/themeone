@@ -56,11 +56,14 @@
         <main class="sub-content connect-content">
             <div class="connect-wrapper failed">
                 <div class="section-title">
-                    <h2><span class="exchange-name">Bitget</span> UID <span class="user-uid">000000</span><br>연동이 완료되었어요</h2>
-                    <p class="ft-14">성공적으로 연동 됐어요!</p>
+                    <h2>페이백이 필요한 친구를<br>초대해서 혜택을 같이 누려보세요!</h2>
+                    <p><span class="highlight-blue">테마원</span>에 친구가 초대코드로 가입하면 쿠폰을 받을 수 있어요.</p>
                 </div>
                 <div class="btn-group btn-one">
-                    <a href="" class="blue-btn">확인</a>
+                    <a href="#" class="line-btn bold-btn" id="copyBtn">A122445</a>
+                    <div class="notification-popup">
+                        <p class="notification-text">클릭해서 복사하세요!</p>
+                    </div>
                 </div>
             </div>
         </main>
@@ -102,7 +105,27 @@
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const copyBtn = document.getElementById('copyBtn');
             
+            copyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // 버튼 텍스트(초대코드) 가져오기
+                const inviteCode = this.textContent.trim();
+                
+                // 클립보드에 복사
+                navigator.clipboard.writeText(inviteCode).catch(function(err) {
+                    // 구형 브라우저용 대체 방법
+                    const textArea = document.createElement("textarea");
+                    textArea.value = inviteCode;
+                    textArea.style.position = "fixed";
+                    textArea.style.opacity = "0";
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                });
+            });
         });
     </script>
 </body>

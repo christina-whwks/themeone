@@ -49,8 +49,9 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .blue-btn.withdrawal-btn {padding: 2rem 0; width: 100%; font-size: 2rem; color: #fff; font-weight: 700; line-height: 150%;}
 .blue-btn:disabled {background-color: #203453; color: #0084FF;}
 .dark-blue-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: #203453; color: #0084FF; font-size: 2rem; font-weight: 700; line-height: 150%; text-align: center;}
-.line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem; text-align: center;}
 .line-btn.help-btn {padding: 1.2rem 2rem; border-radius: 8rem; width: fit-content; color: #0084FF; font-size: 2rem; line-height: 150%;}
+.line-btn.bold-btn {font-weight: 900; color: #0084FF;}
 .yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .max-btn {background-color: transparent; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1; position: absolute; top: 50%; transform:translateY(-50%); right: 2rem;}
@@ -104,12 +105,17 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .blue-btn.contact-btn span {font-size: 12px; line-height: 26px;}
     .blue-btn.reward-btn {padding: 12px 0; font-size: 16px; line-height: 24px; border-radius: 12px;}
     .blue-btn.paste-btn {font-size: 12px; line-height: 18px; padding: 8px 12px; border-radius: 12px;}
+    .blue-btn.withdrawal-btn {font-size: 16px;}
+    .line-btn.help-btn {font-size: 14px; padding: 8px 12px;}
     .yellow-btn {padding: 12px 0; font-size: 14px; line-height: 24px; border-radius: 12px;}
     .sky-btn {padding: 12px 0; font-size: 14px; line-height: 24px; border-radius: 12px;}
+    .max-btn {font-size: 10px;}
+    .dark-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
 
     .input-field {font-size: 16px; padding: 12px 20px; border-radius: 30px;}
     .input-code-digit {width: 43px; padding: 20px 0; font-size: 16px;}
     .input-field-line {padding: 12px 20px; height: 60px; font-size: 16px;}
+    .input-field-line.withdrawal {padding: 12px; height: fit-content; font-size: 10px;}
 
     input[type="checkbox"].block-chk + label {font-size: 13px; padding: 12px; padding-left: 40px;}
     input[type="checkbox"].block-chk + label::before {left: 12px; width: 20px; height: 20px;}
@@ -174,6 +180,11 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .modal-header {display: flex; align-items: center; justify-content: space-between;}
 .modal-header h5 {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
 .modal-header .close figure {width: 3.2rem; height: 3.2rem;}
+
+@media screen and (max-width: 768px) {
+    .modal-header h5 {font-size: 20px;}
+    .modal-header .close figure {width: 24px; height: 24px;}
+}
 
 /* 거래소 선택 모달 */
 .exchange-modal {max-width: 90.4rem; width: 100%;}
@@ -627,33 +638,55 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .withdrawal-wrapper .btn-group {margin-top: 12rem;}
 
 @media screen and (max-width: 768px) {
-    .withdrawal-content {padding: 0 2rem;}
+    .withdrawal-content {padding: 0 20px; margin-top: 20px; margin-bottom: 200px;}
+    .withdrawal-wrapper .section-title h2 {font-size: 20px;}
+    .withdrawal-wrapper .section-title p {font-size: 12px;}
+    .withdrawal-wrapper .account-info figure {width: 40px; height: 40px;}
+    .withdrawal-wrapper .account-info .account-txt-box .account-uid {font-size: 10px; line-height: 150%;}
+    .withdrawal-wrapper .account-info .account-txt-box .account-value {font-size: 14px;}
+    .withdrawal-wrapper .btn-group {margin-top: 120px;}
 }
 
-/* ============================== [ 연동하기 ] ========================================================================================== */
+/* ============================== [ 연동하기 + 친구초대(코드발급) ] ========================================================================================== */
 /* step1 (초기화면) */
 .connect-content {max-width: 90.4rem; width: 100%; margin-bottom: 20rem;}
 .connect-wrapper {padding: 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 8rem;}
 .connect-wrapper .section-title {display: flex; flex-direction: column; row-gap: 0.8rem; align-items: flex-start; margin-bottom: 0;}
 .connect-wrapper .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
 .connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
-.connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem;}
+.connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem; position: relative;}
 .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
 
 @media screen and (max-width: 768px) {
-    .connect-content {padding: 0 2rem;}
+    .connect-content {padding: 0 20px; margin-top: 20px; margin-bottom: 200px;}
+    .connect-wrapper {padding: 40px 20px 20px 20px; row-gap: 80px;}
+    .connect-wrapper .section-title h2 {font-size: 20px;}
+    .connect-wrapper .section-title p {font-size: 12px;}
+    .connect-wrapper .section-title p.ft-14 {font-size: 14px;}
+    .connect-wrapper .btn-group a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
 }
 
 /* step2-1 : 예 누르면 나오는 페이지 */
 .uid-input-box {display: flex; align-items: center; column-gap: 1.2rem; border-radius: 2rem; border: 1px solid #3182F6; background-color: #1B202A; width: 100%; padding: 2rem; height: 7.3rem;}
 .uid-input-box .ex-select-box a {display: flex; align-items: center; column-gap: 1.2rem;}
 .uid-input-box .ex-select-box a .logo {width: 5rem; height: 5rem;}
+.uid-input-box .ex-select-box a .arrow {width: 2.4rem; height: 2.4rem;}
 .exp-uid-box {display: flex; flex-direction: column; row-gap: 2rem; margin-bottom: 16rem;}
 .exp-uid-box h3 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%; text-align: center;}
 .exp-uid-box .exp-img-box {border-radius: 2rem; background: #CBE4FF; padding: 1.2rem 0; display: flex; align-items: center; justify-content: center;}
 .exp-uid-box .exp-img-box figure {width: 30.6rem;}
 .btn-group.btn-one button {width: 100%;}
 .btn-group.btn-one a {width: 100%;}
+
+@media screen and (max-width: 768px) {
+    .uid-input-box {padding: 8px 12px; border-radius: 20px; column-gap: 12px; height: fit-content;}
+    .uid-input-box .ex-select-box a .logo {width: 32px; height: 32px;}
+    .uid-input-box .ex-select-box a .arrow {width: 16px; height: 16px;}
+    .uid-input-box .search-input {font-size: 14px;}
+    .exp-uid-box {row-gap: 20px; margin-bottom: 0;}
+    .exp-uid-box h3 {font-size: 20px;}
+    .btn-group.btn-one button {padding: 12px 0; border-radius: 12px; font-weight: 700;}
+}
 
 /* step2-2 : 아니요 누르면 나오는 페이지 */
 
@@ -663,3 +696,20 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .connect-wrapper.failed .section-title h2 .user-uid:after {content: "'";}
 .connect-wrapper.failed .exp-box {display: flex; align-items: center; justify-content: center; row-gap: 4rem; border-radius: 2rem; background: #121721; padding: 8rem 0;}
 .connect-wrapper.failed .exp-box h3 {color: #0084FF; text-align: center; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
+
+@media screen and (max-width: 768px) {
+    .connect-wrapper.failed .exp-box {padding: 80px 0; row-gap: 40px; margin-bottom: 0;}
+    .connect-wrapper.failed .exp-box h3 {font-size: 20px;}
+}
+
+/* 친구초대 코드발급 */
+.connect-content .btn-group .notification-popup {position: absolute; top: -30%; left: 20%;}
+.connect-content .btn-group .notification-popup p {padding: 2rem; border-radius: 3.2rem 3.2rem 0.2rem 3.2rem; background-color: #3182F6; box-shadow: 4px 4px 120px 0 rgba(0, 0, 0, 0.25); backdrop-filter: blur(32px); color: #F4F5F7; font-size: 1.6rem; font-weight: 600; line-height: normal;}
+
+@media screen and (min-width: 769px) and (max-width: 980px) {
+    .connect-content .btn-group .notification-popup {display: block;}
+}
+@media screen and (max-width: 768px) {
+    .connect-content .btn-group .notification-popup {display: block; left: 5%;}
+    .connect-content .btn-group .notification-popup p {padding: 12px; font-size: 14px;}
+}

@@ -68,7 +68,7 @@
                 </div>
                 <form action="" class="form withdrawal-form">
                     <div class="input-group">
-                        <input type="number" name="" id="withdrawalValue" class="input-field-line withdrawal" placeholder="금액을 입력해주세요.">
+                        <input type="text" name="" id="withdrawalValue" class="input-field-line withdrawal" placeholder="금액을 입력해주세요." autocomplete="off">
                         <button type="button" class="max-btn" id="maxBtn">최대</button>
                     </div>
                 </form>
@@ -189,32 +189,76 @@
             // 최대 출금 가능 금액
             const maxAmount = parseFloat(accountValue.textContent.trim());
 
+            // 숫자만 추출하는 함수
+            function extractNumber(value) {
+                return value.replace(/[^\d.]/g, '');
+            }
+
+            // 값에 USDT 단위 추가하는 함수
+            function formatWithUSDT(value) {
+                if (value === '') return '';
+                return value + ' USDT';
+            }
+
             // 입력값 변경 시 버튼 활성화/비활성화 및 최대값 제한
             withdrawalValue.addEventListener('input', function() {
-                let inputValue = parseFloat(this.value);
+                // 현재 커서 위치 저장
+                const cursorPosition = this.selectionStart;
+                
+                // 숫자만 추출
+                let numericValue = extractNumber(this.value);
+                let inputValue = parseFloat(numericValue);
                 
                 // 최대 금액 초과 시 최대값으로 제한
                 if (inputValue > maxAmount) {
-                    this.value = maxAmount;
+                    numericValue = maxAmount.toString();
                     inputValue = maxAmount;
                 }
                 
+                // USDT 단위와 함께 표시
+                const formattedValue = formatWithUSDT(numericValue);
+                this.value = formattedValue;
+                
+                // 커서 위치 조정 (USDT 앞에 위치하도록)
+                const newCursorPosition = Math.min(cursorPosition, numericValue.length);
+                this.setSelectionRange(newCursorPosition, newCursorPosition);
+                
                 // 버튼 활성화/비활성화
-                if (this.value && inputValue > 0) {
+                if (numericValue && inputValue > 0) {
                     withdrawalBtn.disabled = false;
                 } else {
                     withdrawalBtn.disabled = true;
                 }
             });
 
+            // 포커스 시 커서를 숫자 부분 끝에 위치
+            withdrawalValue.addEventListener('focus', function() {
+                const numericPart = extractNumber(this.value);
+                this.setSelectionRange(numericPart.length, numericPart.length);
+            });
+
+            // 키 입력 시 USDT 부분에서 입력 방지
+            withdrawalValue.addEventListener('keydown', function(e) {
+                const cursorPosition = this.selectionStart;
+                const numericPart = extractNumber(this.value);
+                
+                // USDT 부분에서 입력 방지 (백스페이스, 델리트는 허용)
+                if (cursorPosition > numericPart.length && e.key !== 'Backspace' && e.key !== 'Delete' && e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') {
+                    e.preventDefault();
+                }
+            });
+
             // 최대 버튼 클릭 시 계좌 잔액을 입력창에 설정
             maxBtn.addEventListener('click', function() {
-                withdrawalValue.value = maxAmount;
+                withdrawalValue.value = formatWithUSDT(maxAmount.toString());
                 
                 // 값이 입력되었으므로 버튼 활성화
                 if (maxAmount > 0) {
                     withdrawalBtn.disabled = false;
                 }
+                
+                // 커서를 숫자 부분 끝에 위치
+                withdrawalValue.setSelectionRange(maxAmount.toString().length, maxAmount.toString().length);
             });
         });
     </script>
