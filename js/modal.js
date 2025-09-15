@@ -1,28 +1,76 @@
-const bg = document.querySelector('.bg');  // 모달 배경 (어두운 오버레이)
-const modals = document.querySelectorAll('.modal');  // 모든 모달
-const modalTriggers = document.querySelectorAll('[data-modal]');  // 모달을 여는 버튼들
-const modalCloseButtons = document.querySelectorAll('.btn-cancel');  // 취소 버튼들
-const modalCloseIcons = document.querySelectorAll('.modal .close');  // X 버튼들
+const bg = document.querySelector('.bg');
+const modals = document.querySelectorAll('.modal');
+const modalTriggers = document.querySelectorAll('[data-modal]');
+const modalCloseButtons = document.querySelectorAll('.btn-cancel');
+const modalCloseIcons = document.querySelectorAll('.modal .close');
+
+// 모달 스택 관리를 위한 배열
+let modalStack = [];
 
 // 모달 열기 - data-modal 속성을 가진 버튼 클릭 시
 modalTriggers.forEach(function(trigger) {
     trigger.addEventListener('click', function(e) {
         e.preventDefault();
-        const modalId = this.getAttribute('data-modal');  // data-modal 속성값 가져오기
-        const targetModal = document.getElementById(modalId);  // 해당 ID의 모달 찾기
+        const modalId = this.getAttribute('data-modal');
+        const targetModal = document.getElementById(modalId);
         
         if (targetModal) {
-            bg.style.display = 'block';        // 배경 오버레이 표시
-            targetModal.style.display = 'block';  // 해당 모달 표시
+            openModal(targetModal);
         }
     });
 });
+
+// 모달 열기 함수
+function openModal(modal) {
+    // 새로운 bg 요소 생성
+    const newBg = bg.cloneNode(true);
+    newBg.style.display = 'block';
+    newBg.style.zIndex = 1000 + modalStack.length * 10;
+    
+    // 모달의 z-index 설정
+    modal.style.display = 'block';
+    modal.style.zIndex = 1001 + modalStack.length * 10;
+    
+    // body에 새로운 bg 추가
+    document.body.appendChild(newBg);
+    
+    // 스택에 모달과 배경 정보 추가
+    modalStack.push({
+        modal: modal,
+        bg: newBg
+    });
+    
+    // 새로운 bg에 클릭 이벤트 추가
+    newBg.addEventListener('click', function(e) {
+        if (e.target === newBg) {
+            closeTopModal();
+        }
+    });
+}
+
+// 최상위 모달 닫기 함수
+function closeTopModal() {
+    if (modalStack.length === 0) return;
+    
+    const topModalData = modalStack.pop();
+    
+    // 모달과 배경 숨기기
+    topModalData.modal.style.display = 'none';
+    topModalData.bg.remove();
+}
+
+// 모든 모달 닫기 함수
+function closeAllModals() {
+    while (modalStack.length > 0) {
+        closeTopModal();
+    }
+}
 
 // 모달 닫기 - X 아이콘 클릭 시
 modalCloseIcons.forEach(function(closeIcon) {
     closeIcon.addEventListener('click', function(e) {
         e.preventDefault();
-        closeAllModals();  // 모든 모달 닫기 함수 호출
+        closeTopModal();
     });
 });
 
@@ -30,28 +78,13 @@ modalCloseIcons.forEach(function(closeIcon) {
 modalCloseButtons.forEach(function(closeBtn) {
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        closeAllModals();
+        closeTopModal();
     });
 });
 
-// 모달 닫기 - 배경 클릭 시
-bg.addEventListener('click', function(e) {
-    if (e.target === bg) {  // 배경 자체를 클릭한 경우만
-        closeAllModals();
-    }
-});
-
-// 모달 닫기 - ESC 키 누를 시
+// ESC 키로 최상위 모달 닫기
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        closeAllModals();
+        closeTopModal();
     }
 });
-
-// 모든 모달 닫기 함수
-function closeAllModals() {
-    bg.style.display = 'none';  // 배경 오버레이 숨기기
-    modals.forEach(function(modal) {
-        modal.style.display = 'none';  // 모든 모달 숨기기
-    });
-}

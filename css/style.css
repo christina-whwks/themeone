@@ -34,6 +34,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 
 /* 컬러 */
 .highlight-blue {color: #0084FF;}
+.highlight-red {color: #FF2C3E;}
 
 /* font weight */
 .bold-txt {font-weight: 900;}
@@ -56,6 +57,8 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .max-btn {background-color: transparent; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1; position: absolute; top: 50%; transform:translateY(-50%); right: 2rem;}
 .dark-btn {padding: 2rem 0; border-radius: 2rem; background-color: #121721; font-size: 2rem; font-weight: 700; line-height: 3rem; color: #F4F5F7; display: flex; align-items: center; justify-content: center; text-align: center;}
+.trans-btn {background-color: transparent; width: 1.2rem; height: 1.2rem; margin-bottom: 0.5rem;}
+.red-btn {padding: 2rem 0; border-radius: 1.6rem; background-color: #FF2C3E; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 2rem; color: #F4F5F7; font-weight: 700; line-height: 150%;}
 
 /* input */
 .input-group {position: relative;}
@@ -178,7 +181,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .modal {display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 61rem; z-index: 1001; background-color: #fff; padding: 2.4rem; border-radius: 3.2rem; background-color: #1B202A;}
 .modal .inner {display: flex; flex-direction: column; row-gap: 4rem;}
 .modal-header {display: flex; align-items: center; justify-content: space-between;}
-.modal-header h5 {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
+.modal-header h5 {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
+.modal-header h5 p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .modal-header .close figure {width: 3.2rem; height: 3.2rem;}
 
 @media screen and (max-width: 768px) {
@@ -254,6 +258,31 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .policy-box p {font-size: 12px; padding-right: 20px;}
     .policy-modal .modal-buttons button {padding: 8px 0; border-radius: 12px;}
 }
+
+/* 구글 otp 모달 */
+.connect-modal {max-width: 39.6rem; padding: 4rem;}
+.connect-modal .modal-header h5 {font-size: 2rem;}
+.connect-modal .modal-header .close figure {width: 2.4rem; height: 2.4rem;}
+.connect-modal .otp-container {display: flex; flex-direction: column; row-gap: 4rem;}
+.connect-modal .otp-step-box {display: flex; flex-direction: column; row-gap: 2rem;}
+.connect-modal .otp-step-box span {color: #F4F5F7; font-size: 1.2rem; font-weight: 600; line-height: 150%;}
+.connect-modal .link-group {display: flex; align-items: center; column-gap: 0.8rem;}
+.connect-modal .link-group .dark-btn {width: 50%; border-radius: 1.2rem; display: flex; align-items: center; column-gap: 0.8rem;}
+.connect-modal .link-group .dark-btn.apple figure {width: 1.6rem; height: 2rem;}
+.connect-modal .link-group .dark-btn.google figure {width: 2rem; height: 2rem;}
+.connect-modal .link-group .dark-btn span {font-size: 1.6rem; line-height: 150%;}
+.connect-modal .qr-code-box {padding: 1.2rem; border-radius: 2rem; border: 1px solid #313335; width: fit-content;}
+.connect-modal .qr-code-box figure {background-color: #fff; border-radius: 0.8rem; width: 9.5rem; height: 9.4rem;}
+.connect-modal .code-input-group {margin-bottom: 4rem;}
+.connect-modal .input-code-digit {width: 4.2rem; font-size: 3.2rem;}
+
+/* 구글 otp 연동해제 모달 */
+.dis-modal {max-width: 56.5rem; width: 56.5rem; padding: 4rem;}
+.modal-header-v2 {display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem;}
+.modal-header-v2 figure {width: 6rem; height: 5.4rem;}
+.modal-header-v2 h5 {color: #F4F5F7; text-align: center; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
+.modal-buttons button {width: calc(50% - 1rem);}
+.dis-modal .modal-buttons button.dark-btn {border-radius: 1.6rem;}
 
 
 /* ============================== [ 모바일용 메뉴 ] ========================================================================================== */
@@ -713,3 +742,37 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .connect-content .btn-group .notification-popup {display: block; left: 5%;}
     .connect-content .btn-group .notification-popup p {padding: 12px; font-size: 14px;}
 }
+
+/* ============================== [ 마이페이지 ] ========================================================================================== */
+.mypage-content {max-width: 133.2rem; width: 100%; margin: 20rem auto; display: flex; flex-direction: column; row-gap: 4rem;}
+.user-info-container {display: flex; align-items: center; column-gap: 1.2rem;}
+.user-info-container > figure {width: 5.6rem; height: 5.6rem;}
+.user-info-container .user-info-txt {display: flex; flex-direction: column;}
+.user-info-container .user-info-txt .user-id {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.user-info-container .user-info-txt .user-num-txt {display: flex; align-items: center; column-gap: 0.4rem;}
+.user-info-container .user-info-txt .user-num-txt p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.mypage-menu-list {display: flex; align-items: center; column-gap: 1.2rem;}
+.mypage-menu-list li {width: 25%;}
+.mypage-menu-list li a {width: 100%; padding: 2rem 0; border-radius: 2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 1.2rem; align-items: center; justify-content: center;}
+.mypage-menu-list li a figure {width: 4rem; height: 4rem;}
+.mypage-menu-list li a span {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.mypage-submenu-list {display: flex; flex-direction: column;}
+.mypage-submenu-list li {width: 100%;}
+.mypage-submenu-list li a {padding: 2rem; border-radius: 1.6rem; background-color: #121721; display: flex; align-items: center; justify-content: space-between;}
+.mypage-submenu-list li a .submenu-box {display: flex; flex-direction: column; row-gap: 0.8rem;}
+.mypage-submenu-list li a .submenu-box .submenu-title {display: flex; align-items: center; column-gap: 0.8rem;}
+.mypage-submenu-list li a .submenu-box .submenu-title figure {width: 2.4rem; height: 2.4rem;}
+.mypage-submenu-list li a .submenu-box .submenu-title span {color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 150%; padding-top: 0.3rem;}
+.mypage-submenu-list li a .submenu-box p {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+.mypage-submenu-list li a .submenu-arrow {display: flex; align-items: center; column-gap: 2rem;}
+.mypage-submenu-list li a .submenu-arrow figure {width: 2.4rem; height: 2.4rem;}
+.mypage-submenu-list li a .submenu-arrow span {color: #A09FA5; font-size: 1.6rem; font-weight: 700; line-height: 1; padding-top: 0.4rem;}
+.mypage-submenu-list li a .submenu-arrow span.after {color: #0084FF;}
+
+/* ============================== [ 회원탈퇴 ] ========================================================================================== */
+/* 모달 레이아웃 상속받아 사용 */
+.fixed-modal {display: block; position: relative; max-width: 90.4rem; width: 90.4rem; top: auto; left: auto; transform: none; margin-bottom: 10rem;}
+.fixed-modal .inner {row-gap: 8rem;}
+.fixed-modal .modal-header {align-items: flex-start;}
+.fixed-modal .modal-buttons {align-items: stretch;}
+.fixed-modal .modal-buttons .blue-btn {padding: 2rem 0; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 2rem; font-weight: 700;}
