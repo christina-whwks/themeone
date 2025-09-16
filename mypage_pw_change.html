@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테마원 - 1등 수수료 페이백 플랫폼</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation Header -->
+        <nav class="main-navigation">
+            <div class="nav-content">
+                <div class="nav-left">
+                    <div class="logo-container">
+                        <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <ul class="nav-menu">
+                        <li><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
+                        <li><a href="#" class="nav-link">서비스 소개</a></li>
+                        <li><a href="#" class="nav-link">봇 소개</a></li>
+                        <li><a href="partnership.html" class="nav-link">제휴문의</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <div class="auth-buttons">
+                        <a href="join.html" class="blue-btn">회원가입</a>
+                        <a href="login.html" class="line-btn">로그인</a>
+                    </div>
+                    <a href="#" class="pc"><figure><img src="img/icon/language.svg" alt=""></figure></a>
+                    <a href="#" class="mobile" id="mobileMenu"><figure><img src="img/icon/dehaze.svg" alt=""></figure></a>
+                </div>
+            </div>
+            <!-- 모바일용 메뉴 -->
+            <div class="mobile-menu" id="mobileMenuPanel">
+                <div class="mobile-menu-header">
+                    <div class="logo-container">
+                        <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                    </div>
+                    <button class="mobile-menu-close" id="mobileMenuClose">
+                        <figure><img src="img/icon/close.svg" alt=""></figure>
+                    </button>
+                </div>
+                <ul class="mobile-menu-list">
+                    <li><a href="payback_main.html" class="mobile-nav-link">페이백 테스트</a></li>
+                    <li><a href="#" class="mobile-nav-link">서비스 소개</a></li>
+                    <li><a href="#" class="mobile-nav-link">봇 소개</a></li>
+                    <li><a href="partnership.html" class="mobile-nav-link">제휴문의</a></li>
+                </ul>
+                <div class="mobile-buttons">
+                    <a href="#"><figure><img src="img/icon/language.svg" alt=""></figure><span>언어 변경</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="sub-content pw-content">
+            <div class="pw-wrapper">
+                <div class="pw-title-box">
+                    <h2>비밀번호 변경</h2>
+                    <p>비밀번호 변경 이후에는 출금이 <span class="highlight-blue">72시간 동안 제한</span>됩니다.</p>
+                </div>
+                <form action="" class="pw-form">
+                    <div class="input-group">
+                        <input type="password" class="input-field-line" placeholder="현재 비밀번호" id="nowPw" required>
+                        <div class="validate-txt" id="nowPwChk">
+                            <figure><img src="img/icon/check_circle_red.svg" alt=""></figure>
+                            <span>비밀번호가 일치하지 않아요.</span>
+                        </div>
+                    </div>
+                    <div class="input-group password-group">
+                        <input type="password" class="input-field-line" placeholder="새로운 비밀번호" id="newPw1" required>
+                        <div class="exp-box">
+                            <div class="exp-row" id="digitCnt">
+                                <figure><img src="img/icon/check_circle.svg" alt=""></figure>
+                                <span>8~16개 사이의 문자를 입력해주세요.</span>
+                            </div>
+                            <div class="exp-row" id="reqTxt">
+                                <figure><img src="img/icon/check_circle.svg" alt=""></figure>
+                                <span>반드시 숫자와 특수문자 (!@#$%^&*()) 중에 1개가 포함되어야 합니다.</span>
+                            </div>
+                        </div>
+                        <input type="password" class="input-field-line" placeholder="새로운 비밀번호 확인" id="newPw2" required>
+                        <div class="validate-txt" id="newPwChk">
+                            <figure><img src="img/icon/check_circle_red.svg" alt=""></figure>
+                            <span>비밀번호가 일치하지 않아요.</span>
+                        </div>
+                    </div>
+                    <div class="btn-group btn-one">
+                        <button type="submit" class="blue-btn" disabled>비밀번호 재설정하기</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">이용약관</a>
+                        <a href="#">위치기반서비스 이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                        </div>
+                        <div class="info-box">
+                            <p class="contact-info">제휴제안&광고문의: 테마원@테마원.com <br class="mobile">고객센터: cs@테마원.com</p>
+                            <p class="company-details">상호명 : (주)테마원 ㅣ 대표 홍길동 ㅣ 사업자등록번호 000-00-00000</p>
+                            <p class="address-info">주소 : 서울시 서울구 서울로 101, 1층 ㅣ 전화 : 1000-0000 & 000-0000-0000</p>
+                            <p class="copyright">Copyright (주)테더마이너스원. ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="social-icons">
+                        <a href="#"><figure><img src="img/icon/insta.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/in.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/x.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/youtube.svg" alt=""></figure></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/mobile_menu.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nowPw = document.getElementById('nowPw');
+            const nowPwChk = document.getElementById('nowPwChk');
+            const newPw1 = document.getElementById('newPw1');
+            const newPw2 = document.getElementById('newPw2');
+            const newPwChk = document.getElementById('newPwChk');
+            const expBox = document.querySelector('.exp-box');
+            const digitCnt = document.getElementById('digitCnt');
+            const reqTxt = document.getElementById('reqTxt');
+            const submitBtn = document.querySelector('button[type="submit"]');
+            const correctPassword = 'test1234!';
+            
+            // 현재 비밀번호 입력값 변화 감지
+            nowPw.addEventListener('input', function() {
+                const inputValue = this.value;
+                
+                // 입력값이 있을 때만 검증
+                if (inputValue !== '') {
+                    if (inputValue !== correctPassword) {
+                        // 비밀번호가 틀린 경우
+                        nowPwChk.classList.add('fault');
+                        this.classList.add('fault');
+                        this.classList.remove('success');
+                    } else {
+                        // 비밀번호가 맞는 경우
+                        nowPwChk.classList.remove('fault');
+                        this.classList.remove('fault');
+                        this.classList.add('success');
+                    }
+                } else {
+                    // 입력값이 없는 경우 모든 클래스 제거
+                    nowPwChk.classList.remove('fault');
+                    this.classList.remove('fault', 'success');
+                }
+                checkAllConditions();
+            });
+            
+            // 포커스 아웃 시에도 검증
+            nowPw.addEventListener('blur', function() {
+                const inputValue = this.value;
+                
+                if (inputValue !== '' && inputValue !== correctPassword) {
+                    nowPwChk.classList.add('fault');
+                    this.classList.add('fault');
+                    this.classList.remove('success');
+                }
+            });
+            
+            // 새로운 비밀번호 유효성 검사
+            function validateNewPassword() {
+                const password = newPw1.value;
+                const digitCntImg = digitCnt.querySelector('img');
+                const digitCntSpan = digitCnt.querySelector('span');
+                const reqTxtImg = reqTxt.querySelector('img');
+                const reqTxtSpan = reqTxt.querySelector('span');
+                
+                // exp-box에 active 클래스 추가/제거
+                if (password !== '') {
+                    expBox.classList.add('active');
+                } else {
+                    expBox.classList.remove('active');
+                }
+                
+                // 8~16개 문자 검사
+                const isLengthValid = password.length >= 8 && password.length <= 16;
+                if (isLengthValid) {
+                    digitCntImg.src = 'img/icon/check_circle_blue.svg';
+                    digitCnt.classList.add('checked');
+                    digitCntSpan.classList.add('checked');
+                } else {
+                    digitCntImg.src = 'img/icon/check_circle.svg';
+                    digitCnt.classList.remove('checked');
+                    digitCntSpan.classList.remove('checked');
+                }
+                
+                // 숫자와 특수문자 포함 검사
+                const hasNumber = /\d/.test(password);
+                const hasSpecialChar = /[!@#$%^&*()]/.test(password);
+                const isCharValid = hasNumber && hasSpecialChar;
+                
+                if (isCharValid) {
+                    reqTxtImg.src = 'img/icon/check_circle_blue.svg';
+                    reqTxt.classList.add('checked');
+                    reqTxtSpan.classList.add('checked');
+                } else {
+                    reqTxtImg.src = 'img/icon/check_circle.svg';
+                    reqTxt.classList.remove('checked');
+                    reqTxtSpan.classList.remove('checked');
+                }
+                
+                // newPw1 입력 필드에 success 클래스 추가/제거
+                if (password !== '' && isLengthValid && isCharValid) {
+                    newPw1.classList.add('success');
+                    newPw1.classList.remove('fault');
+                } else if (password !== '') {
+                    newPw1.classList.remove('success');
+                    newPw1.classList.add('fault');
+                } else {
+                    newPw1.classList.remove('success', 'fault');
+                }
+                
+                checkAllConditions();
+            }
+            
+            // 새로운 비밀번호 확인 검증
+            function validatePasswordMatch() {
+                const password1 = newPw1.value;
+                const password2 = newPw2.value;
+                
+                if (password2 !== '') {
+                    if (password1 !== password2) {
+                        // 비밀번호가 일치하지 않는 경우
+                        newPwChk.classList.add('active');
+                        newPw2.classList.add('fault');
+                        newPw2.classList.remove('success');
+                    } else {
+                        // 비밀번호가 일치하는 경우
+                        newPwChk.classList.remove('active');
+                        newPw2.classList.remove('fault');
+                        newPw2.classList.add('success');
+                    }
+                } else {
+                    // 입력값이 없는 경우
+                    newPwChk.classList.remove('active');
+                    newPw2.classList.remove('fault', 'success');
+                }
+                
+                checkAllConditions();
+            }
+            
+            // 모든 조건 체크하여 제출 버튼 활성화/비활성화
+            function checkAllConditions() {
+                const isCurrentPwValid = nowPw.value === correctPassword;
+                const isNewPwValid = newPw1.value.length >= 8 && newPw1.value.length <= 16 && 
+                                    /\d/.test(newPw1.value) && /[!@#$%^&*()]/.test(newPw1.value);
+                const isPasswordMatch = newPw1.value !== '' && newPw1.value === newPw2.value;
+                
+                if (isCurrentPwValid && isNewPwValid && isPasswordMatch) {
+                    submitBtn.disabled = false;
+                } else {
+                    submitBtn.disabled = true;
+                }
+            }
+            
+            // 이벤트 리스너 추가
+            newPw1.addEventListener('input', validateNewPassword);
+            newPw2.addEventListener('input', validatePasswordMatch);
+            newPw2.addEventListener('blur', validatePasswordMatch);
+        });
+    </script>
+</body>
+</html>

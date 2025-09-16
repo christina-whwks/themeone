@@ -70,6 +70,8 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .input-field-line {padding: 1.2rem 2rem; border-radius: 2rem; border: 1px solid #595B63; background-color: #121721; width: 100%; font-size: 1.6rem; height: 6rem; color: #F4F5F7; font-size: 1.6rem; font-weight: 500;}
 .input-field-line::placeholder {color: #A09FA5; font-weight: 500;}
 .input-field-line.withdrawal {border: 1px solid #3182F6;}
+.input-field-line.fault {border: 1px solid #FF2C3E;}
+.input-field-line.success {border: 1px solid #3182F6;}
 
 /* checkbox */
 input[type="checkbox"].basic-chk {position: absolute; opacity: 0; width: 0; height: 0;}
@@ -803,3 +805,22 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .amount-box .amount:after {content: '원'; padding-left: 0.5rem;}
 .expected-payback-container p.explain {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .expected-payback-container p.explain span {font-weight: 700;}
+
+/* ============================== [ 비밀번호 변경 ] ========================================================================================== */
+.pw-content {max-width: 56rem; width: 56rem;}
+.pw-wrapper {display: flex; flex-direction: column; row-gap: 8rem;}
+.pw-wrapper .pw-title-box {display: flex; flex-direction: column; padding-top: 4rem; row-gap: 1.2rem;}
+.pw-wrapper .pw-title-box h2 {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
+.pw-wrapper .pw-title-box p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.pw-form {display: flex; flex-direction: column;}
+.pw-form .input-group {display: flex; flex-direction: column; margin-bottom: 2rem; row-gap: 2rem;}
+.pw-form .input-group .validate-txt {display: flex; align-items: center; column-gap: 0.8rem; color: #FF2C3E; font-size: 1.2rem; font-weight: 500; line-height: 140%;}
+.pw-form .input-group #nowPwChk {opacity: 0;}
+.pw-form .input-group #nowPwChk.fault {opacity: 1;}
+.pw-form .password-group {display: flex; flex-direction: column; row-gap: 1.2rem;}
+.pw-form .exp-box {margin-bottom: 0.8rem; display: none;}
+.pw-form .exp-box.active {display: block;}
+.pw-form #newPwChk {display: none;}
+.pw-form #newPwChk.active {display: flex;}
+.pw-form .btn-group {margin-top: 8rem;}
+.pw-form .btn-group button {padding: 2rem 0; border-radius: 2rem;}
