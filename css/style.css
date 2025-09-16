@@ -136,6 +136,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .nav-content .logo-container a h2 {color: #3182F6; text-align: center; font-size: 3.2rem; font-weight: 900; line-height: 4.8rem;}
 .nav-content .logo-container a figure {width: fit-content;}
 .nav-content .nav-menu {display: flex; align-items: center; column-gap: 2.4rem; justify-content: center;}
+.nav-content .nav-menu li.active .nav-link {color: #0084FF;}
 .nav-content .nav-menu li .nav-link {color: #F4F5F7; font-size: 2rem; font-weight: 500; line-height: 3.2rem;}
 .nav-content .nav-right {display: flex; align-items: center; column-gap: 2.4rem; justify-content: flex-end;}
 .nav-content .nav-right .auth-buttons {display: flex; align-items: center; column-gap: 1.2rem;}
@@ -397,13 +398,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .payback-box {display: flex; align-items: center; justify-content: space-between;}
 .payback-box span {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
 .connect-right {width: 60%;}
-.my-exchange-box {display: flex; flex-direction: column; row-gap: 4rem;}
+.my-exchange-box {display: flex; flex-direction: column; row-gap: 4rem; height: 48rem;}
 .exchange-title {display: flex; align-items: center; justify-content: space-between;}
 .exchange-title > span {color: #A09FA5; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
 .exchange-title a {display: flex; align-items: center; column-gap: 0.4rem;}
 .exchange-title a span {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 3.6rem;}
 .exchange-title a figure {width: 1.6rem; height: 1.6rem;}
-.my-exchange-list {display: flex; align-items: center; flex-wrap: wrap; gap: 2rem;}
+.my-exchange-list {display: flex; align-items: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.3rem;}
 .my-exchange-list li {width: calc(50% - 1rem); padding: 2rem; display: flex; align-items: center; column-gap: 1.2rem;}
 .my-exchange-list li figure {width: 4rem; height: 4rem;}
 .my-exchange-list li .my-value-box {display: flex; flex-direction: column;}
@@ -679,20 +680,22 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 /* ============================== [ 연동하기 + 친구초대(코드발급) ] ========================================================================================== */
 /* step1 (초기화면) */
 .connect-content {max-width: 90.4rem; width: 100%; margin-bottom: 20rem;}
-.connect-wrapper {padding: 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 8rem;}
-.connect-wrapper .section-title {display: flex; flex-direction: column; row-gap: 0.8rem; align-items: flex-start; margin-bottom: 0;}
-.connect-wrapper .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
-.connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
-.connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem; position: relative;}
-.connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
+.connect-content .connect-wrapper {padding: 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 8rem;}
+.connect-content .connect-wrapper .section-title {display: flex; flex-direction: column; row-gap: 0.8rem; align-items: flex-start; margin-bottom: 0;}
+.connect-content .connect-wrapper .section-title a figure {width: 4rem; height: 4rem;}
+.connect-content .connect-wrapper .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.connect-content .connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.connect-content .connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem; position: relative;}
+.connect-content .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
 
 @media screen and (max-width: 768px) {
     .connect-content {padding: 0 20px; margin-top: 20px; margin-bottom: 200px;}
-    .connect-wrapper {padding: 40px 20px 20px 20px; row-gap: 80px;}
-    .connect-wrapper .section-title h2 {font-size: 20px;}
-    .connect-wrapper .section-title p {font-size: 12px;}
-    .connect-wrapper .section-title p.ft-14 {font-size: 14px;}
-    .connect-wrapper .btn-group a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
+    .connect-content .connect-wrapper {padding: 40px 20px 20px 20px; row-gap: 80px;}
+    .connect-content .connect-wrapper .section-title a figure {width: 24px; height: 24px;}
+    .connect-content .connect-wrapper .section-title h2 {font-size: 20px;}
+    .connect-content .connect-wrapper .section-title p {font-size: 12px;}
+    .connect-content .connect-wrapper .section-title p.ft-14 {font-size: 14px;}
+    .connect-content .connect-wrapper .btn-group a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
 }
 
 /* step2-1 : 예 누르면 나오는 페이지 */
@@ -776,3 +779,27 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .fixed-modal .modal-header {align-items: flex-start;}
 .fixed-modal .modal-buttons {align-items: stretch;}
 .fixed-modal .modal-buttons .blue-btn {padding: 2rem 0; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 2rem; font-weight: 700;}
+
+/* ============================== [ 페이백 테스트 ] ========================================================================================== */
+/* payback step2 */
+.leverage .input-group #delBtn {display: none; width: 2.4rem; height: 2.4rem;}
+.leverage .input-group #delBtn.active {display: block;}
+.leverage .input-group .input-field-line:focus {border: 1px solid #3182F6;}
+.input-group .unit {position: absolute; top: 50%; transform:translateY(-50%); right: 2rem; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1;}
+
+/* payback step4 */
+/* exchange-list 상속받아 사용 */
+.exchange-list.txt-list li .exchange-btn span {color: #A09FA5; font-size: 1.4rem;}
+
+@media screen and (max-width: 768px) {
+    .exchange-list.txt-list li .exchange-btn span {font-size: 14px;}
+}
+
+/* payback step5 */
+.expected-payback-container {display: flex; flex-direction: column; padding: 2.8rem; border-radius: 1.6rem; border: 1px solid #3182F6; row-gap: 2rem;}
+.amount-box {display: flex; flex-direction: column; border-bottom: 1px solid #313335;}
+.amount-box .subject {color: #A09FA5; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.amount-box .amount {color: #0084FF; font-size: 4.8rem; font-weight: 700; line-height: 150%; position: relative;}
+.amount-box .amount:after {content: '원'; padding-left: 0.5rem;}
+.expected-payback-container p.explain {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.expected-payback-container p.explain span {font-weight: 700;}

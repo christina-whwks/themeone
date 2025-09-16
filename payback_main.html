@@ -19,7 +19,7 @@
                 </div>
                 <div class="nav-center">
                     <ul class="nav-menu">
-                        <li><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
+                        <li class="active"><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
                         <li><a href="#" class="nav-link">서비스 소개</a></li>
                         <li><a href="#" class="nav-link">봇 소개</a></li>
                         <li><a href="partnership.html" class="nav-link">제휴문의</a></li>
@@ -53,21 +53,14 @@
             </div>
         </nav>
 
-        <main class="sub-content">
-            <div class="modal dis-modal fixed-modal" id="disconnectModal">
-                <div class="inner">
-                    <div class="modal-header">
-                        <h5>탈퇴하면<br>현재 이메일로는 재가입이 불가능해요
-                            <p>서비스 이용에 어려움이 있나요?</p>
-                        </h5>
-                        <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-buttons">
-                            <a href="#" class="blue-btn">상담원에게 도움받기</a>
-                            <a href="#" class="red-btn">그대로 탈퇴하기</a>
-                        </div>
-                    </div>
+        <main class="sub-content connect-content">
+            <div class="connect-wrapper failed">
+                <div class="section-title">
+                    <h2>지금 다른 사람들이<br>돌려받는 수수료는 얼마일까요?</h2>
+                    <p>간단한 조회<span class="highlight-blue"> 40초면 끝나요!</span></p>
+                </div>
+                <div class="btn-group btn-one">
+                    <a href="payback_step1.html" class="blue-btn">거래 수수료 환급 받으러가기</a>
                 </div>
             </div>
         </main>
@@ -103,72 +96,6 @@
                 </div>
             </div>
         </footer>
-    </div>
-
-    <!-- 거래소 선택 모달 -->
-    <div class="bg"></div>
-    <div class="modal exchange-modal" id="exchangeModal">
-        <div class="inner">
-            <div class="modal-header">
-                <h5>거래소 선택</h5>
-                <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
-            </div>
-            <div class="modal-body">
-                <ul class="exchange-list">
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/binance.png" alt=""></figure>
-                            <span>Binance</span>
-                            <figure class="heat"><img src="img/icon/mode_heat.svg" alt=""></figure>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bybit.png" alt=""></figure>
-                            <span>Bybit</span>
-                            <figure class="heat"><img src="img/icon/mode_heat.svg" alt=""></figure>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bitget.png" alt=""></figure>
-                            <span>Bitget</span>
-                            <figure class="heat"><img src="img/icon/mode_heat.svg" alt=""></figure>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/okx.png" alt=""></figure>
-                            <span>OKX</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bingx.png" alt=""></figure>
-                            <span>BingX</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/gateio.png" alt=""></figure>
-                            <span>Gate.io</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/tapbit.png" alt=""></figure>
-                            <span>Tapbit</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/mexc.png" alt=""></figure>
-                            <span>MEXC</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
     </div>
 
     <script src="js/modal.js"></script>

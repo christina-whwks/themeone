@@ -19,7 +19,7 @@
                 </div>
                 <div class="nav-center">
                     <ul class="nav-menu">
-                        <li><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
+                        <li class="active"><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
                         <li><a href="#" class="nav-link">서비스 소개</a></li>
                         <li><a href="#" class="nav-link">봇 소개</a></li>
                         <li><a href="partnership.html" class="nav-link">제휴문의</a></li>
@@ -53,21 +53,21 @@
             </div>
         </nav>
 
-        <main class="sub-content">
-            <div class="modal dis-modal fixed-modal" id="disconnectModal">
-                <div class="inner">
-                    <div class="modal-header">
-                        <h5>탈퇴하면<br>현재 이메일로는 재가입이 불가능해요
-                            <p>서비스 이용에 어려움이 있나요?</p>
-                        </h5>
-                        <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
+        <main class="sub-content connect-content">
+            <div class="connect-wrapper">
+                <div class="section-title">
+                    <a href="payback_main.html"><figure><img src="img/icon/arrow_forward_left.svg" alt=""></figure></a>
+                    <h2>레버리지 얼마나<br>사용하시나요?</h2>
+                    <p>평균적인 레버리지 배율을 알려주세요.</p>
+                </div>
+                <form action="" class="form withdrawal-form leverage">
+                    <div class="input-group">
+                        <input type="number" name="" id="leverageValue" class="input-field-line" placeholder="1 ~ 125 숫자를 입력해주세요" autocomplete="off">
+                        <button type="button" class="max-btn" id="delBtn"><figure><img src="img/icon/close.svg" alt=""></figure></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="modal-buttons">
-                            <a href="#" class="blue-btn">상담원에게 도움받기</a>
-                            <a href="#" class="red-btn">그대로 탈퇴하기</a>
-                        </div>
-                    </div>
+                </form>
+                <div class="btn-group btn-one">
+                    <button type="button" class="blue-btn withdrawal-btn" id="nextBtn" disabled>다음</button>
                 </div>
             </div>
         </main>
@@ -105,77 +105,43 @@
         </footer>
     </div>
 
-    <!-- 거래소 선택 모달 -->
-    <div class="bg"></div>
-    <div class="modal exchange-modal" id="exchangeModal">
-        <div class="inner">
-            <div class="modal-header">
-                <h5>거래소 선택</h5>
-                <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
-            </div>
-            <div class="modal-body">
-                <ul class="exchange-list">
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/binance.png" alt=""></figure>
-                            <span>Binance</span>
-                            <figure class="heat"><img src="img/icon/mode_heat.svg" alt=""></figure>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bybit.png" alt=""></figure>
-                            <span>Bybit</span>
-                            <figure class="heat"><img src="img/icon/mode_heat.svg" alt=""></figure>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bitget.png" alt=""></figure>
-                            <span>Bitget</span>
-                            <figure class="heat"><img src="img/icon/mode_heat.svg" alt=""></figure>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/okx.png" alt=""></figure>
-                            <span>OKX</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bingx.png" alt=""></figure>
-                            <span>BingX</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/gateio.png" alt=""></figure>
-                            <span>Gate.io</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/tapbit.png" alt=""></figure>
-                            <span>Tapbit</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/mexc.png" alt=""></figure>
-                            <span>MEXC</span>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
     <script src="js/modal.js"></script>
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const leverageInput = document.getElementById('leverageValue');
+            const delBtn = document.getElementById('delBtn');
+            const nextBtn = document.getElementById('nextBtn');
             
+            // 입력값 변화 감지
+            leverageInput.addEventListener('input', function() {
+                const inputValue = this.value.trim();
+                
+                if (inputValue !== '') {
+                    // 값이 있으면 delBtn에 active 클래스 추가하고 nextBtn 활성화
+                    delBtn.classList.add('active');
+                    nextBtn.disabled = false;
+                } else {
+                    // 값이 없으면 delBtn에서 active 클래스 제거하고 nextBtn 비활성화
+                    delBtn.classList.remove('active');
+                    nextBtn.disabled = true;
+                }
+            });
+            
+            // 삭제 버튼 클릭 시 입력값 초기화
+            delBtn.addEventListener('click', function() {
+                leverageInput.value = '';
+                this.classList.remove('active');
+                nextBtn.disabled = true;
+                leverageInput.focus(); // 포커스 다시 맞춤
+            });
+            
+            // nextBtn 클릭 시 다음 페이지로 이동
+            nextBtn.addEventListener('click', function() {
+                if (!this.disabled) {
+                    window.location.href = 'payback_step3.html';
+                }
+            });
         });
     </script>
 </body>
