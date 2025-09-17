@@ -50,9 +50,11 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .blue-btn.withdrawal-btn {padding: 2rem 0; width: 100%; font-size: 2rem; color: #fff; font-weight: 700; line-height: 150%;}
 .blue-btn:disabled {background-color: #203453; color: #0084FF;}
 .dark-blue-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: #203453; color: #0084FF; font-size: 2rem; font-weight: 700; line-height: 150%; text-align: center;}
-.line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem; text-align: center;}
+.dark-wh-btn {padding: 1.2rem 2.4rem; border-radius: 2.4rem; background-color: #1B202A; color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%; text-align: center;}
+.line-btn {padding: 1.2rem 2.4rem; border-radius: 2rem; background-color: transparent; border: 1px solid #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 150%; text-align: center;}
 .line-btn.help-btn {padding: 1.2rem 2rem; border-radius: 8rem; width: fit-content; color: #0084FF; font-size: 2rem; line-height: 150%;}
-.line-btn.bold-btn {font-weight: 900; color: #0084FF;}
+.line-btn.bold-btn {font-weight: 900; color: #0084FF; color: #A09FA5;}
+.line-btn.normal {border: 1px solid #313335; border-radius: 2.4rem;}
 .yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .max-btn {background-color: transparent; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1; position: absolute; top: 50%; transform:translateY(-50%); right: 2rem;}
@@ -840,3 +842,23 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .rank-list li .rank-txt-box .uid-box {display: flex; align-items: center; column-gap: 0.5rem;}
 .rank-list li .rank-txt-box .uid-box span {color: #F4F5F7; font-size: 1.4rem; font-weight: 500; line-height: 1;}
 .rank-list li .rank-txt-box .now-rank p {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
+
+/* ============================== [ 뉴스 페이지 메인 + 상세 ] ========================================================================================== */
+.news-content {max-width: 133.2rem; margin: 20rem auto; width: 100%; margin-bottom: 12rem;}
+.date-container {margin-bottom: 2rem;}
+.date-container .date {padding: 4rem; border-radius: 2rem; background-color: #3182F6;}
+.date-container .date p {color: #FFF; font-size: 2.4rem; font-weight: 600; line-height: 87.5%;}
+.news-list {display: flex; flex-direction: column; row-gap: 2rem;}
+.news-detail {display: flex; flex-direction: column; padding: 8rem 4rem; border-radius: 1.6rem; background-color: #1B202A;}
+.news-detail .news-title {margin-bottom: 1.2rem;}
+.news-detail .news-title p {color: #F4F5F7; font-size: 2.4rem; font-weight: 600; line-height: 150%;}
+.news-detail .news-date {margin-bottom: 2rem;}
+.news-detail .news-date p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.news-detail .news-summary {margin-bottom: 2rem;}
+.news-detail .news-summary p {color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 140%;}
+
+.news-btn-box {display: flex; align-items: center; justify-content: center; margin-top: 4rem;}
+
+@media screen and (max-width: 768px) {
+    .news-content {padding: 0 2rem;}
+}
