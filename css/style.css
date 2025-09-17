@@ -689,6 +689,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .connect-content .connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .connect-content .connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem; position: relative;}
 .connect-content .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
+.connect-content .connect-wrapper .btn-group.btn-one a {width: 100%;}
 
 @media screen and (max-width: 768px) {
     .connect-content {padding: 0 20px; margin-top: 20px; margin-bottom: 200px;}
