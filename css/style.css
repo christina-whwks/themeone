@@ -829,3 +829,14 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 /* ============================== [ 제휴거래소 전체 ] ========================================================================================== */
 /* 메인 페이지 상속받아 사용 */
 .visual-section {max-width: 133.2rem; margin: 12.6rem auto; width: 100%; margin-bottom: 12rem;}
+
+/* ============================== [ 페이백 랭킹 ] ========================================================================================== */
+.rank-container {}
+.rank-list {display: flex; flex-direction: column; row-gap: 2rem;}
+.rank-list li {padding: 2rem; border-radius: 1.6rem; background-color: #121721; display: flex; align-items: center; column-gap: 1.2rem;}
+.rank-list li.active {background-color: #3182F6;}
+.rank-list li figure {width: 4rem; height: 4rem;}
+.rank-list li .rank-txt-box {display: flex; flex-direction: column;}
+.rank-list li .rank-txt-box .uid-box {display: flex; align-items: center; column-gap: 0.5rem;}
+.rank-list li .rank-txt-box .uid-box span {color: #F4F5F7; font-size: 1.4rem; font-weight: 500; line-height: 1;}
+.rank-list li .rank-txt-box .now-rank p {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
