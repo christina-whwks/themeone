@@ -19,14 +19,17 @@
                 </div>
                 <div class="nav-center">
                     <ul class="nav-menu">
-                        <li class="active"><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
+                        <li><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
                         <li><a href="service_introduce.html" class="nav-link">서비스 소개</a></li>
-                        <li><a href="bot_introduce.html" class="nav-link">봇 소개</a></li>
+                        <li class="active"><a href="bot_introduce.html" class="nav-link">봇 소개</a></li>
                         <li><a href="partnership.html" class="nav-link">제휴문의</a></li>
                     </ul>
                 </div>
                 <div class="nav-right">
-                    <a href="mypage.html"><figure><img src="img/icon/account_circle.svg" alt=""></figure></a>
+                    <div class="auth-buttons">
+                        <a href="join.html" class="blue-btn">회원가입</a>
+                        <a href="login.html" class="line-btn">로그인</a>
+                    </div>
                     <a href="#" class="pc"><figure><img src="img/icon/language.svg" alt=""></figure></a>
                     <a href="#" class="mobile" id="mobileMenu"><figure><img src="img/icon/dehaze.svg" alt=""></figure></a>
                 </div>
@@ -53,67 +56,73 @@
             </div>
         </nav>
 
-        <main class="sub-content connect-content">
-            <div class="connect-wrapper">
-                <div class="section-title">
-                    <a href="payback_main.html"><figure><img src="img/icon/arrow_forward_left.svg" alt=""></figure></a>
-                    <h2>가장 자주 쓰는<br>거래소 하나만 선택해주세요.</h2>
-                    <p>어떤 거래소를 이용 중이신가요?</p>
+        <main class="bot-main">
+            <!-- Hero Banner -->
+            <section class="hero-banner">
+                <div class="bg-blur"></div>
+                <div class="hero-content">
+                    <div class="bot-image-box">
+                        <figure><img src="img/bot.png" alt=""></figure>
+                    </div>
+                    <div class="section-title">
+                        <h2>
+                            테마원의 코인 정보 봇<br />
+                            <span class="highlight-blue">고래잡는 포경선</span>
+                        </h2>
+                    </div>
                 </div>
-                <ul class="exchange-list">
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/binance.png" alt=""></figure>
-                            <span>Binance</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bybit.png" alt=""></figure>
-                            <span>Bybit</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bitget.png" alt=""></figure>
-                            <span>Bitget</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/okx.png" alt=""></figure>
-                            <span>OKX</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/bingx.png" alt=""></figure>
-                            <span>BingX</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/gateio.png" alt=""></figure>
-                            <span>Gate.io</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/tapbit.png" alt=""></figure>
-                            <span>Tapbit</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button type="button" class="exchange-btn">
-                            <figure><img src="img/logos/mexc.png" alt=""></figure>
-                            <span>MEXC</span>
-                        </button>
-                    </li>
-                </ul>
+            </section>
+
+            <section class="explain-section">
+                <div class="explain-wrapper">
+                    <div class="explain-box">
+                        <ul class="explain-list">
+                            <li>
+                                <h5><span class="highlight-blue">1.</span> 주간 일정표 전달</h5>
+                                <p>매주 주말 차주 일정표 전달<br>
+                                    !일정 명령어 입력 시 주간일정 텍스트 업로드</p>
+                            </li>
+                            <li>
+                                <h5><span class="highlight-blue">2.</span> 데드,골든크로스 알림</h5>
+                                <p>20 - 200 기준선 기준 알림</p>
+                            </li>
+                            <li>
+                                <h5><span class="highlight-blue">3.</span> 비트코인 RSI 알림</h5>
+                                <p> 15분 / 1시간 / 4시간 타임프레임<br>
+                                    Rsi 30 또는 70에서 마감하는 캔들이여야만<br> 
+                                    알람이 작동</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="explain-box">
+                        <ul class="explain-list">
+                            <li>
+                                <h5><span class="highlight-blue">4.</span> 매 시간대별 OI 제공</h5>
+                                <p>매 시간 CVD,청산맵 제공 4시간 마다 <br>
+                                    비트코인 도미넌스,코베 프리미엄, <br>
+                                    미결제 약정 제공</p>
+                            </li>
+                            <li>
+                                <h5><span class="highlight-blue">5.</span> 정보 전달</h5>
+                                <p>각종 텔레그램 정보글 빠르게 전달<br>
+                                    (딜레이 약 1분)</p>
+                            </li>
+                            <li>
+                                <h5><span class="highlight-blue">6.</span> 코인 시세 조회</h5>
+                                <p>예시) !시세 비트코인 입력 시 <br>
+                                    바이낸스,업비트 기준 <br>
+                                    시세정보,김프 조회 기능</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="btn-group btn-one">
-                    <button type="button" class="blue-btn withdrawal-btn" id="nextBtn" disabled>다음</button>
+                    <button type="button" class="blue-btn contact-btn">
+                        <figure><img src="img/icon/chat.svg" alt=""></figure>
+                        <span>봇 문의하기</span>
+                    </button>
                 </div>
-            </div>
+            </section>
         </main>
 
         <!-- Footer -->
@@ -149,34 +158,10 @@
         </footer>
     </div>
 
-    <script src="js/modal.js"></script>
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const exchangeBtns = document.querySelectorAll('.exchange-btn');
-            const nextBtn = document.getElementById('nextBtn');
-
-            // 거래소 버튼 클릭 시 선택 상태 변경 및 다음 버튼 활성화
-            exchangeBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // 모든 버튼에서 선택 상태 제거
-                    exchangeBtns.forEach(b => b.classList.remove('selected'));
-                    
-                    // 클릭된 버튼에 선택 상태 추가
-                    this.classList.add('selected');
-                    
-                    // 다음 버튼 활성화
-                    nextBtn.disabled = false;
-                });
-            });
-
-            nextBtn.addEventListener('click', function() {
-                // 선택된 거래소가 있는지 확인 (버튼이 활성화된 상태인지 체크)
-                if (!this.disabled) {
-                    // 다음 페이지로 이동
-                    window.location.href = 'payback_step2.html';
-                }
-            });
+        
         });
     </script>
 </body>
