@@ -862,3 +862,78 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 @media screen and (max-width: 768px) {
     .news-content {padding: 0 2rem;}
 }
+
+/* ============================== [ 서비스 소개 페이지 ] ========================================================================================== */
+.service-main {max-width: 133.2rem; width: 100%; margin: 0 auto;}
+.service-main .section-title {display: flex; flex-direction: column; row-gap: 2rem;}
+.service-main .section-title p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%; }
+.service-main .section-title h2 {text-align: center; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
+.service-main .section-title span {color: #A09FA5; text-align: center; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.service-main .section-title span.highlight-blue {color: #0084FF;}
+
+.service-main .hero-content {display: flex; flex-direction: column; row-gap: 2rem; margin: 19.5rem auto;}
+.service-main .hero-content .hero-subtitle {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
+.service-main .hero-content .hero-title-text {color: #F4F5F7; text-align: center; font-size: 6.4rem; font-weight: 900; line-height: 140%;}
+
+.service-main .features-section {display: flex; align-items: center; justify-content: center; margin-bottom: 20rem;}
+.service-main .features-container {display: flex; align-items: center; column-gap: 2rem;}
+.service-main .features-container .feature-card {border-radius: 4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem; padding: 4rem 0; width: 31rem; height: 37rem;}
+.service-main .features-container .feature-card.feature-card-green {background-color: #56AF31;}
+.service-main .features-container .feature-card.feature-card-blue {background-color: #0084FF;}
+.service-main .features-container .feature-card.feature-card-purple {background-color: #7F5BFB;}
+.service-main .features-container .feature-card .feature-txt-box {display: flex; flex-direction: column;}
+.service-main .features-container .feature-card .feature-txt-box p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.service-main .features-container .feature-card .feature-txt-box h3 {color: #F4F5F7; text-align: center; font-size: 4rem; font-weight: 700; line-height: 150%;}
+
+.differentiators-section {margin-bottom: 20rem;}
+.differentiators-section .stats-list {max-width: 100rem; width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4rem; margin: 0 auto;}
+.differentiators-section .stats-list .stat-item {width: calc(33% - 2.5rem); display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 2rem;}
+.differentiators-section .stats-list .stat-item figure {width: 20rem; height: 20rem;}
+.differentiators-section .stats-list .stat-item .stat-txt-box {display: flex; flex-direction: column; }
+.differentiators-section .stats-list .stat-item .stat-txt-box p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
+.differentiators-section .stats-list .stat-item .stat-txt-box .stat-number {color: #F4F5F7; text-align: center; font-size: 4rem; font-weight: 700; line-height: 150%;}
+
+.partnership-container {width: 100%; padding: 8rem 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 8rem;}
+.partnership-container figure {width: 32rem; height: 32rem;}
+.partnership-container .partnership-text h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 900; line-height: 150%;}
+
+.usage-section {margin: 32.6rem auto; width: 100%;}
+.usage-container {display: flex; flex-direction: column; row-gap: 12rem;}
+.usage-list {display: flex; align-items: center; column-gap: 8rem;}
+.usage-list li {padding: 2rem 0; border-radius: 2rem; background-color: #1B202A; width: 27rem; position: relative;}
+.usage-list li:after {content: ''; width: 4rem; height: 4rem; background-image: url('/img/icon/arrow_right_blue.svg'); background-repeat: no-repeat; position: absolute; top: 50%; right: -22%; transform: translateY(-50%);}
+.usage-list li:last-child:after {display: none;}
+.usage-list li p {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 150%; text-align: center;}
+
+.analytics-section {margin-bottom: 20rem;}
+.analytics-section .section-title p {font-size: 3.2rem; font-weight: 700;}
+.analytics-section .section-title span {font-size: 3.2rem; font-weight: 700;}
+.chart-container {display: flex; align-items: flex-end; column-gap: 2rem; justify-content: center; margin-bottom: 12rem;}
+.chart-bar {display: flex; flex-direction: column; row-gap: 2rem; width: 25rem; align-items: center; justify-content: center;}
+.chart-bar .chart-bar-visual {width: 8rem; border-radius: 1.6rem; background-color: #3182F6;}
+.chart-bar .chart-bar-visual.gray {background-color: #A09FA5;}
+.chart-bar .chart-value {color: #A09FA5; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.chart-bar .chart-label {color: #A09FA5; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.chart-bar .chart-label.white {color: #F4F5F7;}
+
+.service-main .exchange-section {margin-bottom: 20rem;}
+.service-main .tab-container {margin-bottom: 0;}
+.service-main .tab-buttons {column-gap: 2rem; display: flex;}
+.service-main .tab-buttons li {flex: 1;}
+.service-main .tab-buttons .tab-btn {padding: 2rem; display: flex; align-items: center; column-gap: 1.2rem; border-radius: 2rem; background-color: #1B202A; flex: 1;}
+.service-main .tab-buttons .tab-btn figure {width: 3.2rem; height: 3.2rem; border-radius: 2rem; overflow: hidden;}
+.service-main .tab-buttons .tab-btn span {color: #F4F5F7; font-size: 1.6rem; font-weight: 600; line-height: 1;}
+.service-main .tab-buttons .tab-btn.active {border: 1px solid #3182F6; background-color: #203453;}
+.service-main .tab-contents-wrapper {margin-bottom: 4rem;}
+.service-main .tab-contents .tab-content .exchange-wrapper {padding: 8rem 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 5rem; align-items: center; justify-content: center;}
+.service-main .tab-contents .tab-content .exchange-wrapper .exchange-box {display: flex; flex-direction: column; row-gap: 2rem; align-items: center; justify-content: center; text-align: center;}
+.service-main .tab-contents .tab-content .exchange-wrapper .exchange-box h3 {color: #F4F5F7; text-align: center; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.service-main .tab-contents .tab-content .exchange-wrapper .exchange-box p {color: #A09FA5; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
+.service-main .chart-container {margin-bottom: 0; column-gap: 12rem;}
+.service-main .chart-bar {width: fit-content;}
+
+.cta-section {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; padding: 20rem 0; background-color: #1B202A; row-gap: 8rem;}
+.cta-section .section-title {display: flex; flex-direction: column; row-gap: 2rem;}
+.cta-section .section-title p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
+.cta-section .section-title h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
+.cta-section .cta-button-container .blue-btn {width: 97.5rem; padding: 2rem 0; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
