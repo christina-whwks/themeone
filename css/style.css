@@ -216,10 +216,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-list li .exchange-btn figure.heat {width: 12px; height: 12px;}
 }
 
-/* 문의하기 모달 */
+/* 문의하기 모달 (가입권유모달 같이 사용) */
 .req-modal {max-width: 82.4rem; width: 100%;}
+.req-modal.join .inner {row-gap: 8rem;}
+.req-modal .modal-header {align-items: flex-start;}
 .modal-buttons {display: flex; align-items: center; column-gap: 2rem;}
 .modal-buttons a {width: calc(50% - 1rem);}
+.modal-buttons.btn-one a {width: 100%; padding: 2rem 0; font-size: 2rem;}
 
 @media screen and (max-width: 768px) {
     .req-modal {max-width: 370px; padding: 20px;}
@@ -956,3 +959,87 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 .bot-main .btn-group {display: flex; justify-content: center;}
 .bot-main .btn-group .blue-btn.contact-btn {width: fit-content; border-radius: 4rem;}
+
+/* ============================== [ 셀퍼럴 상세 페이지 ] ========================================================================================== */
+.self-main .notification-box {display: flex; align-items: center; column-gap: 0.8rem; padding: 2rem 2.4rem; border-radius: 2rem; border: 1px solid #313335; background-color: #121721;}
+.self-main .notification-box figure {width: 4rem; height: 4rem;}
+.self-main .notification-box p {color: #A09FA5; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.self-main .notification-box .noti-wrapper {display: flex; align-items: center; justify-content: space-between; width: 100%;}
+.self-main .notification-box .noti-wrapper > figure {width: 2.4rem; height: 2.4rem;}
+.self-main .notification-box .noti-wrapper .noti-left {display: flex; align-items: center; column-gap: 0.8rem;}
+.self-main .notification-box .noti-wrapper .noti-left p span.small {font-size: 1.4rem;}
+
+.self-main .banner-section {background-color: #00F0FF;}
+.self-main .banner-section .banner-wrapper {display: flex; align-items: center; justify-content: center;}
+.self-main .banner-section .banner-wrapper figure {width: 37.8rem; height: 37.8rem;}
+
+.self-main .top-section {max-width: 133.2rem; width: 100%; margin: 8rem auto 20rem;}
+.self-main .top-section .top-wrapper {display: flex; flex-direction: column; row-gap: 4rem;}
+.self-main .top-section .section-title {display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; row-gap: 2rem; margin-bottom: 0;}
+.self-main .top-section .section-title h2 {color: #F4F5F7; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
+.self-main .top-section .section-title .boost-info {display: flex; align-items: center; justify-content: flex-start; column-gap: 0.8rem;}
+.self-main .top-section .section-title .boost-info .boost-badge {display: flex; align-items: center; border-radius: 4px; background-color: #6D000F; padding: 4px;}
+.self-main .top-section .section-title .boost-info .boost-badge figure {width: 1.6rem; height: 1.6rem;}
+.self-main .top-section .section-title .boost-info .boost-badge span {color: #FF2C3E; font-size: 12px; font-weight: 600; line-height: 140%; padding-top: 3px;}
+.self-main .top-section .section-title .boost-info p {color: #A09FA5; font-size: 1.6rem; font-weight: 600; line-height: 150%;}
+.self-main .top-section .progress-box {margin-top: 4rem;}
+.self-main .top-section .progress-box .progress-bar {position: relative; height: 8px; width: 100%; border-radius: 4px; background-color: #1B202A;}
+.self-main .top-section .progress-box .progress-bar .progress-fill {position: absolute; height: 8px; top: 0; left: 0; border-radius: 4px; background-color: #3182F6; z-index: 1;}
+.self-main .top-section .progress-box .progress-bar .progress-label {position: absolute; bottom: 220%; border-radius: 1.6rem 1.6rem 1.6rem 0; background-color: #1B202A; padding: 0.8rem 1.2rem; box-shadow: 0 8px 20px 0 rgba(16, 17, 18, 0.10);}
+.self-main .top-section .progress-box .progress-bar .progress-label span {color: #A09FA5; text-align: center; font-size: 1.2rem; font-weight: 500; line-height: 140%;}
+.self-main .top-section .progress-box .progress-bar .progress-label span.rate:after {content: '%'; padding-left: 0.3rem;}
+
+.self-main .fee-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .fee-section .fee-wrapper {display: flex; flex-direction: column; row-gap: 4rem;}
+.self-main .fee-section .section-title {margin-bottom: 0; font-weight: 700;}
+.self-main .fee-section .fee-content {display: flex; flex-direction: column;}
+.self-main .fee-section .fee-content p {color: #A09FA5; font-size: 2.4rem; font-weight: 600; line-height: 186%;}
+
+.self-main .policy-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .policy-section .section-title {margin-bottom: 0;}
+.self-main .policy-section .section-title h2 {font-weight: 700;}
+.self-main .policy-section .policy-wrapper {display: flex; flex-direction: column; row-gap: 4rem;}
+.self-main .policy-section .policy-content {display: flex; flex-direction: column; row-gap: 2rem;}
+.self-main .policy-section .policy-content .policy-box {display: flex; flex-direction: column; height: fit-content; margin-top: 0; margin-bottom: 0; overflow-y: hidden;}
+.self-main .policy-section .policy-content .policy-box h5 {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.self-main .policy-section .policy-content .policy-box p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.self-main .policy-section .policy-content .policy-box .policy-table {padding: 4rem 2rem; border-radius: 2rem; border: 1px solid #3182F6; background-color: #121721;}
+.self-main .policy-section .policy-content .policy-box .policy-table th:first-child {width: 33%; text-align: left;}
+.self-main .policy-section .policy-content .policy-box .policy-table td:nth-child(2),
+.self-main .policy-section .policy-content .policy-box .policy-table td:last-child {width: 33%; text-align: center;}
+.self-main .policy-section .policy-content .policy-box .policy-table tr:last-child td {padding-bottom: 0;}
+.self-main .policy-section .policy-content .policy-box .policy-table th,
+.self-main .policy-section .policy-content .policy-box .policy-table td {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%; padding-bottom: 2rem;}
+.self-main .policy-section .policy-content .policy-box .policy-table th.gray,
+.self-main .policy-section .policy-content .policy-box .policy-table td.gray {color: #A09FA5;}
+.self-main .policy-section .policy-content .policy-box .policy-table th.blue,
+.self-main .policy-section .policy-content .policy-box .policy-table td.blue {color: #0084FF;}
+.self-main .policy-section .policy-content .policy-box .policy-table td.white {color: #F4F5F7;}
+
+.self-main .analytics-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .analytics-section .section-title {margin-bottom: 4rem;}
+.self-main .analytics-section .section-title h2 {font-weight: 700;}
+.self-main .analytics-section .section-sub-title {display: flex; flex-direction: column; margin-bottom: 8rem;}
+.self-main .analytics-section .section-sub-title h3 {color: #A09FA5; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.self-main .analytics-section .section-sub-title p {color: #A09FA5; font-size: 2rem; font-weight: 400; line-height: 150%;}
+
+.self-main .themeone-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .themeone-section .section-title {margin-bottom: 4rem;}
+.self-main .themeone-section .section-title h2 {font-weight: 700;}
+.self-main .themeone-section .themeone-list {display: flex; align-items: center; justify-content: center; width: 100%; column-gap: 2rem;}
+.self-main .themeone-section .themeone-list li {width: 33%;}
+.self-main .themeone-section .themeone-list li a {padding: 3.2rem 2rem; border-radius: 3.2rem; background-color: #1B202A; display: block; width: 100%; height: 35rem;}
+
+.self-main .event-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .event-section .section-title {margin-bottom: 4rem;}
+.self-main .event-section .section-title h2 {font-weight: 700;}
+.self-main .event-section .event-list {display: flex; align-items: center; justify-content: center; width: 100%; column-gap: 2rem;}
+.self-main .event-section .event-list li {width: 50%;}
+.self-main .event-section .event-list li a {padding: 3.2rem 2rem; border-radius: 3.2rem; background-color: #1B202A; display: block; width: 100%; height: 35rem;}
+
+.floating-section {max-width: 122rem; width: 100%; position: fixed; bottom: 10%; z-index: 10; left: 50%; transform: translateX(-50%);}
+.floating-section .floating-wrapper {padding: 4rem 2rem; border-radius: 2rem; border: 2px solid #3182F6; background-color: #121721; display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.floating-section .floating-wrapper .section-title {margin-bottom: 4rem;}
+.floating-section .floating-wrapper .section-title h2 {font-weight: 700;}
+.floating-section .floating-wrapper .btn-group {width: 100%; display: flex; align-items: center; justify-content: center; column-gap: 1.2rem;}
+.floating-section .floating-wrapper .btn-group a {width: 50%; border-radius: 2rem; padding: 2rem 0; font-size: 2rem;}
