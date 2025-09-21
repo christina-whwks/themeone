@@ -881,6 +881,15 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .rank-list li .rank-txt-box .uid-box span {color: #F4F5F7; font-size: 1.4rem; font-weight: 500; line-height: 1;}
 .rank-list li .rank-txt-box .now-rank p {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
 
+@media screen and (max-width: 768px) {
+    .rank.connect-content .connect-wrapper .section-title h2 {font-size: 24px;}
+    .rank.connect-content .connect-wrapper .section-title p {font-size: 12px;}
+    .rank-list li {padding: 12px; column-gap: 12px; border-radius: 16px;}
+    .rank-list li figure {width: 32px; height: 32px;}
+    .rank-list li .rank-txt-box .uid-box span {font-size: 12px;}
+    .rank-list li .rank-txt-box .now-rank p {font-size: 16px;}
+}
+
 /* ============================== [ 뉴스 페이지 메인 + 상세 ] ========================================================================================== */
 .news-content {max-width: 133.2rem; margin: 20rem auto; width: 100%; margin-bottom: 12rem;}
 .date-container {margin-bottom: 2rem;}
