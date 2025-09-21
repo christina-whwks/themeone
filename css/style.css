@@ -710,17 +710,24 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .connect-content .connect-wrapper .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
 .connect-content .connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .connect-content .connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem; position: relative;}
-.connect-content .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%; color: #0084FF;}
+.connect-content .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
+.connect-content .connect-wrapper .btn-group a.line-btn.bold-btn {color: #0084FF;}
 .connect-content .connect-wrapper .btn-group.btn-one a {width: 100%;}
 
 @media screen and (max-width: 768px) {
     .connect-content {padding: 0 20px; margin-top: 120px; margin-bottom: 200px;}
     .connect-content .connect-wrapper {padding: 40px 20px; row-gap: 40px;}
+    .connect-content .connect-wrapper.step {padding: 20px;}
+    .connect-content .connect-wrapper.step .section-title {row-gap: 12px;}
+    .connect-content .connect-wrapper.step .section-title p {display: none;}
+    .connect-content .connect-wrapper.step.s2 .section-title p {display: block;}
     .connect-content .connect-wrapper .section-title a figure {width: 24px; height: 24px;}
     .connect-content .connect-wrapper .section-title h2 {font-size: 20px;}
     .connect-content .connect-wrapper .section-title p {font-size: 10px;}
     .connect-content .connect-wrapper .section-title p.ft-14 {font-size: 14px;}
     .connect-content .connect-wrapper .btn-group a {padding: 12px 0; font-size: 14px; border-radius: 12px;}
+    .connect-content .connect-wrapper.step .btn-group.btn-one .blue-btn.withdrawal-btn {font-size: 14px;}
+    .connect-wrapper.step .input-field-line {font-size: 10px; padding: 12px; height: auto;}
 }
 
 /* step2-1 : 예 누르면 나오는 페이지 */
@@ -830,12 +837,18 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .leverage .input-group #delBtn.active {display: block;}
 .leverage .input-group .input-field-line:focus {border: 1px solid #3182F6;}
 .input-group .unit {position: absolute; top: 50%; transform:translateY(-50%); right: 2rem; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1;}
+@media screen and (max-width: 768px) {
+    .leverage .input-group #delBtn {width: 12px; height: 12px;}
+}
 
 /* payback step4 */
 /* exchange-list 상속받아 사용 */
 .exchange-list.txt-list li .exchange-btn span {color: #A09FA5; font-size: 1.4rem;}
 
 @media screen and (max-width: 768px) {
+    .exchange-list.txt-list {flex-direction: column;}
+    .exchange-list.txt-list li {width: 100%;}
+    .exchange-list.txt-list li .exchange-btn {padding: 20px;}
     .exchange-list.txt-list li .exchange-btn span {font-size: 14px;}
 }
 
@@ -847,6 +860,15 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .amount-box .amount:after {content: '원'; padding-left: 0.5rem;}
 .expected-payback-container p.explain {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .expected-payback-container p.explain span {font-weight: 700;}
+
+@media screen and (max-width: 768px) {
+    .expected-payback-container {padding: 20px; border-radius: 12px; row-gap: 20px; margin-bottom: 8rem;}
+    .amount-box .subject {font-size: 14px;}
+    .amount-box .amount {font-size: 32px; margin-bottom: 12px;}
+    .expected-payback-container p.explain {font-size: 12px;}
+    .connect-content .connect-wrapper.step .btn-group.btn-one .blue-btn.withdrawal-btn.ft-16 {font-size: 16px;}
+
+}
 
 /* ============================== [ 비밀번호 변경 ] ========================================================================================== */
 .pw-content {max-width: 56rem; width: 56rem;}
