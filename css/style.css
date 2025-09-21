@@ -550,6 +550,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-table tbody td {padding: 12px 0; font-size: 10px; line-height: 15px;}
     .exchange-table .exchange figure {width: 12px; height: 12px;}
     .exchange-table .exchange span {font-size: 10px;}
+    .exchange-table tbody tr.active td:first-child {padding-right: 20px;}
 }
 
 @media screen and (max-width: 449px) {
@@ -869,6 +870,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 /* ============================== [ 제휴거래소 전체 ] ========================================================================================== */
 /* 메인 페이지 상속받아 사용 */
 .visual-section {max-width: 133.2rem; margin: 12.6rem auto; width: 100%; margin-bottom: 12rem;}
+.visual-section .img-box {width: 100%; height: 47rem; border-radius: 2rem; background-color: #1B202A; padding: 4rem;}
+
+@media screen and (max-width: 768px) {
+    .visual-section {padding: 20px; margin: 43px auto;}
+    .visual-section .img-box {height: 240px; padding: 40px; border-radius: 20px;}
+    .visual-section .img-box figure {width: 100%; height: 100%;}
+}
 
 /* ============================== [ 페이백 랭킹 ] ========================================================================================== */
 .rank-container {}
