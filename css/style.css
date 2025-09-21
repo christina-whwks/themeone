@@ -1063,3 +1063,14 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .floating-section .floating-wrapper .section-title h2 {font-weight: 700;}
 .floating-section .floating-wrapper .btn-group {width: 100%; display: flex; align-items: center; justify-content: center; column-gap: 1.2rem;}
 .floating-section .floating-wrapper .btn-group a {width: 50%; border-radius: 2rem; padding: 2rem 0; font-size: 2rem;}
+
+/* ============================== [ 마이페이지 - 쿠폰 ] ========================================================================================== */
+.coupon-container {}
+.coupon-empty {display: flex; flex-direction: column; justify-content: center; align-items: center; row-gap: 2rem;}
+.coupon-empty figure {width: 12rem; height: 12rem;}
+.coupon-empty span {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+
+@media screen and (max-width: 768px) {
+    .counpon-empty figure {width: 80px; height: 80px;}
+    .coupon-empty span {font-size: 20px;}
+}
