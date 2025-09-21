@@ -693,17 +693,17 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .connect-content .connect-wrapper .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
 .connect-content .connect-wrapper .section-title p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .connect-content .connect-wrapper .btn-group {display: flex; align-items: center; column-gap: 1.2rem; position: relative;}
-.connect-content .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%;}
+.connect-content .connect-wrapper .btn-group a {width: 50%; padding: 2rem 0; font-size: 2rem; line-height: 150%; color: #0084FF;}
 .connect-content .connect-wrapper .btn-group.btn-one a {width: 100%;}
 
 @media screen and (max-width: 768px) {
-    .connect-content {padding: 0 20px; margin-top: 20px; margin-bottom: 200px;}
-    .connect-content .connect-wrapper {padding: 40px 20px 20px 20px; row-gap: 80px;}
+    .connect-content {padding: 0 20px; margin-top: 120px; margin-bottom: 200px;}
+    .connect-content .connect-wrapper {padding: 40px 20px; row-gap: 40px;}
     .connect-content .connect-wrapper .section-title a figure {width: 24px; height: 24px;}
     .connect-content .connect-wrapper .section-title h2 {font-size: 20px;}
-    .connect-content .connect-wrapper .section-title p {font-size: 12px;}
+    .connect-content .connect-wrapper .section-title p {font-size: 10px;}
     .connect-content .connect-wrapper .section-title p.ft-14 {font-size: 14px;}
-    .connect-content .connect-wrapper .btn-group a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
+    .connect-content .connect-wrapper .btn-group a {padding: 12px 0; font-size: 14px; border-radius: 12px;}
 }
 
 /* step2-1 : 예 누르면 나오는 페이지 */
@@ -750,7 +750,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .connect-content .btn-group .notification-popup {display: block;}
 }
 @media screen and (max-width: 768px) {
-    .connect-content .btn-group .notification-popup {display: block; left: 5%;}
+    .connect-content .btn-group .notification-popup {display: none;}
     .connect-content .btn-group .notification-popup p {padding: 12px; font-size: 14px;}
 }
 
