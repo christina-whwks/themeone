@@ -226,7 +226,12 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .modal-buttons.btn-one a {width: 100%; padding: 2rem 0; font-size: 2rem;}
 
 @media screen and (max-width: 768px) {
-    .req-modal {max-width: 370px; padding: 20px;}
+    .req-modal {max-width: 370px; padding: 20px; border-radius: 24px;}
+    .req-modal.join .inner {row-gap: 40px;}
+    .req-modal .modal-header h5 {font-size: 16px;}
+    .req-modal .modal-header .close figure {width: 20px; height: 20px;}
+    .req-modal .modal-buttons a.dark-btn {font-size: 12px;}
+    .modal-buttons.btn-one a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
 }
 
 /* 로그인 - 이메일 인증 모달 */
@@ -1138,11 +1143,76 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .floating-section .floating-wrapper .btn-group {width: 100%; display: flex; align-items: center; justify-content: center; column-gap: 1.2rem;}
 .floating-section .floating-wrapper .btn-group a {width: 50%; border-radius: 2rem; padding: 2rem 0; font-size: 2rem;}
 
+@media screen and (max-width: 768px) {
+    .self-main .banner-section .banner-wrapper figure {width: 100%; height: 378px;}
+    .self-main .top-section {padding: 0 20px; margin: 80px auto 120px;}
+    .self-main .top-section .top-wrapper {row-gap: 20px;}
+    .self-main .top-section .section-title {row-gap: 12px;}
+    .self-main .top-section .section-title h2 {font-size: 24px;}
+    .self-main .top-section .section-title .boost-info {column-gap: 4px;}
+    .self-main .top-section .section-title .boost-info .boost-badge figure {width: 12px; height: 12px;}
+    .self-main .top-section .section-title .boost-info .boost-badge span {font-size: 10px;}
+    .self-main .top-section .section-title .boost-info p {font-size: 12px; line-height: 200%;}
+
+    .self-main .notification-box {padding: 12px 16px;}
+    .self-main .notification-box figure {width: 24px; height: 24px;}
+    .self-main .notification-box p {font-size: 12px;}
+    .self-main .top-section .progress-box .progress-bar .progress-label {display: none;}
+
+    .self-main .fee-section {padding: 0 20px; margin: 0 auto 120px;}
+    .self-main .fee-section .fee-wrapper {row-gap: 20px;}
+    .self-main .fee-section .fee-wrapper .section-title h2 {font-size: 24px;}
+    .self-main .fee-section .fee-content p {font-size: 16px;}
+    .self-main .notification-box .noti-wrapper > figure {width: 12px; height: 12px;}
+    .self-main .notification-box .noti-wrapper .noti-left p span.small {font-size: 10px;}
+
+    .self-main .policy-section {padding: 0 20px; margin: 0 auto 120px;}
+    .self-main .policy-section .section-title h2 {font-size: 24px;}
+    .self-main .policy-section .policy-content {row-gap: 20px;}
+    .self-main .policy-section .policy-content .policy-box h5 {font-size: 16px;}
+    .self-main .policy-section .policy-content .policy-box p {font-size: 14px;}
+    .self-main .policy-section .policy-content .policy-box .policy-table {padding: 20px 16px;}
+    .self-main .policy-section .policy-content .policy-box .policy-table th {font-size: 14px; padding-bottom: 12px;} 
+    .self-main .policy-section .policy-content .policy-box .policy-table td {font-size: 12px; padding-bottom: 12px;}
+
+    .self-main .analytics-section {padding: 0 20px; margin: 0 auto 200px;}
+    .self-main .analytics-section .section-title h2 {font-size: 24px;}
+    .self-main .analytics-section .section-sub-title h3 {font-size: 20px;}
+    .self-main .analytics-section .section-sub-title p {font-size: 12px; letter-spacing: -0.04px;}
+
+    .self-main .chart-container .chart-bar:first-child,
+    .self-main .chart-container .chart-bar:nth-child(2) {display: none;}
+    .self-main .chart-bar .chart-value {font-size: 14px;}
+    .self-main .chart-bar .chart-bar-visual {width: 64px;}
+    .self-main .chart-bar .chart-label {font-size: 14px;}
+
+    .self-main .themeone-section {padding: 0 20px; margin: 0 auto 120px;}
+    .self-main .themeone-section .section-title h2 {font-size: 24px;}
+    .self-main .themeone-section .section-title a figure {width: 24px; height: 24px;}
+    .self-main .themeone-section .themeone-list {flex-direction: column; row-gap: 20px;}
+    .self-main .themeone-section .themeone-list li {width: 100%;}
+
+    .self-main .event-section {padding: 0 20px; margin: 0 auto 120px;}
+    .self-main .event-section .section-title h2 {font-size: 24px;}
+    .self-main .event-section .section-title a figure {width: 24px; height: 24px;}
+    .self-main .event-section .event-list {flex-direction: column; row-gap: 20px;}
+    .self-main .event-section .event-list li {width: 100%;}
+
+    .floating-section {max-width: 410px;}
+    .floating-section .floating-wrapper {padding: 20px; border-radius: 16px;}
+    .floating-section .floating-wrapper .section-title {margin-bottom: 20px;}
+    .floating-section .floating-wrapper .section-title h2 {font-size: 16px;}
+    .floating-section .floating-wrapper .btn-group {column-gap: 4px;}
+    .floating-section .floating-wrapper .btn-group a {padding: 8px 0; border-radius: 8px; font-size: 12px;}
+
+}
+
 /* ============================== [ 마이페이지 - 쿠폰 ] ========================================================================================== */
 .coupon-container {}
 .coupon-empty {display: flex; flex-direction: column; justify-content: center; align-items: center; row-gap: 2rem;}
 .coupon-empty figure {width: 12rem; height: 12rem;}
 .coupon-empty span {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+
 
 @media screen and (max-width: 768px) {
     .counpon-empty figure {width: 80px; height: 80px;}
