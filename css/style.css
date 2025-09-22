@@ -119,10 +119,11 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .max-btn {font-size: 10px;}
     .dark-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
     .red-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
+    .dark-wh-btn {padding: 8px 12px; font-size: 12px;}
 
     .input-field {font-size: 16px; padding: 12px 20px; border-radius: 30px;}
     .input-code-digit {width: 43px; padding: 20px 0; font-size: 16px;}
-    .input-field-line {padding: 12px 20px; height: 60px; font-size: 16px;}
+    .input-field-line {padding: 12px 20px; height: 60px; font-size: 16px; border-radius: 20px;}
     .input-field-line.withdrawal {padding: 12px; height: fit-content; font-size: 10px;}
 
     input[type="checkbox"].block-chk + label {font-size: 13px; padding: 12px; padding-left: 40px;}
@@ -876,14 +877,15 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 비밀번호 변경 ] ========================================================================================== */
-.pw-content {max-width: 56rem; width: 56rem;}
-.pw-wrapper {display: flex; flex-direction: column; row-gap: 8rem;}
-.pw-wrapper .pw-title-box {display: flex; flex-direction: column; padding-top: 4rem; row-gap: 1.2rem;}
-.pw-wrapper .pw-title-box h2 {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
-.pw-wrapper .pw-title-box p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
+.pw-content {max-width: 56rem; width: 100%;}
+.pw-wrapper {display: flex; flex-direction: column; row-gap: 80px;}
+.pw-wrapper .pw-title-box {display: flex; flex-direction: column; padding-top: 40px; row-gap: 1.2rem;}
+.pw-wrapper .pw-title-box h2 {color: #F4F5F7; font-size: 24px; font-weight: 700; line-height: 150%;}
+.pw-wrapper .pw-title-box p {color: #A09FA5; font-size: 16px; font-weight: 500; line-height: 150%;}
 .pw-form {display: flex; flex-direction: column;}
 .pw-form .input-group {display: flex; flex-direction: column; margin-bottom: 2rem; row-gap: 2rem;}
-.pw-form .input-group .validate-txt {display: flex; align-items: center; column-gap: 0.8rem; color: #FF2C3E; font-size: 1.2rem; font-weight: 500; line-height: 140%;}
+.pw-form .input-group .validate-txt {display: flex; align-items: center; column-gap: 0.8rem; color: #FF2C3E; font-size: 12px; font-weight: 500; line-height: 140%;}
+.pw-form .input-group .validate-txt figure {width: 16px; height: 16px;}
 .pw-form .input-group #nowPwChk {opacity: 0;}
 .pw-form .input-group #nowPwChk.fault {opacity: 1;}
 .pw-form .password-group {display: flex; flex-direction: column; row-gap: 1.2rem;}
@@ -891,8 +893,14 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .pw-form .exp-box.active {display: block;}
 .pw-form #newPwChk {display: none;}
 .pw-form #newPwChk.active {display: flex;}
-.pw-form .btn-group {margin-top: 8rem;}
-.pw-form .btn-group button {padding: 2rem 0; border-radius: 2rem;}
+.pw-form .btn-group {margin-top: 80px;}
+.pw-form .btn-group button {padding: 20px 0; border-radius: 20px;}
+
+@media screen and (max-width: 768px) {
+    .pw-content {margin-top: 80px; padding: 0 20px;}
+    .pw-wrapper .pw-title-box {row-gap: 4px;}
+    .pw-form .btn-group button {font-size: 16px;}
+}
 
 /* ============================== [ 제휴거래소 전체 ] ========================================================================================== */
 /* 메인 페이지 상속받아 사용 */
@@ -927,7 +935,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 /* ============================== [ 뉴스 페이지 메인 + 상세 ] ========================================================================================== */
 .news-content {max-width: 133.2rem; margin: 20rem auto; width: 100%; margin-bottom: 12rem;}
-.date-container {margin-bottom: 2rem;}
+.date-container {margin-bottom: 20px;}
 .date-container .date {padding: 4rem; border-radius: 2rem; background-color: #3182F6;}
 .date-container .date p {color: #FFF; font-size: 2.4rem; font-weight: 600; line-height: 87.5%;}
 .news-content .news-list {display: flex; flex-direction: column; row-gap: 2rem;}
@@ -936,13 +944,23 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .news-content .news-detail .news-title p {color: #F4F5F7; font-size: 2.4rem; font-weight: 600; line-height: 150%;}
 .news-content .news-detail .news-date {margin-bottom: 2rem;}
 .news-content .news-detail .news-date p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
-.news-content .news-detail .news-summary {margin-bottom: 2rem;}
+.news-content .news-detail .news-summary {margin-bottom: 20px;}
 .news-content .news-detail .news-summary p {color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 140%;}
 
 .news-btn-box {display: flex; align-items: center; justify-content: center; margin-top: 4rem;}
+.news-btn-box .line-btn {color: #A09FA5;}
 
 @media screen and (max-width: 768px) {
-    .news-content {padding: 0 2rem;}
+    .news-content {padding: 0 2rem; margin-top: 80px;}
+    .news-content .section-title h2 {font-size: 24px;}
+    .date-container .date {padding: 20px; border-radius: 16px;}
+    .date-container .date p {font-size: 16px; line-height: 150%;}
+    .news-content .news-detail {padding: 20px;}
+    .news-content .news-detail .news-title {margin-bottom: 8px;}
+    .news-content .news-detail .news-title p {font-size: 14px;}
+    .news-content .news-detail .news-date {margin-bottom: 12px;}
+    .news-content .news-detail .news-date p {font-size: 10px;}
+    .news-content .news-detail .news-summary p {font-size: 10px;}
 }
 
 /* ============================== [ 서비스 소개 페이지 ] ========================================================================================== */
@@ -959,23 +977,23 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 .service-main .features-section {display: flex; align-items: center; justify-content: center; margin-bottom: 20rem;}
 .service-main .features-container {display: flex; align-items: center; column-gap: 2rem;}
-.service-main .features-container .feature-card {border-radius: 4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem; padding: 4rem 0; width: 31rem; height: 37rem;}
+.service-main .features-container .feature-card {border-radius: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 40px; padding: 40px 0; width: 31rem; height: 37rem;}
 .service-main .features-container .feature-card.feature-card-green {background-color: #56AF31;}
 .service-main .features-container .feature-card.feature-card-blue {background-color: #0084FF;}
 .service-main .features-container .feature-card.feature-card-purple {background-color: #7F5BFB;}
 .service-main .features-container .feature-card .feature-txt-box {display: flex; flex-direction: column;}
-.service-main .features-container .feature-card .feature-txt-box p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 500; line-height: 150%;}
-.service-main .features-container .feature-card .feature-txt-box h3 {color: #F4F5F7; text-align: center; font-size: 4rem; font-weight: 700; line-height: 150%;}
+.service-main .features-container .feature-card .feature-txt-box p {color: #F4F5F7; text-align: center; font-size: 20px; font-weight: 500; line-height: 150%;}
+.service-main .features-container .feature-card .feature-txt-box h3 {color: #F4F5F7; text-align: center; font-size: 40px; font-weight: 700; line-height: 150%;}
 
 .differentiators-section {margin-bottom: 20rem;}
-.differentiators-section .stats-list {max-width: 100rem; width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4rem; margin: 0 auto;}
+.differentiators-section .stats-list {max-width: 100rem; width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 0 auto;}
 .differentiators-section .stats-list .stat-item {width: calc(33% - 2.5rem); display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 2rem;}
 .differentiators-section .stats-list .stat-item figure {width: 20rem; height: 20rem;}
 .differentiators-section .stats-list .stat-item .stat-txt-box {display: flex; flex-direction: column; }
 .differentiators-section .stats-list .stat-item .stat-txt-box p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
 .differentiators-section .stats-list .stat-item .stat-txt-box .stat-number {color: #F4F5F7; text-align: center; font-size: 4rem; font-weight: 700; line-height: 150%;}
 
-.partnership-container {width: 100%; padding: 8rem 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 8rem;}
+.partnership-container {width: 100%; padding: 80px 40px; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 80px;}
 .partnership-container figure {width: 32rem; height: 32rem;}
 .partnership-container .partnership-text h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 900; line-height: 150%;}
 
@@ -987,9 +1005,9 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .usage-list li:last-child:after {display: none;}
 .usage-list li p {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 150%; text-align: center;}
 
-.analytics-section {margin-bottom: 20rem;}
-.analytics-section .section-title p {font-size: 3.2rem; font-weight: 700;}
-.analytics-section .section-title span {font-size: 3.2rem; font-weight: 700;}
+.service-main .analytics-section {margin-bottom: 20rem;}
+.service-main .analytics-section .section-title p {font-size: 3.2rem; font-weight: 700;}
+.service-main .analytics-section .section-title span {font-size: 3.2rem; font-weight: 700;}
 .chart-container {display: flex; align-items: flex-end; column-gap: 2rem; justify-content: center; margin-bottom: 12rem;}
 .chart-bar {display: flex; flex-direction: column; row-gap: 2rem; width: 25rem; align-items: center; justify-content: center;}
 .chart-bar .chart-bar-visual {width: 8rem; border-radius: 1.6rem; background-color: #3182F6;}
@@ -1008,7 +1026,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .service-main .tab-buttons .tab-btn.active {border: 1px solid #3182F6; background-color: #203453;}
 .service-main .tab-contents-wrapper {margin-bottom: 4rem;}
 .service-main .tab-contents .tab-content .exchange-wrapper {padding: 8rem 4rem; border-radius: 3.2rem; background-color: #1B202A; display: flex; flex-direction: column; row-gap: 5rem; align-items: center; justify-content: center;}
-.service-main .tab-contents .tab-content .exchange-wrapper .exchange-box {display: flex; flex-direction: column; row-gap: 2rem; align-items: center; justify-content: center; text-align: center;}
+.service-main .tab-contents .tab-content .exchange-wrapper .exchange-box {display: flex; flex-direction: column; row-gap: 20px; align-items: center; justify-content: center; text-align: center;}
 .service-main .tab-contents .tab-content .exchange-wrapper .exchange-box h3 {color: #F4F5F7; text-align: center; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
 .service-main .tab-contents .tab-content .exchange-wrapper .exchange-box p {color: #A09FA5; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
 .service-main .chart-container {margin-bottom: 0; column-gap: 12rem;}
@@ -1019,6 +1037,64 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .cta-section .section-title p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%;}
 .cta-section .section-title h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
 .cta-section .cta-button-container .blue-btn {width: 97.5rem; padding: 2rem 0; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
+
+@media screen and (max-width: 768px) {
+    .service-main .hero-content {margin: 183px auto 103px; row-gap: 12px;}
+    .service-main .hero-content .hero-subtitle {font-size: 14px;}
+    .service-main .hero-content .hero-title-text {font-size: 32px;}
+
+    .service-main .features-section {margin-bottom: 120px; overflow-x: auto; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
+    .service-main .features-container .feature-card {padding: 40px; width: 24.8rem;}
+    .service-main .section-title {row-gap: 12px; margin-bottom: 40px;}
+    .service-main .section-title p {font-size: 12px;}
+    .service-main .section-title h2 {font-size: 24px;}
+    .service-main .section-title span {font-size: 10px;}
+
+    .differentiators-section {margin-bottom: 80px;}
+    .differentiators-section .stats-list {flex-direction: column;}
+    .differentiators-section .stats-list .stat-item {width: 100%;}
+    .differentiators-section .stats-list .stat-item figure {width: 120px; height: 120px;}
+    .differentiators-section .stats-list .stat-item .stat-txt-box p {font-size: 12px;}
+    .differentiators-section .stats-list .stat-item .stat-txt-box .stat-number {font-size: 24px;}
+
+    .partnership-container {}
+    .partnership-container figure {width: 160px; height: 160px;}
+    .partnership-container .partnership-text h2 {font-size: 24px;}
+
+    .usage-section {margin: 133px auto; padding: 0 20px;}
+    .usage-container {row-gap: 80px;}
+    .usage-container .section-title {margin-bottom: 0;}
+    .usage-list {flex-direction: column; row-gap: 64px;}
+    .usage-list li {width: 100%;}
+    .usage-list li p {font-size: 16px;}
+    .usage-list li:after {background-image: url('/img/icon/arrow_down_blue.svg'); right: 50%; transform: translateX(50%); top: 120%;}
+
+    .service-main .analytics-section {padding: 0 20px;}
+    .service-main .analytics-section .section-title h2 {font-size: 14px;}
+    .service-main .analytics-section .section-title p {font-size: 20px;}
+    .service-main .analytics-section .section-title span {font-size: 20px;}
+    .service-main .chart-container {column-gap: 50px;}
+    .service-main .chart-container .chart-bar:first-child,
+    .service-main .chart-container .chart-bar:nth-child(2) {display: none;}
+    .service-main .chart-bar .chart-value {font-size: 14px;}
+    .service-main .chart-bar .chart-bar-visual {width: 64px;}
+    .service-main .chart-bar .chart-label {font-size: 14px;}
+
+    .service-main .exchange-section {padding: 0 20px; margin-bottom: 120px;}
+    .service-main .tab-contents .tab-content .exchange-wrapper {padding: 40px 20px; row-gap: 80px;}
+    .service-main .tab-contents .tab-content .exchange-wrapper .exchange-box h3 {font-size: 20px;}
+    .service-main .tab-contents .tab-content .exchange-wrapper .exchange-box p {font-size: 12px;}
+    .service-main .exchange-graph .chart-container {column-gap: 120px;}
+    .service-main .exchange-graph .chart-container .chart-bar:first-child,
+    .service-main .exchange-graph .chart-container .chart-bar:nth-child(2) {display: flex;}
+
+    .cta-section {padding: 200px 20px;}
+    .cta-section .section-title {row-gap: 12px; margin-bottom: 40px;}
+    .cta-section .section-title p {font-size: 12px;}
+    .cta-section .section-title h2 {font-size: 24px;}
+    .cta-section .cta-button-container {width: 100%;}
+    .cta-section .cta-button-container .blue-btn {width: 100%; font-size: 14px;}
+}
 
 /* ============================== [ 봇 소개 페이지 ] ========================================================================================== */
 .bot-main {}
