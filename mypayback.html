@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테마원 - 1등 수수료 페이백 플랫폼</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Navigation Header -->
+        <nav class="main-navigation">
+            <div class="nav-content">
+                <div class="nav-left">
+                    <div class="logo-container">
+                        <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <ul class="nav-menu">
+                        <li><a href="payback_main.html" class="nav-link">페이백 테스트</a></li>
+                        <li><a href="service_introduce.html" class="nav-link">서비스 소개</a></li>
+                        <li><a href="bot_introduce.html" class="nav-link">봇 소개</a></li>
+                        <li><a href="partnership.html" class="nav-link">제휴문의</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right">
+                    <a href="mypage.html"><figure><img src="img/icon/account_circle.svg" alt=""></figure></a>
+                    <a href="#" class="pc"><figure><img src="img/icon/language.svg" alt=""></figure></a>
+                    <a href="#" class="mobile" id="mobileMenu"><figure><img src="img/icon/dehaze.svg" alt=""></figure></a>
+                </div>
+            </div>
+            <!-- 모바일용 메뉴 -->
+            <div class="mobile-menu" id="mobileMenuPanel">
+                <div class="mobile-menu-header">
+                    <div class="logo-container">
+                        <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                    </div>
+                    <button class="mobile-menu-close" id="mobileMenuClose">
+                        <figure><img src="img/icon/close.svg" alt=""></figure>
+                    </button>
+                </div>
+                <ul class="mobile-menu-list">
+                    <li><a href="payback_main.html" class="mobile-nav-link">페이백 테스트</a></li>
+                    <li><a href="service_introduce.html" class="mobile-nav-link">서비스 소개</a></li>
+                    <li><a href="bot_introduce.html" class="mobile-nav-link">봇 소개</a></li>
+                    <li><a href="partnership.html" class="mobile-nav-link">제휴문의</a></li>
+                </ul>
+                <div class="mobile-buttons">
+                    <a href="#"><figure><img src="img/icon/language.svg" alt=""></figure><span>언어 변경</span></a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="sub-content payback-content">
+            <div class="payback-wrapper">
+                <div class="exchange-info">
+                    <figure class="exchange-logo"><img src="img/logos/bitget.png" alt=""></figure>
+                    <div class="exchange-uid">
+                        <figure><img src="img/icon/automation.svg" alt=""></figure>
+                        <span>UID 00000000</span>
+                    </div>
+                </div>
+                <div class="tab-container">
+                    <ul class="tab-buttons">
+                        <li><div class="tab-btn" data-tab="0">페이백</div></li>
+                        <li><div class="tab-btn active" data-tab="1">페이백 내역</div></li>
+                    </ul>
+                </div>
+                <div class="tab-contents-wrapper">
+                    <div class="tab-contents">
+                        <div class="tab-content" data-tab="0">
+                            <div class="payback-container">
+                                <div class="mypayback-box">
+                                    <div class="mypayback-title">
+                                        <span>나의 페이백</span>
+                                        <span class="date">업데이트 08월 24일 20:00 KST</span>
+                                    </div>
+                                    <div class="mypayback-value">
+                                        <span class="usdt">0.00</span>
+                                    </div>
+                                    <div class="mypayback-noti">
+                                        <figure><img src="img/icon/brand_awareness.svg" alt=""></figure>
+                                        <div class="noti-box">
+                                            <p>출금까지 <span class="highlight-blue">50 USDT</span>남았어요</p>
+                                            <span>50 USDT 모으면 출금 할 수 있어요!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mypayback-cum">
+                                    <span>누적 페이백</span>
+                                    <span class="usdt">0.00</span>
+                                </div>
+                                <div class="mypayback-update">
+                                    <h3><span class="exchange-name">Bitget</span> 페이백 금액이<br><span class="highlight-blue">언제 업데이트</span> 되는지 알려드릴게요</h3>
+                                    <div class="update-date">
+                                        <figure><img src="img/icon/calendar_check.svg" alt=""></figure>
+                                        <ul class="update-date-list">
+                                            <li>23일</li>
+                                            <li>24일</li>
+                                            <li>24일</li>
+                                        </ul>
+                                    </div>
+                                    <div class="update-info">
+                                        <p>
+                                            <span class="highlight-blue">08월 23일 01:00(KST)</span>부터<br class="pc">
+                                            <span class="highlight-blue">08월 24일 01:00(KST)</span>까지<br class="mobile"> 거래로 발생한 페이백 내역이 오늘 <span class="highlight-blue">08월 24일 20:00(KST)</span>에 업데이트가 돼요
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content active" data-tab="1">
+                            <div class="calendar-wrapper">
+                                <div class="calendar-container">
+                                    <div class="calendar-box">
+                                        <div id="date_container">
+                                            <div id="date_box_single"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">이용약관</a>
+                        <a href="#">위치기반서비스 이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                    </div>
+                    <div class="company-info">
+                        <div class="company-logo">
+                            <a href="#"><figure><img src="img/logo.png" alt=""></figure></a>
+                        </div>
+                        <div class="info-box">
+                            <p class="contact-info">제휴제안&광고문의: 테마원@테마원.com <br class="mobile">고객센터: cs@테마원.com</p>
+                            <p class="company-details">상호명 : (주)테마원 ㅣ 대표 홍길동 ㅣ 사업자등록번호 000-00-00000</p>
+                            <p class="address-info">주소 : 서울시 서울구 서울로 101, 1층 ㅣ 전화 : 1000-0000 & 000-0000-0000</p>
+                            <p class="copyright">Copyright (주)테더마이너스원. ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <div class="social-icons">
+                        <a href="#"><figure><img src="img/icon/insta.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/in.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/x.svg" alt=""></figure></a>
+                        <a href="#"><figure><img src="img/icon/youtube.svg" alt=""></figure></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/modal.js"></script>
+    <script src="js/mobile_menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/jquery.daterangepicker.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            initTabSystem('.payback-content');
+
+            // 현재 날짜 가져오기
+            const today = moment();
+            const currentYear = today.year();
+            const currentMonth = today.month() + 1; // moment는 0부터 시작하므로 +1
+    
+            // 데이트피커 초기화
+            $('#date_picker').dateRangePicker({
+                format: 'YYYY-MM-DD',
+                language: 'ko',
+                customArrowPrevSymbol: '<img src="img/icon/arrow_left_gray.svg">',
+                customArrowNextSymbol: '<img src="img/icon/arrow_right_gray.svg">',
+                showTopbar: false,
+                singleMonth: true,
+                showShortcuts: false,
+                inline: true,
+                container: '#date_box_single',
+                alwaysOpen: true,
+                singleDate: true,
+                startDate: today.format('YYYY-MM-DD'), // 오늘 날짜를 시작 날짜로 설정
+            }).bind('datepicker-change', function(event, obj) {
+                // 선택된 날짜로 표시 업데이트
+                let selectDate = obj.value;
+                $('#chooseDate').text(selectDate);
+                console.log(`선택한날짜: ${selectDate}`);
+                
+            });
+        });
+
+        // 탭 시스템 초기화 함수
+        function initTabSystem(containerSelector) {
+            const container = document.querySelector(containerSelector);
+            if (!container) return; // 해당 컨테이너가 없으면 종료
+            
+            const tabButtons = container.querySelectorAll('.tab-btn:not(.more)');
+            const tabContents = container.querySelectorAll('.tab-content');
+            let currentActiveTab = 0; // 현재 활성화된 탭 인덱스 추적
+            
+            // 탭 전환 함수
+            function switchTab(tabIndex) {
+                // 이미 활성화된 탭을 다시 클릭한 경우 무시
+                if (currentActiveTab === parseInt(tabIndex)) return;
+                
+                // 모든 탭 버튼 비활성화
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // 클릭한 탭 버튼 활성화
+                const activeButton = Array.from(tabButtons).find(btn => btn.getAttribute('data-tab') === tabIndex.toString());
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+                
+                // 이전 활성 탭 페이드 아웃
+                const previousTab = container.querySelector(`.tab-content[data-tab="${currentActiveTab}"]`);
+                if (previousTab) {
+                    previousTab.style.opacity = '0';
+                }
+                
+                // 새 탭으로 전환 (지연 적용)
+                setTimeout(() => {
+                    // 모든 탭 콘텐츠 비활성화
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                        content.style.display = 'none';
+                    });
+                    
+                    // 선택된 탭 콘텐츠만 활성화
+                    const activeTab = container.querySelector(`.tab-content[data-tab="${tabIndex}"]`);
+                    if (activeTab) {
+                        activeTab.classList.add('active');
+                        activeTab.style.display = 'block';
+                        
+                        // 약간의 지연 후 페이드 인
+                        setTimeout(() => {
+                            activeTab.style.opacity = '1';
+                        }, 50);
+                    }
+                    
+                    // 현재 활성 탭 업데이트
+                    currentActiveTab = parseInt(tabIndex);
+                }, 300); // 페이드 아웃이 완료될 때까지 기다림
+            }
+            
+            // 각 탭 버튼에 클릭 이벤트 추가
+            tabButtons.forEach((button) => {
+                button.addEventListener('click', function() {
+                    const tabIndex = this.getAttribute('data-tab');
+                    switchTab(tabIndex);
+                });
+            });
+            
+            // 초기 상태 설정 - 첫 번째 탭이 기본적으로 활성화
+            if (tabButtons.length > 0) {
+                // 이미 활성화된 탭 찾기
+                const activeButton = Array.from(tabButtons).find(btn => btn.classList.contains('active'));
+                
+                if (activeButton) {
+                    // 이미 활성화된 탭이 있으면 그 탭의 인덱스 사용
+                    const activeTabIndex = activeButton.getAttribute('data-tab');
+                    currentActiveTab = parseInt(activeTabIndex);
+                    
+                    // 해당 탭 콘텐츠 활성화
+                    const activeTab = container.querySelector(`.tab-content[data-tab="${activeTabIndex}"]`);
+                    if (activeTab) {
+                        activeTab.classList.add('active');
+                        activeTab.style.opacity = '1';
+                        activeTab.style.display = 'block';
+                    }
+                } else {
+                    // 활성화된 탭이 없으면 첫 번째 탭 활성화
+                    const firstTabIndex = tabButtons[0].getAttribute('data-tab');
+                    tabButtons[0].classList.add('active');
+                    currentActiveTab = parseInt(firstTabIndex);
+                    
+                    // 첫 번째 탭 콘텐츠 활성화
+                    const firstTab = container.querySelector(`.tab-content[data-tab="${firstTabIndex}"]`);
+                    if (firstTab) {
+                        firstTab.classList.add('active');
+                        firstTab.style.opacity = '1';
+                        firstTab.style.display = 'block';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

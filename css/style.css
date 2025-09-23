@@ -434,11 +434,12 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .exchange-title a span {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 3.6rem;}
 .exchange-title a figure {width: 1.6rem; height: 1.6rem;}
 .my-exchange-list {display: flex; align-items: center; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.3rem;}
-.my-exchange-list li {width: calc(50% - 1rem); padding: 2rem; display: flex; align-items: center; column-gap: 1.2rem;}
-.my-exchange-list li figure {width: 4rem; height: 4rem;}
-.my-exchange-list li .my-value-box {display: flex; flex-direction: column;}
-.my-exchange-list li .my-value-box .my-uid {color: #F4F5F7; font-size: 1.4rem; font-weight: 500; line-height: 1;}
-.my-exchange-list li .my-value-box .my-value {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
+.my-exchange-list li {width: calc(50% - 1rem);}
+.my-exchange-list li a {padding: 2rem; display: flex; align-items: center; column-gap: 1.2rem;}
+.my-exchange-list li a figure {width: 4rem; height: 4rem;}
+.my-exchange-list li a .my-value-box {display: flex; flex-direction: column;}
+.my-exchange-list li a .my-value-box .my-uid {color: #F4F5F7; font-size: 1.4rem; font-weight: 500; line-height: 1;}
+.my-exchange-list li a .my-value-box .my-value {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 
 @media screen and (max-width: 768px){
     .connect-section {padding-right: 20px;}
@@ -456,10 +457,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-title a span {font-size: 14px; line-height: 36px;}
     .exchange-title a figure {width: 12px; height: 12px;}
     .my-exchange-list {gap: 20px;}
-    .my-exchange-list li {width: 100%; padding: 12px; column-gap: 8px;}
-    .my-exchange-list li figure {width: 40px; height: 40px;}
-    .my-exchange-list li .my-value-box .my-uid {font-size: 10px; line-height: 15px;}
-    .my-exchange-list li .my-value-box .my-value {font-size: 14px; line-height: 21px;}
+    .my-exchange-list li a {width: 100%; padding: 12px; column-gap: 8px;}
+    .my-exchange-list li a figure {width: 40px; height: 40px;}
+    .my-exchange-list li a .my-value-box .my-uid {font-size: 10px; line-height: 15px;}
+    .my-exchange-list li a .my-value-box .my-value {font-size: 14px; line-height: 21px;}
 }
 
 /* 이벤트 섹션 */
@@ -1289,8 +1290,74 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .coupon-empty figure {width: 12rem; height: 12rem;}
 .coupon-empty span {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
 
-
 @media screen and (max-width: 768px) {
     .counpon-empty figure {width: 80px; height: 80px;}
     .coupon-empty span {font-size: 20px;}
 }
+
+/* ============================== [ 거래소 페이백 ] ========================================================================================== */
+.payback-content {max-width: 133.2rem; width: 100%;}
+.payback-content .payback-wrapper {display: flex; flex-direction: column; row-gap: 40px; margin-bottom: 20rem;}
+.payback-content .exchange-info {display: flex; flex-direction: column; row-gap: 20px; align-items: center; justify-content: center;}
+.payback-content .exchange-info .exchange-logo {width: 50px; height: 50px;}
+.payback-content .exchange-info .exchange-uid {display: flex; align-items: center; column-gap: 4px; padding: 1.2rem; background-color: #1B202A; color: #0084FF;}
+.payback-content .exchange-info .exchange-uid figure {width: 16px; height: 16px;}
+.payback-content .exchange-info .exchange-uid span {font-size: 1.4rem;}
+.payback-content .tab-container {margin-bottom: 0;}
+.payback-content .tab-container .tab-buttons {width: 100%; column-gap: 0;}
+.payback-content .tab-container .tab-buttons li {width: 50%;}
+.payback-content .tab-container .tab-buttons li .tab-btn {border-radius: 0; background-color: transparent; display: flex; align-items: center; justify-content: center; padding: 2rem 0; border-bottom: 1px solid #595B63; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.payback-content .tab-container .tab-buttons li .tab-btn.active {color: #3182F6; border-bottom: 1px solid #3182F6;}
+.payback-content .payback-container {display: flex; flex-direction: column; row-gap: 20px;}
+.payback-content .payback-container .mypayback-box {padding: 4rem; border-radius: 2rem; border: 1px solid #313335; display: flex; flex-direction: column; row-gap: 4rem;}
+.payback-content .payback-container .mypayback-box .mypayback-title {display: flex; align-items: center; justify-content: space-between;}
+.payback-content .payback-container .mypayback-box .mypayback-title span {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.payback-content .payback-container .mypayback-box .mypayback-title span.date {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+.payback-content .payback-container .mypayback-box .mypayback-value span.usdt {color: #F4F5F7; font-size: 32px; font-weight: 700; line-height: 150%;}
+.payback-content .payback-container .mypayback-box .mypayback-value span.usdt:after {content:'USDT'; padding-left: 0.5rem;}
+.payback-content .payback-container .mypayback-box .mypayback-noti {display: flex; align-items: center; column-gap: 0.8rem; border-top: 1px solid #313335; padding-top: 2rem;}
+.payback-content .payback-container .mypayback-box .mypayback-noti figure {width: 4rem; height: 4rem;}
+.payback-content .payback-container .mypayback-box .mypayback-noti .noti-box {display: flex; flex-direction: column;}
+.payback-content .payback-container .mypayback-box .mypayback-noti .noti-box p {color: #F4F5F7; font-size: 2rem; font-weight: 600; line-height: 150%;}
+.payback-content .payback-container .mypayback-box .mypayback-noti .noti-box > span {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+.payback-content .payback-container .mypayback-cum {display: flex; align-items: center; justify-content: space-between; padding: 4rem; border-radius: 2rem; border: 1px solid #313335;}
+.payback-content .payback-container .mypayback-cum span {color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.payback-content .payback-container .mypayback-cum span.usdt:after {content: 'USDT'; padding-left: 0.5rem;}
+.payback-content .payback-container .mypayback-update {padding: 4rem; border-radius: 2rem; border: 1px solid #313335; display: flex; flex-direction: column; row-gap: 4rem;}
+.payback-content .payback-container .mypayback-update h3 {color: #F4F5F7; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
+.payback-content .payback-container .mypayback-update .update-date {display: flex; align-items: center; justify-content: center; column-gap: 2rem;}
+.payback-content .payback-container .mypayback-update .update-date figure {width: 6.4rem; height: 6.4rem;}
+.payback-content .payback-container .mypayback-update .update-date .update-date-list {display: flex; align-items: center; column-gap: 4rem;}
+.payback-content .payback-container .mypayback-update .update-date .update-date-list li {width: 12rem; height: 12rem; border-radius: 100%; background-color: #203453; color: #0084FF; font-size: 2rem; font-weight: 700; line-height: 150%; display: flex; align-items: center; justify-content: center; position: relative;}
+.payback-content .payback-container .mypayback-update .update-date .update-date-list li:first-child:after {content: ''; background-image: url('../img/icon/more_horiz.svg'); aspect-ratio: 1/1; background-position: center; background-repeat: no-repeat; position: absolute; top: 50%; transform: translateY(-50%); right: -30%; width: 3.2rem; height: 3.2rem;}
+.payback-content .payback-container .mypayback-update .update-date .update-date-list li:last-child {background-color: #3182F6; color: #F4F5F7; margin-left: 4rem;}
+.payback-content .payback-container .mypayback-update .update-date .update-date-list li:last-child:before {content: ''; background-image: url('../img/icon/arrow_right_blue.svg'); aspect-ratio: 1/1; background-position: center; background-repeat: no-repeat; width: 4rem; height: 4rem; position: absolute; top: 50%; transform: translateY(-50%); left: -50%;}
+.payback-content .payback-container .mypayback-update .update-info p {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+
+@media screen and (max-width: 768px) {
+    .payback-content {margin-top: 40px;}
+    .payback-content .exchange-info .exchange-uid {padding: 8px;}
+    .payback-content .exchange-info .exchange-uid span {font-size: 12px;}
+    .payback-content .tab-container .tab-buttons li .tab-btn {padding: 12px 0; font-size: 14px;}
+    .payback-content .tab-contents-wrapper {padding: 0 20px;}
+    .payback-content .payback-container .mypayback-box {padding: 20px; row-gap: 20px;}
+    .payback-content .payback-container .mypayback-box .mypayback-title {margin-bottom: 20px;}
+    .payback-content .payback-container .mypayback-box .mypayback-title span {font-size: 16px;}
+    .payback-content .payback-container .mypayback-box .mypayback-title span.date {font-size: 10px;}
+    .payback-content .payback-container .mypayback-box .mypayback-noti {padding-top: 12px;}
+    .payback-content .payback-container .mypayback-box .mypayback-noti figure {width: 32px; height: 32px;}
+    .payback-content .payback-container .mypayback-box .mypayback-noti .noti-box p {font-size: 14px;}
+    .payback-content .payback-container .mypayback-box .mypayback-noti .noti-box > span {font-size: 10px;}
+    .payback-content .payback-container .mypayback-cum {padding: 20px;}
+    .payback-content .payback-container .mypayback-cum span {font-size: 16px;}
+    .payback-content .payback-container .mypayback-update {padding: 20px;}
+    .payback-content .payback-container .mypayback-update h3 {font-size: 16px;}
+    .payback-content .payback-container .mypayback-update .update-date figure {width: 32px; height: 32px;}
+    .payback-content .payback-container .mypayback-update .update-date .update-date-list {column-gap: 28px;}
+    .payback-content .payback-container .mypayback-update .update-date .update-date-list li {width: 50px; height: 50px; font-size: 10px;}
+    .payback-content .payback-container .mypayback-update .update-date .update-date-list li:first-child:after {width: 20px; height: 20px; right: -50%;}
+    .payback-content .payback-container .mypayback-update .update-date .update-date-list li:last-child {margin-left: 20px;}
+    .payback-content .payback-container .mypayback-update .update-date .update-date-list li:last-child:before {width: 20px; height: 20px; left: -70%;}
+    .payback-content .payback-container .mypayback-update .update-info p {font-size: 10px;}
+}
+
