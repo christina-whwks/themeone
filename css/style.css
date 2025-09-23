@@ -452,11 +452,12 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .reward-box .reward-value-box .reward-unit {font-size: 16px; line-height: 36px; padding-bottom: 2px;}
     .payback-box span {font-size: 20px; line-height: 30px;}
     .connect-right {width: 100%;}
-    .my-exchange-box {row-gap: 40px;}
+    .my-exchange-box {row-gap: 40px; overflow-y: auto; height: 380px; scrollbar-width: none; -ms-overflow-style: none;}
     .exchange-title > span {font-size: 20px; line-height: 30px;}
     .exchange-title a span {font-size: 14px; line-height: 36px;}
     .exchange-title a figure {width: 12px; height: 12px;}
     .my-exchange-list {gap: 20px;}
+    .my-exchange-list li {width: 100%;}
     .my-exchange-list li a {width: 100%; padding: 12px; column-gap: 8px;}
     .my-exchange-list li a figure {width: 40px; height: 40px;}
     .my-exchange-list li a .my-value-box .my-uid {font-size: 10px; line-height: 15px;}
@@ -548,11 +549,11 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 768px) {
     .exchange-section {padding-right: 20px;}
-    .tab-buttons .tab-btn {padding: 8px 20px; font-size: 12px;}
-    .tab-buttons {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
-    .tab-buttons::-webkit-scrollbar {display: none;}
-    .tab-buttons:active {cursor: grabbing;}
-    .tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap; pointer-events: none;}
+    .exchange-section .tab-buttons .tab-btn {padding: 8px 20px; font-size: 12px;}
+    .exchange-section .tab-buttons {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
+    .exchange-section .tab-buttons::-webkit-scrollbar {display: none;}
+    .exchange-section .tab-buttons:active {cursor: grabbing;}
+    .exchange-section .tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap; pointer-events: none;}
     .exchange-table thead th {font-size: 12px; line-height: 18px;}
     .exchange-table tbody td {padding: 12px 0; font-size: 10px; line-height: 15px;}
     .exchange-table .exchange figure {width: 12px; height: 12px;}
@@ -1361,3 +1362,53 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .payback-content .payback-container .mypayback-update .update-info p {font-size: 10px;}
 }
 
+/* ============================== [ 나의 리워드 ] ========================================================================================== */
+.myreward-content {max-width: 97.5rem; width: 100%;}
+.myreward-wrapper {background-color: #3182F6; display: flex; flex-direction: column;}
+.myreward-wrapper .myreward-info-box {display: flex; flex-direction: column; padding: 4rem; row-gap: 2rem;}
+.myreward-wrapper .myreward-info-box .payback-txt-title {display: flex; flex-direction: column;}
+.myreward-wrapper .myreward-info-box .payback-txt-title p {color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 150%;}
+.myreward-wrapper .myreward-info-box .payback-txt-title span.usdt {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.myreward-wrapper .myreward-info-box .payback-txt-title span.usdt:after {content: 'USDT'; padding-left: 0.5rem;}
+.myreward-wrapper .myreward-info-box .this-month-payback {display: flex; flex-direction: column; row-gap: 11.7rem; padding: 2.8rem; background-color: #1B202A; border-radius: 1.6rem;}
+.myreward-wrapper .myreward-info-box .this-month-payback .this-month-title {display: flex; flex-direction: column;}
+.myreward-wrapper .myreward-info-box .this-month-payback .this-month-title .title {color: #A09FA5; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.myreward-wrapper .myreward-info-box .this-month-payback .this-month-title p {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.myreward-wrapper .myreward-info-box .this-month-payback .this-month-title p span.usdt:after {content: 'USDT'; padding-left: 0.5rem;}
+.myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar {position: relative; height: 8px; width: 100%; border-radius: 4px; background-color: #A09FA5;}
+.myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar .progress-fill {position: absolute; height: 8px; top: 0; left: 0; border-radius: 4px; background-color: #3182F6; z-index: 1;}
+.myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar .progress-label {position: absolute; bottom: 220%; border-radius: 1.6rem 1.6rem 1.6rem 0; background-color: #3182F6; padding: 0.8rem 1.2rem; box-shadow: 0 8px 20px 0 rgba(16, 17, 18, 0.10);}
+.myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar .progress-label span {color: #F4F5F7; text-align: center; font-size: 1.2rem; font-weight: 500; line-height: 140%;}
+
+.myreward-wrapper .myreward-detail-box {padding: 4rem; border-radius: 4rem 4rem 0 0; background-color: #1B202A;}
+.myreward-wrapper .myreward-detail-box .tab-container {padding: 1.2rem; background-color: #121721; border-radius: 2rem; margin-bottom: 8rem;}
+.myreward-wrapper .myreward-detail-box .tab-container .tab-buttons {column-gap: 0;}
+.myreward-wrapper .myreward-detail-box .tab-container .tab-buttons li {width: 50%;}
+.myreward-wrapper .myreward-detail-box .tab-container .tab-buttons li .tab-btn {padding: 2rem 0; border-radius: 1.2rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; line-height: 150%; font-weight: 700; background-color: transparent;}
+.myreward-wrapper .myreward-detail-box .tab-container .tab-buttons li .tab-btn.active {background-color: #3182F6;}
+.myreward-wrapper .report-container {display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem; margin-bottom: 12rem;}
+.myreward-wrapper .report-container .report-title h3 {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.myreward-wrapper .report-container .report-content {display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 1.2rem;}
+.myreward-wrapper .report-container .report-content p {color: #F4F5F7; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.myreward-wrapper .report-container .report-content p span.usdt:after {content: 'USDT'; padding-left: 0.5rem;}
+
+@media screen and (max-width: 768px) {
+    .myreward-content {margin-top: 80px;}
+    .myreward-wrapper .myreward-info-box {padding: 20px;}
+    .myreward-wrapper .myreward-info-box .payback-txt-title p {font-size: 12px;}
+    .myreward-wrapper .myreward-info-box .payback-txt-title span.usdt {font-size: 24px;}
+    .myreward-wrapper .myreward-info-box .this-month-payback {padding: 20px;}
+    .myreward-wrapper .myreward-info-box .this-month-payback .this-month-title .title {font-size: 16px;}
+    .myreward-wrapper .myreward-info-box .this-month-payback .this-month-title p {font-size: 20px;}
+    .myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar .progress-label {display: none;}
+    .myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar {height: 4px;}
+    .myreward-wrapper .myreward-info-box .this-month-payback .progress-box .progress-bar .progress-fill {height: 4px;}
+
+    .myreward-wrapper .myreward-detail-box {padding: 20px; border-radius: 40px 40px 0 0;}
+    .myreward-wrapper .myreward-detail-box .tab-container {margin-bottom: 40px; padding: 8px;}
+    .myreward-wrapper .myreward-detail-box .tab-container .tab-buttons li .tab-btn {padding: 12px 0; font-size: 14px;}
+
+    .myreward-wrapper .report-container {row-gap: 20px; margin-bottom: 80px;}
+    .myreward-wrapper .report-container .report-title h3 {font-size: 20px;}
+    .myreward-wrapper .report-container .report-content p {font-size: 14px;}
+}

@@ -53,65 +53,37 @@
             </div>
         </nav>
 
-        <main class="sub-content payback-content">
-            <div class="payback-wrapper">
-                <div class="exchange-info">
-                    <figure class="exchange-logo"><img src="img/logos/bitget.png" alt=""></figure>
-                    <div class="exchange-uid">
-                        <figure><img src="img/icon/automation.svg" alt=""></figure>
-                        <span>UID 00000000</span>
+        <main class="sub-content myreward-content">
+            <div class="myreward-wrapper">
+                <div class="myreward-info-box">
+                    <div class="payback-txt-title">
+                        <p><span class="date">08</span>월 받은 페이백</p>
+                        <span class="usdt">0</span>
                     </div>
-                </div>
-                <div class="tab-container">
-                    <ul class="tab-buttons">
-                        <li><div class="tab-btn active" data-tab="0">페이백</div></li>
-                        <li><div class="tab-btn" data-tab="1">페이백 내역</div></li>
-                    </ul>
-                </div>
-                <div class="tab-contents-wrapper">
-                    <div class="tab-contents">
-                        <div class="tab-content active" data-tab="0">
-                            <div class="payback-container">
-                                <div class="mypayback-box">
-                                    <div class="mypayback-title">
-                                        <span>나의 페이백</span>
-                                        <span class="date">업데이트 08월 24일 20:00 KST</span>
-                                    </div>
-                                    <div class="mypayback-value">
-                                        <span class="usdt">0.00</span>
-                                    </div>
-                                    <div class="mypayback-noti">
-                                        <figure><img src="img/icon/brand_awareness.svg" alt=""></figure>
-                                        <div class="noti-box">
-                                            <p>출금까지 <span class="highlight-blue">50 USDT</span>남았어요</p>
-                                            <span>50 USDT 모으면 출금 할 수 있어요!</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mypayback-cum">
-                                    <span>누적 페이백</span>
-                                    <span class="usdt">0.00</span>
-                                </div>
-                                <div class="mypayback-update">
-                                    <h3><span class="exchange-name">Bitget</span> 페이백 금액이<br><span class="highlight-blue">언제 업데이트</span> 되는지 알려드릴게요</h3>
-                                    <div class="update-date">
-                                        <figure><img src="img/icon/calendar_check.svg" alt=""></figure>
-                                        <ul class="update-date-list">
-                                            <li>23일</li>
-                                            <li>24일</li>
-                                            <li>24일</li>
-                                        </ul>
-                                    </div>
-                                    <div class="update-info">
-                                        <p>
-                                            <span class="highlight-blue">08월 23일 01:00(KST)</span>부터<br class="pc">
-                                            <span class="highlight-blue">08월 24일 01:00(KST)</span>까지<br class="mobile"> 거래로 발생한 페이백 내역이 오늘 <span class="highlight-blue">08월 24일 20:00(KST)</span>에 업데이트가 돼요
-                                        </p>
-                                    </div>
+                    <div class="this-month-payback">
+                        <div class="this-month-title">
+                            <span class="title">이번 달 페이백</span>
+                            <p><span class="highlight-blue usdt">0</span> 받았어요</p>
+                        </div>
+                        <div class="progress-box">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 72%;"></div>
+                                <div class="progress-label" style="left: 72%;">
+                                    <span class="rate">08.25</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content" data-tab="1">
+                    </div>
+                </div>
+                <div class="myreward-detail-box">
+                    <div class="tab-container">
+                        <ul class="tab-buttons">
+                            <li><div class="tab-btn active" data-tab="0">페이백 내역</div></li>
+                            <li><div class="tab-btn" data-tab="1">분석 리포트</div></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents">
+                        <div class="tab-content active" data-tab="0">
                             <div class="calendar-wrapper">
                                 <div class="calendar-container">
                                     <div class="calendar-box">
@@ -119,6 +91,19 @@
                                             <div id="date_box_single"></div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content" data-tab="1">
+                            <div class="report-container">
+                                <div class="report-title">
+                                    <h3>이번 달 분석 리포트</h3>
+                                </div>
+                                <div class="report-content">
+                                    <p>1. 이번 달 열심히 페이백 받아봐요!</p>
+                                    <p>2. 친구와 함께 테마원을 사용해볼까요?</p>
+                                    <p>3. 이번 달에 출금한 페이백은 총 <span class="highlight-blue usdt">0</span>에요</p>
+                                    <p>4. 출금을 위해 거래를 시작해볼까요?</p>
                                 </div>
                             </div>
                         </div>
@@ -160,14 +145,13 @@
         </footer>
     </div>
 
-    <script src="js/modal.js"></script>
     <script src="js/mobile_menu.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/jquery.daterangepicker.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            initTabSystem('.payback-content');
+            initTabSystem('.myreward-content');
 
             // 현재 날짜 가져오기
             const today = moment();
