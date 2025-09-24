@@ -31,6 +31,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 
 .pc {display: block;}
 .mobile {display: none;}
+.s-mobile {display: none;}
 
 /* 컬러 */
 .highlight-blue {color: #0084FF;}
@@ -133,6 +134,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 450px){
     html {font-size: calc(100vw * 10 / 450);}
+}
+
+@media screen and (max-width: 400px) {
+    .s-mobile {display: block;}
 }
 
 /* ============================== [ 헤더 header ] ========================================================================================== */
@@ -520,11 +525,12 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 768px) {
     .withdrawal-status-section {padding-right: 20px;}
-    .withdrawal-table thead th {font-size: 14px; line-height: 21px; padding: 12px 0;}
-    .withdrawal-table thead th:first-child {padding: 12px 0 12px 20px;}
-    .withdrawal-table thead th:last-child {padding: 12px 20px 12px 0;}
+    .withdrawal-table thead th {font-size: 14px; line-height: 150%; padding: 12px 0;}
+    .withdrawal-table thead th:first-child {padding: 12px 0;}
+    .withdrawal-table thead th:last-child {padding: 12px 0; width: 23%;}
     .withdrawal-table tbody td {font-size: 12px;}
     .withdrawal-table tbody td:first-child {font-size: 12px;}
+    .withdrawal-table tbody td:last-child {padding-right: 0;}
     .exchange figure {width: 16px; height: 16px;}
     .status-badge {padding: 4px 8px; font-size: 10px; line-height: 15px;}
 }
@@ -581,6 +587,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .support-info .support-hours {font-size: 20px; line-height: 30px;}
     .support-info .support-tags {margin-top: 20px;}
     .support-info .support-tags .support-tag {padding: 4px 12px; border-radius: 12px; font-size: 12px; line-height: 18px;}
+    .support-action {align-items: center;}
     .support-action .support-notice {font-size: 12px; line-height: 18px;}
 }
 
