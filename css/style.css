@@ -531,7 +531,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .withdrawal-table thead th:first-child {padding: 12px 0;}
     .withdrawal-table thead th:last-child {padding: 12px 0; width: 23%;}
     .withdrawal-table tbody td {font-size: 12px;}
-    .withdrawal-table tbody td:first-child {font-size: 12px;}
+    .withdrawal-table tbody td:first-child {font-size: 12px; padding-left: 0;}
     .withdrawal-table tbody td:last-child {padding-right: 0;}
     .exchange figure {width: 16px; height: 16px;}
     .status-badge {padding: 4px 8px; font-size: 10px; line-height: 15px;}
