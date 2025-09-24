@@ -550,7 +550,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .exchange-table thead th:last-child {padding: 2rem 2rem 2rem 0;}
 .exchange-table tbody tr.active {background: linear-gradient(90deg, #3182F6 0%, rgba(49, 130, 246, 0.00) 100%);}
 .exchange-table tbody tr.active td:first-child {border-radius: 2rem 0 0 2rem;}
-.exchange-table tbody td {padding: 1.5rem 0; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.exchange-table tbody td {width: 20%; padding: 1.5rem 0; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
 .exchange-table tbody td:first-child {padding-left: 2rem;}
 .exchange-table tbody td:last-child {padding-right: 2rem;}
 .exchange-table tbody td .exchange {justify-content: flex-start;}
@@ -562,15 +562,21 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-section .tab-buttons::-webkit-scrollbar {display: none;}
     .exchange-section .tab-buttons:active {cursor: grabbing;}
     .exchange-section .tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap; pointer-events: none;}
-    .exchange-table thead th {font-size: 12px; line-height: 18px;}
+    .exchange-table thead th {font-size: 12px; line-height: 18px; padding: 12px 0;}
+    .exchange-table thead th:first-child {padding: 12px 0 12px 12px;}
     .exchange-table tbody td {padding: 12px 0; font-size: 10px; line-height: 15px;}
     .exchange-table .exchange figure {width: 12px; height: 12px;}
     .exchange-table .exchange span {font-size: 10px;}
     .exchange-table tbody tr.active td:first-child {padding-right: 10px;}
+    .exchange-table tbody td:last-child {padding-right: 0;}
 }
 
 @media screen and (max-width: 449px) {
-    .exchange-table tbody td {padding-left: 12px;}
+    .exchange-table {table-layout: fixed;}
+    .exchange-table thead th:first-child {padding: 12px 0 12px 6px;}
+    .exchange-table thead th:last-child {padding: 12px 0;}
+    .exchange-table tbody td {padding: 12px 0;}
+    .exchange-table tbody td:first-child {padding: 12px 0 12px 6px;}
 }
 
 .support-card {padding: 4rem; background-color: #1B202A; border-radius: 3.2rem; display: flex; flex-direction: column; row-gap: 6.9rem;}
