@@ -127,9 +127,9 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .input-field-line {padding: 12px 20px; height: 60px; font-size: 16px; border-radius: 20px;}
     .input-field-line.withdrawal {padding: 12px; height: fit-content; font-size: 10px;}
 
-    input[type="checkbox"].block-chk + label {font-size: 13px; padding: 12px; padding-left: 40px;}
+    input[type="checkbox"].block-chk + label {font-size: 1.3rem; padding: 12px; padding-left: 40px;}
     input[type="checkbox"].block-chk + label::before {left: 12px; width: 20px; height: 20px;}
-    input[type="checkbox"].block-chk + label a {font-size: 13px;}
+    input[type="checkbox"].block-chk + label a {font-size: 1.3rem;}
 }
 
 @media screen and (max-width: 450px){
@@ -338,6 +338,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .mobile-menu {
         display: none !important;
     }
+    .mobile-menu-header {border-bottom: none;}
 }
 
 /* ============================== [ 메인 ] ========================================================================================== */
