@@ -53,70 +53,14 @@
             </div>
         </nav>
 
-        <main class="sub-content mypage-content coupon">
+        <main class="sub-content mypage-content">
             <div class="coupon-container">
-                <div class="coupon-box">
-                    <ul class="coupon-list">
-                        <li>
-                            <div class="coupon-content">
-                                <span class="coupon-title">신규 회원가입 쿠폰</span>
-                                <span class="coupon-value">10 USDT</span>
-                                <span class="coupon-date">2025/08/06 09:28:37</span>
-                            </div>
-                            <a href="#" class="blue-btn coupon-btn" data-modal="couponModal">사용하기</a>
-                        </li>
-                        <li>
-                            <div class="coupon-content">
-                                <span class="coupon-title">신규 회원가입 쿠폰</span>
-                                <span class="coupon-value">10 USDT</span>
-                                <span class="coupon-date">2025/08/06 09:28:37</span>
-                            </div>
-                            <a href="#" class="blue-btn coupon-btn" data-modal="couponModal">사용하기</a>
-                        </li>
-                    </ul>
-                    <a href="mypage_coupon_issued.html" class="blue-btn">다른 쿠폰 발급 받기</a>
+                <div class="coupon-empty service">
+                    <span>서비스 준비중이에요!</span>
+                    <a href="#" class="line-btn gray">이전페이지로 돌아가기</a>
                 </div>
             </div>
         </main>
-
-        <!-- 거래소 선택 모달 -->
-        <div class="bg"></div>
-        <div class="modal coupon-modal" id="couponModal">
-            <div class="inner">
-                <div class="modal-header">
-                    <h5>어떤 거래소에 적용하시겠어요?</h5>
-                </div>
-                <div class="modal-body">
-                    <ul class="coupon-list">
-                        <li>
-                            <button type="button" class="exchange-btn">
-                                <figure><img src="img/logos/bitget.png" alt=""></figure>
-                                <span>Bitget</span>
-                                <span>1455760</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="exchange-btn">
-                                <figure><img src="img/logos/bybit.png" alt=""></figure>
-                                <span>Bybit</span>
-                                <span>1455760</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="exchange-btn">
-                                <figure><img src="img/logos/okx.png" alt=""></figure>
-                                <span>OKX</span>
-                                <span>1455760</span>
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="modal-buttons">
-                        <a href="#" class="dark-btn close">닫기</a>
-                        <button type="button" class="blue-btn">쿠폰 사용</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Footer -->
         <footer class="main-footer">
@@ -155,22 +99,7 @@
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const exchangeBtns = document.querySelectorAll('.exchange-btn');
-            const nextBtn = document.getElementById('nextBtn');
-
-            // 거래소 버튼 클릭 시 선택 상태 변경 및 다음 버튼 활성화
-            exchangeBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // 모든 버튼에서 선택 상태 제거
-                    exchangeBtns.forEach(b => b.classList.remove('selected'));
-                    
-                    // 클릭된 버튼에 선택 상태 추가
-                    this.classList.add('selected');
-                    
-                    // 다음 버튼 활성화
-                    nextBtn.disabled = false;
-                });
-            });
+            
         });
     </script>
 </body>

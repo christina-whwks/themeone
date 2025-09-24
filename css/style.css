@@ -56,6 +56,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .line-btn.help-btn {padding: 1.2rem 2rem; border-radius: 8rem; width: fit-content; color: #0084FF; font-size: 2rem; line-height: 150%;}
 .line-btn.bold-btn {font-weight: 900; color: #0084FF; color: #A09FA5;}
 .line-btn.normal {border: 1px solid #313335; border-radius: 2.4rem;}
+.line-btn.gray {border: 1px solid #313335; color: #A09FA5;}
 .yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
 .max-btn {background-color: transparent; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1; position: absolute; top: 50%; transform:translateY(-50%); right: 2rem;}
@@ -319,6 +320,34 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .modal-header-v2 h5 {font-size: 16px;}
 }
 
+/* 쿠폰함에서 거래소 선택 모달 */
+.coupon-modal {max-width: 54.1rem; width: 100%; padding: 4rem; border-radius: 3.2rem 3.2rem 0 0; top: auto; bottom: 0; transform: translateX(-50%);}
+.coupon-modal .inner {row-gap: 2.4rem;}
+.coupon-modal .coupon-list {display: flex; align-items: center; flex-direction: column; flex-wrap: wrap; gap: 1.2rem; width: 100%; min-height: fit-content; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 0 1px;}
+.coupon-modal .coupon-list li {width: 100%;}
+.coupon-modal .coupon-list li .exchange-btn {width: 100%; display: flex; align-items: center; column-gap: 1.6rem; background-color: #121721; padding: 2rem; border-radius: 1.2rem;}
+.coupon-modal .coupon-list li .exchange-btn.selected {outline: 1px solid #3182F6; background-color: #203453;}
+.coupon-modal .coupon-list li .exchange-btn figure {width: 3.2rem; height: 3.2rem; border-radius: 100%; overflow: hidden;}
+.coupon-modal .coupon-list li .exchange-btn figure.heat {width: 2rem; height: 2rem;}
+.coupon-modal .coupon-list li .exchange-btn span {color: #F4F5F7; font-size: 1.6rem; font-weight: 600;}
+.coupon-modal .modal-buttons {margin-top: 2.4rem;}
+.coupon-modal .modal-buttons .dark-btn {border-radius: 1.6rem; color: #A09FA5;}
+.coupon-modal .modal-buttons .blue-btn {padding: 2rem 0; border-radius: 1.6rem; font-size: 2rem;}
+
+@media screen and (max-width: 768px) {
+    .coupon-modal .inner {row-gap: 24px;}
+    .coupon-modal {max-width: 100%; padding: 20px;}
+    .coupon-modal .modal-header h5 {font-size: 16px;}
+    .coupon-modal .modal-header .close figure {width: 20px; height: 20px;}
+    .coupon-modal .coupon-list {row-gap: 12px; padding: 2px 1px;}
+    .coupon-modal .coupon-list li .exchange-btn {padding: 12px; column-gap: 12px;}
+    .coupon-modal .coupon-list li .exchange-btn figure {width: 20px; height: 20px;}
+    .coupon-modal .coupon-list li .exchange-btn span {font-size: 12px; line-height: 18px;}
+    .coupon-modal .coupon-list li .exchange-btn figure.heat {width: 12px; height: 12px;}
+    .coupon-modal .modal-buttons .dark-btn {font-size: 16px;}
+    .coupon-modal .modal-buttons .blue-btn {font-size: 16px;}
+}
+
 
 /* ============================== [ 모바일용 메뉴 ] ========================================================================================== */
 .main-navigation {position: relative; z-index: 1;}
@@ -341,7 +370,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 메인 ] ========================================================================================== */
-.main-container {display: flex; flex-direction: column; background-color: #121721;}
+.main-container {display: flex; flex-direction: column; background-color: #121721; min-height: 100svh;}
 .top-banner {width: 100%; background-color: #3182F6;}
 .top-banner .banner-content {display: flex; align-items: center; justify-content: space-between; padding: 2.4rem 4rem;}
 .top-banner .banner-content .banner-left h1 {color: #F4F5F7; text-align: center; font-size: 2.4rem; font-weight: 700; line-height: 3.6rem;}
@@ -1301,14 +1330,49 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 마이페이지 - 쿠폰 ] ========================================================================================== */
-.coupon-container {}
+.coupon-container .coupon-box {display: flex; flex-direction: column; row-gap: 120px; width: 41.2rem; margin: 0 auto;}
 .coupon-empty {display: flex; flex-direction: column; justify-content: center; align-items: center; row-gap: 2rem;}
 .coupon-empty figure {width: 12rem; height: 12rem;}
 .coupon-empty span {color: #F4F5F7; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
+.coupon-empty .line-btn {border-radius: 4rem;}
+
+.coupon-list {display: flex; flex-direction: column; row-gap: 2rem; align-items: center; justify-content: center; width: 100%;}
+.coupon-list li {display: flex; align-items: stretch; width: 100%;}
+.coupon-list li .coupon-content {padding: 4rem; border-radius: 2rem; border: 1px solid #313335; width: 76%; height: 16.3rem; display: flex; flex-direction: column;}
+.coupon-list li .coupon-content .coupon-title {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+.coupon-list li .coupon-content .coupon-value {color: #F4F5F7; font-size: 3.2rem; font-weight: 600; line-height: 150%;}
+.coupon-list li .coupon-content .coupon-date {color: #313335; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+.coupon-list li .blue-btn.coupon-btn {display: flex; align-items: center; justify-content: center; width: 24%; padding: 0 2rem; font-size: 1.6rem;}
+
+.coupon-box .blue-btn {width: fit-content; margin: 0 auto;}
+
+.issued-coupon {max-width: 97.5rem; width: 100%;}
+.issued-coupon .section-title {margin-bottom: 6rem;}
+.issued-coupon-list {display: flex; flex-direction: column; width: 100%; row-gap: 2rem;}
+.issued-coupon-list li {width: 100%; padding: 4rem; border-radius: 2rem; border: 1px solid #313335; background-color: #1B202A; display: flex; align-items: stretch; justify-content: space-between;}
+.issued-coupon-list li .coupon-txt-box {display: flex; flex-direction: column;}
+.issued-coupon-list li .coupon-txt-box .coupon-title {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+.issued-coupon-list li .coupon-txt-box .coupon-value {color: #F4F5F7; font-size: 3.2rem; font-weight: 600; line-height: 150%;}
+.issued-coupon-list li .blue-btn {display: flex; align-items: center; justify-content: center; padding: 2rem; border-radius: 1.6rem; font-size: 2rem; line-height: 150%;}
 
 @media screen and (max-width: 768px) {
+    .mypage-content.coupon {margin: 80px auto;}
+    .mypage-content.issued-coupon {margin: 80px auto;}
     .counpon-empty figure {width: 80px; height: 80px;}
     .coupon-empty span {font-size: 20px;}
+
+    .coupon-container .coupon-box {width: 100%;}
+    .coupon-list li .coupon-content {padding: 32px 40px;}
+    .coupon-list li .coupon-content .coupon-title {font-size: 12px;}
+    .coupon-list li .coupon-content .coupon-value {font-size: 32px;}
+    .coupon-list li .coupon-content .coupon-date {font-size: 12px;}
+    .coupon-list li .blue-btn.coupon-btn {padding: 0; font-size: 14px;}
+
+    .issued-coupon .section-title {margin-bottom: 60px;}
+    .issued-coupon-list li {padding: 20px; border-radius: 20px;}
+    .issued-coupon-list li .coupon-txt-box .coupon-title {font-size: 12px;}
+    .issued-coupon-list li .coupon-txt-box .coupon-value {font-size: 20px;}
+    .issued-coupon-list li .blue-btn {padding: 12px; font-size: 14px;}
 }
 
 /* ============================== [ 거래소 페이백 ] ========================================================================================== */
@@ -1427,3 +1491,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .myreward-wrapper .report-container .report-title h3 {font-size: 20px;}
     .myreward-wrapper .report-container .report-content p {font-size: 14px;}
 }
+
+/* ============================== [ 서비스 준비중 ] ========================================================================================== */
+/* coupon_empty 상속받아사용 */
+.coupon-empty.service {row-gap: 52px;}
