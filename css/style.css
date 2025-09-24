@@ -992,14 +992,14 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .service-main .hero-content .hero-title-text {color: #F4F5F7; text-align: center; font-size: 6.4rem; font-weight: 900; line-height: 140%;}
 
 .service-main .features-section {display: flex; align-items: center; justify-content: center; margin-bottom: 20rem;}
-.service-main .features-container {display: flex; align-items: center; column-gap: 2rem;}
-.service-main .features-container .feature-card {border-radius: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 40px; padding: 40px 0; width: 31rem; height: 37rem;}
+.service-main .features-container {display: flex; align-items: center; column-gap: 2rem; width: 100%;}
+.service-main .features-container .feature-card {width: 33%; border-radius: 4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem; padding: 4rem 0; width: 31rem; height: 37rem;}
 .service-main .features-container .feature-card.feature-card-green {background-color: #56AF31;}
 .service-main .features-container .feature-card.feature-card-blue {background-color: #0084FF;}
 .service-main .features-container .feature-card.feature-card-purple {background-color: #7F5BFB;}
 .service-main .features-container .feature-card .feature-txt-box {display: flex; flex-direction: column;}
-.service-main .features-container .feature-card .feature-txt-box p {color: #F4F5F7; text-align: center; font-size: 20px; font-weight: 500; line-height: 150%;}
-.service-main .features-container .feature-card .feature-txt-box h3 {color: #F4F5F7; text-align: center; font-size: 40px; font-weight: 700; line-height: 150%;}
+.service-main .features-container .feature-card .feature-txt-box p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 500; line-height: 150%;}
+.service-main .features-container .feature-card .feature-txt-box h3 {color: #F4F5F7; text-align: center; font-size: 4rem; font-weight: 700; line-height: 150%;}
 
 .differentiators-section {margin-bottom: 20rem;}
 .differentiators-section .stats-list {max-width: 100rem; width: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 0 auto;}
@@ -1059,8 +1059,9 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .service-main .hero-content .hero-subtitle {font-size: 14px;}
     .service-main .hero-content .hero-title-text {font-size: 32px;}
 
-    .service-main .features-section {margin-bottom: 120px; overflow-x: auto; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
-    .service-main .features-container .feature-card {padding: 40px; width: 24.8rem;}
+    .service-main .features-section {margin-bottom: 120px; overflow: hidden; padding-left: 20px;}
+    .service-main .features-section .features-container {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
+    .service-main .features-container .feature-card {padding: 4rem; width: 248px; height: 378px; flex-shrink: 0;}
     .service-main .section-title {row-gap: 12px; margin-bottom: 40px;}
     .service-main .section-title p {font-size: 12px;}
     .service-main .section-title h2 {font-size: 24px;}
