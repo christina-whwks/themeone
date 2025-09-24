@@ -565,7 +565,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-table tbody td {padding: 12px 0; font-size: 10px; line-height: 15px;}
     .exchange-table .exchange figure {width: 12px; height: 12px;}
     .exchange-table .exchange span {font-size: 10px;}
-    .exchange-table tbody tr.active td:first-child {padding-right: 20px;}
+    .exchange-table tbody tr.active td:first-child {padding-right: 10px;}
 }
 
 @media screen and (max-width: 449px) {
