@@ -560,7 +560,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-section .tab-buttons {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
     .exchange-section .tab-buttons::-webkit-scrollbar {display: none;}
     .exchange-section .tab-buttons:active {cursor: grabbing;}
-    .exchange-section .tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap; pointer-events: none;}
+    .exchange-section .tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap;}
     .exchange-table thead th {font-size: 12px; line-height: 18px; padding: 12px 0;}
     .exchange-table thead th:first-child {padding: 12px 0 12px 12px;}
     .exchange-table tbody td {padding: 12px 0; font-size: 10px; line-height: 15px;}
@@ -992,7 +992,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .service-main .hero-content .hero-title-text {color: #F4F5F7; text-align: center; font-size: 6.4rem; font-weight: 900; line-height: 140%;}
 
 .service-main .features-section {display: flex; align-items: center; justify-content: center; margin-bottom: 20rem;}
-.service-main .features-container {display: flex; align-items: center; column-gap: 2rem; width: 100%;}
+.service-main .features-container {display: flex; align-items: center; column-gap: 2rem; width: 100%; justify-content: center;}
 .service-main .features-container .feature-card {width: 33%; border-radius: 4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem; padding: 4rem 0; width: 31rem; height: 37rem;}
 .service-main .features-container .feature-card.feature-card-green {background-color: #56AF31;}
 .service-main .features-container .feature-card.feature-card-blue {background-color: #0084FF;}
