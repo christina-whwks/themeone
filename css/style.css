@@ -855,6 +855,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .mypage-submenu-list li a .submenu-arrow span {color: #A09FA5; font-size: 1.6rem; font-weight: 700; line-height: 1; padding-top: 0.4rem;}
 .mypage-submenu-list li a .submenu-arrow span.after {color: #0084FF;}
 
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .mypage-content {padding: 0 2rem;}   
+}
+
 @media screen and (max-width: 768px) {
     .mypage-content {margin: 120px auto; padding: 0 20px;}
     .user-info-container > figure {width: 56px; height: 56px;}
@@ -952,6 +956,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .visual-section {max-width: 133.2rem; margin: 12.6rem auto; width: 100%; margin-bottom: 12rem;}
 .visual-section .img-box {width: 100%; height: 47rem; border-radius: 2rem; background-color: #1B202A; padding: 4rem;}
 
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .visual-section {padding: 0 2rem;}
+}
+
 @media screen and (max-width: 768px) {
     .visual-section {padding: 20px; margin: 43px auto;}
     .visual-section .img-box {height: 240px; padding: 40px; border-radius: 20px;}
@@ -994,6 +1002,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 .news-btn-box {display: flex; align-items: center; justify-content: center; margin-top: 4rem;}
 .news-btn-box .line-btn {color: #A09FA5;}
+
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .news-content {padding: 0 2rem;}    
+}
 
 @media screen and (max-width: 768px) {
     .news-content {padding: 0 2rem; margin-top: 80px;}
@@ -1083,6 +1095,23 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .cta-section .section-title h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
 .cta-section .cta-button-container .blue-btn {width: 97.5rem; padding: 2rem 0; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
 
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .partnership-section {padding: 0 2rem;}
+    .usage-section {padding: 0 2rem;}
+    .exchange-section {padding: 0 2rem;}
+}
+
+@media screen and (max-width: 1160px) {
+    .usage-list {flex-direction: column; row-gap: 64px;}
+    .usage-list li {width: 100%;}
+    .usage-list li:after {background-image: url('/img/icon/arrow_down_blue.svg'); right: 50%; transform: translateX(50%); top: 120%;}
+}
+
+@media screen and (max-width: 975px) {
+    .cta-section .cta-button-container {max-width: 97.5rem; width: 100%; padding: 0 2rem;}
+    .cta-section .cta-button-container .blue-btn {width: 100%;}
+}
+
 @media screen and (max-width: 768px) {
     .service-main .hero-content {margin: 183px auto 103px; row-gap: 12px;}
     .service-main .hero-content .hero-subtitle {font-size: 14px;}
@@ -1110,10 +1139,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .usage-section {margin: 133px auto; padding: 0 20px;}
     .usage-container {row-gap: 80px;}
     .usage-container .section-title {margin-bottom: 0;}
-    .usage-list {flex-direction: column; row-gap: 64px;}
-    .usage-list li {width: 100%;}
     .usage-list li p {font-size: 16px;}
-    .usage-list li:after {background-image: url('/img/icon/arrow_down_blue.svg'); right: 50%; transform: translateX(50%); top: 120%;}
 
     .service-main .analytics-section {padding: 0 20px;}
     .service-main .analytics-section .section-title h2 {font-size: 14px;}
@@ -1160,6 +1186,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 .bot-main .btn-group {display: flex; justify-content: center;}
 .bot-main .btn-group .blue-btn.contact-btn {width: fit-content; border-radius: 4rem;}
+
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .bot-main .explain-section {padding: 0 2rem;}
+}
 
 @media screen and (max-width: 768px) {
     .bot-main .hero-banner {margin: 80px auto 120px;}
@@ -1264,6 +1294,19 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .floating-section .floating-wrapper .section-title h2 {font-weight: 700;}
 .floating-section .floating-wrapper .btn-group {width: 100%; display: flex; align-items: center; justify-content: center; column-gap: 1.2rem;}
 .floating-section .floating-wrapper .btn-group a {width: 50%; border-radius: 2rem; padding: 2rem 0; font-size: 2rem;}
+
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .self-main .top-section {padding: 0 2rem;}
+    .self-main .fee-section {padding: 0 2rem;}
+    .self-main .policy-section {padding: 0 2rem;}
+    .self-main .analytics-section {padding: 0 2rem;}
+    .self-main .themeone-section {padding: 0 2rem;}
+    .self-main .event-section {padding: 0 2rem;}
+}
+
+@media screen and (max-width: 1220px) {
+    .floating-section {padding: 0 2rem;}
+}
 
 @media screen and (max-width: 768px) {
     .self-main .banner-section .banner-wrapper figure {width: 100%; height: 378px;}
@@ -1413,6 +1456,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .payback-content .payback-container .mypayback-update .update-date .update-date-list li:last-child {background-color: #3182F6; color: #F4F5F7; margin-left: 4rem;}
 .payback-content .payback-container .mypayback-update .update-date .update-date-list li:last-child:before {content: ''; background-image: url('../img/icon/arrow_right_blue.svg'); aspect-ratio: 1/1; background-position: center; background-repeat: no-repeat; width: 4rem; height: 4rem; position: absolute; top: 50%; transform: translateY(-50%); left: -50%;}
 .payback-content .payback-container .mypayback-update .update-info p {color: #A09FA5; font-size: 1.4rem; font-weight: 500; line-height: 150%;}
+
+@media screen and (min-width: 769px) and (max-width: 1331px) {
+    .payback-content .payback-container {padding: 0 2rem;}
+}
 
 @media screen and (max-width: 768px) {
     .payback-content {margin-top: 40px;}
