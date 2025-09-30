@@ -92,6 +92,10 @@ input[type="checkbox"].block-chk + label::before {content: ''; position: absolut
 input[type="checkbox"].block-chk:checked + label {border: 1px solid #0084FF;}
 input[type="checkbox"].block-chk:checked + label::before {background-image: url('../img/icon/check_after.svg');}
 
+@media screen and (min-width: 981px) {
+    html {font-size: calc(100vw * 10 / 1920);}
+}
+
 @media screen and (min-width: 769px) and (max-width: 980px) {
     html {font-size: calc(100vw * 10 / 980);}
     .notification-popup {display: none;}
@@ -147,17 +151,20 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .nav-content > div {width: 33%;}
 .nav-content .logo-container a h2 {color: #3182F6; text-align: center; font-size: 3.2rem; font-weight: 900; line-height: 4.8rem;}
 .nav-content .logo-container a figure {width: fit-content;}
-.nav-content .nav-menu {display: flex; align-items: center; column-gap: 2.4rem; justify-content: center;}
+.nav-content .nav-menu {display: flex; align-items: center; column-gap: 4rem; justify-content: center;}
 .nav-content .nav-menu li.active .nav-link {color: #0084FF;}
 .nav-content .nav-menu li .nav-link {color: #F4F5F7; font-size: 2rem; font-weight: 500; line-height: 3.2rem;}
 .nav-content .nav-right {display: flex; align-items: center; column-gap: 2.4rem; justify-content: flex-end;}
 .nav-content .nav-right .auth-buttons {display: flex; align-items: center; column-gap: 1.2rem;}
 .nav-content .nav-right a figure {width: 3.2rem; height: 3.2rem;}
 
-@media screen and (max-width: 1290px) {
+/* @media screen and (max-width: 1290px) {
     .nav-content > div {width: fit-content;}
 }
-
+ */
+@media screen and (max-width: 980px) {
+    .nav-content > div {width: fit-content;}
+}
 @media screen and (max-width: 768px) {
     .nav-center {display: none;}
     .nav-content {padding: 20px;}
@@ -430,7 +437,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .suggest-check-box {display: flex; flex-direction: column; row-gap: 8rem; align-items: center; justify-content: center;}
 .suggest-check-box > figure {width: 10.4rem; height: 7.7rem;}
 .connect-container {padding: 2rem; background-color: #121721; border-radius: 1.6rem; display: flex; align-items: center; width: 100%; justify-content: space-between;}
-.connect-container .connect-text-group {display: flex; flex-direction: column;}
+.connect-container .connect-text-group {display: flex; flex-direction: column; row-gap: 0.5rem;}
 .connect-container .connect-text-group .connect-title {display: flex; align-items: center; column-gap: 0.4rem;}
 .connect-container .connect-text-group .connect-title figure {width: 2.4rem; height: 2.4rem;}
 .connect-container .connect-text-group .connect-title span {color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 2.4rem; padding-top: 0.3rem;}
@@ -898,6 +905,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 /* payback step4 */
 /* exchange-list 상속받아 사용 */
+.exchange-list.txt-list li {width: calc(50% - 0.7rem);}
 .exchange-list.txt-list li .exchange-btn span {color: #A09FA5; font-size: 1.4rem;}
 
 @media screen and (max-width: 768px) {
@@ -955,6 +963,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 /* 메인 페이지 상속받아 사용 */
 .visual-section {max-width: 133.2rem; margin: 12.6rem auto; width: 100%; margin-bottom: 12rem;}
 .visual-section .img-box {width: 100%; height: 47rem; border-radius: 2rem; background-color: #1B202A; padding: 4rem;}
+.visual-section .img-box figure {width: 100%; height: 100%;}
 
 @media screen and (min-width: 769px) and (max-width: 1331px) {
     .visual-section {padding: 0 2rem;}
@@ -1176,8 +1185,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .bot-main .hero-content .bot-image-box {padding: 4rem; border-radius: 4rem; background-color: #CCE4FF; width: 34rem;}
 .bot-main .hero-content .section-title h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 900; line-height: 150%;}
 
-.bot-main .explain-section {background-color: #121721; position: relative; z-index: 1; max-width: 133.2rem; width: 100%; margin: 0 auto; margin-bottom: 20rem;}
-.bot-main .explain-wrapper {display: flex; flex-direction: column; row-gap: 8rem; margin-bottom: 20rem;}
+.bot-main .explain-section {background-color: #121721; position: relative; z-index: 1; width: 100%;}
+.bot-main .explain-wrapper {display: flex; flex-direction: column; row-gap: 8rem; margin-bottom: 20rem; max-width: 133.2rem; width: 100%; margin: 0 auto; margin-bottom: 20rem;}
 .bot-main .explain-wrapper .explain-box:first-child {margin-top: 8rem;}
 .bot-main .explain-wrapper .explain-list {display: flex; align-items: flex-start; justify-content: center; column-gap: 4rem;}
 .bot-main .explain-wrapper .explain-list li {width: 33%;}
@@ -1423,7 +1432,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .payback-content .payback-wrapper {display: flex; flex-direction: column; row-gap: 40px; margin-bottom: 20rem;}
 .payback-content .exchange-info {display: flex; flex-direction: column; row-gap: 20px; align-items: center; justify-content: center;}
 .payback-content .exchange-info .exchange-logo {width: 50px; height: 50px;}
-.payback-content .exchange-info .exchange-uid {display: flex; align-items: center; column-gap: 4px; padding: 1.2rem; background-color: #1B202A; color: #0084FF;}
+.payback-content .exchange-info .exchange-uid {display: flex; align-items: center; column-gap: 4px; padding: 1.2rem; background-color: #1B202A; color: #0084FF; border-radius: 1.2rem;}
 .payback-content .exchange-info .exchange-uid figure {width: 16px; height: 16px;}
 .payback-content .exchange-info .exchange-uid span {font-size: 1.4rem;}
 .payback-content .tab-container {margin-bottom: 0;}
