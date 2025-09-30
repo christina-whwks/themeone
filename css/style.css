@@ -457,7 +457,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* 연동성공 섹션 */
-.connect-section {width: 100%;}
+.connect-section {width: 100%; margin-top: 12rem;}
 .connect-wrapper {display: flex; align-items: stretch; column-gap: 2rem; width: 100%;}
 .connect-left {width: 40%; display: flex; flex-direction: column; row-gap: 2rem;}
 .connect-card {padding: 4rem; border-radius: 2rem; background-color: #1B202A;}
