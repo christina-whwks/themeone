@@ -1,13 +1,13 @@
 @charset "utf-8";
-@font-face {font-family: "Pretendard"; font-weight: 100; font-display: swap; src: url("../fonts/Pretendard-Thin.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 200; font-display: swap; src: url("../fonts/Pretendard-ExtraLight.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 300; font-display: swap; src: url("../fonts/Pretendard-Light.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 400; font-display: swap; src: url("../fonts/Pretendard-Regular.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 500; font-display: swap; src: url("../fonts/Pretendard-Medium.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 600; font-display: swap; src: url("../fonts/Pretendard-SemiBold.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 700; font-display: swap; src: url("../fonts/Pretendard-Bold.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 800; font-display: swap; src: url("../fonts/Pretendard-ExtraBold.otf") format("opentype"),}
-@font-face {font-family: "Pretendard"; font-weight: 900; font-display: swap; src: url("../fonts/Pretendard-Black.otf") format("opentype"),}
+@font-face {font-family: 'Pretendard'; font-weight: 900; font-display: swap; src: local('Pretendard Black'), url('../fonts/woff2-subset/Pretendard-Black.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-Black.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 800; font-display: swap; src: local('Pretendard ExtraBold'), url('../fonts/woff2-subset/Pretendard-ExtraBold.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-ExtraBold.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 700; font-display: swap; src: local('Pretendard Bold'), url('../fonts/woff2-subset/Pretendard-Bold.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-Bold.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 600; font-display: swap; src: local('Pretendard SemiBold'), url('../fonts/woff2-subset/Pretendard-SemiBold.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-SemiBold.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 500; font-display: swap; src: local('Pretendard Medium'), url('../fonts/woff2-subset/Pretendard-Medium.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-Medium.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 400; font-display: swap; src: local('Pretendard Regular'), url('../fonts/woff2-subset/Pretendard-Regular.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-Regular.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 300; font-display: swap; src: local('Pretendard Light'), url('../fonts/woff2-subset/Pretendard-Light.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-Light.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 200; font-display: swap; src: local('Pretendard ExtraLight'), url('../fonts/woff2-subset/Pretendard-ExtraLight.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-ExtraLight.subset.woff') format('woff');}
+@font-face {font-family: 'Pretendard'; font-weight: 100; font-display: swap; src: local('Pretendard Thin'), url('../fonts/woff2-subset/Pretendard-Thin.subset.woff2') format('woff2'), url('../fonts/woff-subset/Pretendard-Thin.subset.woff') format('woff');}
 
 /* ============================== [ 기본 리셋 ] ========================================================================================== */
 * {margin: 0; padding: 0; box-sizing: border-box;}
@@ -15,10 +15,10 @@ li {list-style: none;}
 a {text-decoration: none; color: inherit; cursor: pointer;}
 html {line-height: 1; color: #111111; font-family: 'Pretendard'; font-weight: 400; background: #fff; height: 100%; font-size: 62.5%;}
 html::-webkit-scrollbar {display: none;}
-body {font-size: 1.6rem; font-family: 'Pretendard;'}
+body {font-size: 1.6rem; font-family: 'Pretendard'; font-weight: 400;}
 button {border: 0; font-size: 1.6rem; font-weight: 400; cursor: pointer;}
 button *, a * {pointer-events: none;}
-input {font-size: 1.6rem; font-weight: 400;}
+input {font-size: 1.6rem; font-weight: 400; -webkit-appearance: none; -moz-appearance: none; appearance: none; border-radius: 0;}
 h1, h2, h3, h4, h5, h6 {font-family: 'Pretendard'; margin: 0; line-height: 1;}
 table {border-spacing: 0px;}
 select::-ms-expand {display: none;}
@@ -70,7 +70,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .search-input::placeholder {color: #A09FA5;}
 .input-field {padding: 1.2rem 2rem; background-color: #121721; border-radius: 3rem; outline: none; border: none; width: 100%; color: #F4F5F7;}
 .input-field::placeholder {color: #A09FA5;}
-.input-code-digit {background-color: transparent; outline: none; border: none; border-bottom: 1px solid #3182F6; width: 5rem; color: #F4F5F7; padding: 2rem 0; text-align: center; font-size: 1.6rem; font-weight: 500;}
+.input-code-digit {background-color: transparent; outline: none; border: none; border-bottom: 1px solid #3182F6; width: 5rem; color: #F4F5F7; padding: 2rem 0; text-align: center; font-size: 1.6rem; font-weight: 500; border-radius: 0;}
 .input-field-line {padding: 1.2rem 2rem; border-radius: 2rem; border: 1px solid #595B63; background-color: #121721; width: 100%; font-size: 1.6rem; height: 6rem; color: #F4F5F7; font-size: 1.6rem; font-weight: 500;}
 .input-field-line::placeholder {color: #A09FA5; font-weight: 500;}
 .input-field-line.withdrawal {border: 1px solid #3182F6;}
