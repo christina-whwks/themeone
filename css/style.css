@@ -223,6 +223,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .modal-header .close figure {width: 24px; height: 24px;}
 }
 
+@media screen and (max-width: 370px) {
+    .modal {max-width: 90%;}
+}
+
 /* 거래소 선택 모달 */
 .exchange-modal {max-width: 90.4rem; width: 100%;}
 .exchange-list {display: flex; align-items: center; flex-wrap: wrap; gap: 1.2rem; width: 100%;}
@@ -244,6 +248,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-list li .exchange-btn figure.heat {width: 12px; height: 12px;}
 }
 
+@media screen and (max-width: 370px) {
+    .exchange-modal {max-width: 90%; width: 100%;}
+}
+
 /* 문의하기 모달 (가입권유모달 같이 사용) */
 .req-modal {max-width: 82.4rem; width: 100%;}
 .req-modal.join .inner {row-gap: 8rem;}
@@ -259,6 +267,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .req-modal .modal-header .close figure {width: 20px; height: 20px;}
     .req-modal .modal-buttons a.dark-btn {font-size: 12px;}
     .modal-buttons.btn-one a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
+}
+
+@media screen and (max-width: 370px) {
+    .req-modal {max-width: 90%; width: 100%;}
 }
 
 /* 로그인 - 이메일 인증 모달 */
@@ -283,6 +295,11 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .paste-container {margin: 20px 0;}
     .message-container p {font-size: 12px; line-height: 16.8px;}
 }
+
+@media screen and (max-width: 370px) {
+    .email-modal {max-width: 90%; width: 100%;}
+}
+
 @media screen and (max-width: 333px) {
     .email-modal .modal-header h5 {font-size: 18px;}
 }
@@ -304,6 +321,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .policy-box {margin-bottom: 40px; height: 200px;}
     .policy-box p {font-size: 12px; padding-right: 20px;}
     .policy-modal .modal-buttons button {padding: 8px 0; border-radius: 12px;}
+}
+
+@media screen and (max-width: 370px) {
+    .policy-modal {max-width: 90%; width: 100%;}
 }
 
 /* 구글 otp 모달 */
@@ -329,6 +350,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .connect-modal .paste-container {margin: 0;}
 }
 
+@media screen and (max-width: 370px) {
+    .connect-modal {max-width: 90%; width: 100%;}
+}
+
 /* 구글 otp 연동해제 모달 */
 .dis-modal {max-width: 56.5rem; width: 56.5rem; padding: 4rem;}
 .modal-header-v2 {display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem;}
@@ -343,6 +368,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .modal-header-v2 {row-gap: 20px;}
     .modal-header-v2 figure {width: 40px; height: 36px;}
     .modal-header-v2 h5 {font-size: 16px;}
+}
+
+@media screen and (max-width: 370px) {
+    .dis-modal {max-width: 90%; width: 100%;}
 }
 
 /* 쿠폰함에서 거래소 선택 모달 */
@@ -373,6 +402,9 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .coupon-modal .modal-buttons .blue-btn {font-size: 16px;}
 }
 
+@media screen and (max-width: 370px) {
+    .coupon-modal {max-width: 90%; width: 100%;}
+}
 
 /* ============================== [ 모바일용 메뉴 ] ========================================================================================== */
 .main-navigation {position: relative; z-index: 1;}
@@ -921,6 +953,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .fixed-modal .modal-header .close figure {width: 20px; height: 20px;}
     .fixed-modal .modal-buttons .blue-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
 }
+
+/* @media screen and (max-width: 370px) {
+    .fixed-modal {max-width: 90%;}
+} */
 
 /* ============================== [ 페이백 테스트 ] ========================================================================================== */
 /* payback step2 */
