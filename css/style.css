@@ -128,13 +128,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .dark-wh-btn {padding: 8px 12px; font-size: 12px;}
 
     .input-field {font-size: 16px; padding: 12px 20px; border-radius: 30px;}
-    .input-code-digit {width: 43px; padding: 20px 0; font-size: 16px;}
+    .input-code-digit {max-width: 43px; width: 100%; padding: 20px 0; font-size: 16px;}
     .input-field-line {padding: 12px 20px; height: 60px; font-size: 16px; border-radius: 20px;}
     .input-field-line.withdrawal {padding: 12px; height: fit-content; font-size: 10px;}
 
-    input[type="checkbox"].block-chk + label {font-size: 1.3rem; padding: 12px; padding-left: 40px;}
+    input[type="checkbox"].block-chk + label {font-size: 13px; padding: 12px; padding-left: 40px; height: 60px;}
     input[type="checkbox"].block-chk + label::before {left: 12px; width: 20px; height: 20px;}
-    input[type="checkbox"].block-chk + label a {font-size: 1.3rem;}
+    input[type="checkbox"].block-chk + label a {font-size: 13px;}
 }
 
 @media screen and (max-width: 450px){
@@ -201,7 +201,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 @media screen and (max-width: 768px) {
     .footer-content {padding: 64px 20px 46px 20px;}
     .footer-content .footer-right {display: none;}
-    .footer-content .footer-links a {font-size: 12px; line-height: 18px;}
+    .footer-content .footer-links {column-gap: 16px;}
+    .footer-content .footer-links a {font-size: 12px; line-height: 150%;}
     .footer-content .company-info .company-logo a figure {width: 63px;}
     .footer-content .company-info .info-box p {font-size: 12px; line-height: normal;}
     .footer-content .company-info .info-box p.contact-info {font-size: 14px; line-height: 21px;}
@@ -252,7 +253,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .modal-buttons.btn-one a {width: 100%; padding: 2rem 0; font-size: 2rem;}
 
 @media screen and (max-width: 768px) {
-    .req-modal {max-width: 370px; padding: 20px; border-radius: 24px;}
+    .req-modal {max-width: 370px; width: 100%; padding: 20px; border-radius: 24px;}
     .req-modal.join .inner {row-gap: 40px;}
     .req-modal .modal-header h5 {font-size: 16px;}
     .req-modal .modal-header .close figure {width: 20px; height: 20px;}
@@ -261,7 +262,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* 로그인 - 이메일 인증 모달 */
-.email-modal.modal {width: 51rem;}
+.email-modal.modal {max-width: 51rem; width: 100%;}
 .email-modal.modal .inner {row-gap: 0;}
 .auth-container {display: flex; flex-direction: column; row-gap: 4rem;}
 .email-box {margin-top: 0.8rem;}
@@ -280,6 +281,9 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .user-email {font-size: 16px;}
     .paste-container {margin: 20px 0;}
     .message-container p {font-size: 12px; line-height: 16.8px;}
+}
+@media screen and (max-width: 333px) {
+    .email-modal .modal-header h5 {font-size: 18px;}
 }
 
 /* 이용약관 모달 */
@@ -699,8 +703,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .join-content {max-width: 56rem; width: 100%;}
 .join-wrapper {margin-top: 4rem;}
 .join-title-box {display: flex; flex-direction: column; row-gap: 1.2rem; margin-bottom: 8rem;}
-.join-title-box h2 {color: #F4F5F7; font-size: 2.4rem; font-weight: 800; line-height: 3.6rem;}
-.join-title-box p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem;}
+.join-title-box h2 {color: #F4F5F7; font-size: 2.4rem; font-weight: 800; line-height: 150%;}
+.join-title-box p {color: #A09FA5; font-size: 1.6rem; font-weight: 500; line-height: 150%;}
 .join-form {display: flex; flex-direction: column; row-gap: 1.2rem;}
 .exp-box {display: flex; flex-direction: column; padding-left: 0.4rem; margin-bottom: 8rem;}
 .exp-box .exp-row {display: flex; align-items: center; column-gap: 0.8rem;}
@@ -716,18 +720,24 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .join-content {max-width: 100%; margin-top: 0; padding: 0 20px 40px 20px;}
     .join-wrapper {margin-top: 40px;}
     .join-title-box {margin-bottom: 80px;}
-    .join-title-box h2 {font-size: 24px; line-height: 36px;}
-    .join-title-box p {font-size: 16px; line-height: 24px;}
+    .join-title-box h2 {font-size: 24px;}
+    .join-title-box p {font-size: 16px;}
     .join-form {row-gap: 12px;}
     .exp-box {margin-bottom: 80px;}
     .exp-box .exp-row figure {width: 16px; height: 16px;}
     .exp-box .exp-row span {font-size: 12px;}
     .join-form .form-links {margin: 80px 0;}
     .join-form .login-button-container {margin-top: 0;}
+    .join-form .form-links span {font-size: 12px;}
+    .join-form .form-links a {font-size: 12px;}
 }
 
 @media screen and (max-width: 392px) {
     .exp-box .exp-row {align-items: flex-start;}
+}
+
+@media screen and (max-width: 333px) {
+    .join-title-box h2 {font-size: 22px;}
 }
 
 /* ============================== [ 회원가입 완료 & 제휴 문의 ] ========================================================================================== */
