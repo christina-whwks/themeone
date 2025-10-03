@@ -802,7 +802,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .connect-content .connect-wrapper .btn-group.btn-one a {width: 100%;}
 
 @media screen and (max-width: 768px) {
-    .connect-content {padding: 0 20px; margin-top: 120px; margin-bottom: 200px;}
+    .connect-content {padding: 0 20px; margin-top: 20px; margin-bottom: 200px;}
     .connect-content .connect-wrapper {padding: 40px 20px; row-gap: 40px;}
     .connect-content .connect-wrapper.step {padding: 20px;}
     .connect-content .connect-wrapper.step .section-title {row-gap: 12px;}
