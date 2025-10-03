@@ -41,7 +41,7 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .bold-txt {font-weight: 900;}
 
 /* 버튼 */
-.blue-btn {padding: 1.2rem 2.4rem 1rem 2.4rem; border-radius: 2rem; background-color: #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 2.4rem; text-align: center;}
+.blue-btn {padding: 1.2rem 2.4rem 1rem 2.4rem; border-radius: 2rem; background-color: #3182F6; color: #F4F5F7; font-size: 1.6rem; font-weight: 500; line-height: 150%; text-align: center;}
 .blue-btn.search-btn {border-radius: 100%; padding: 1.2rem;}
 .blue-btn.contact-btn {display: flex; align-items: center; column-gap: 0.8rem;}
 .blue-btn.contact-btn figure {width: 2.4rem; height: 2.4rem;}
@@ -93,7 +93,7 @@ input[type="checkbox"].block-chk:checked + label {border: 1px solid #0084FF;}
 input[type="checkbox"].block-chk:checked + label::before {background-image: url('../img/icon/check_after.svg');}
 
 @media screen and (min-width: 981px) {
-    html {font-size: calc(100vw * 10 / 1920);}
+    /* html {font-size: calc(100vw * 10 / 1920);} */
 }
 
 @media screen and (min-width: 769px) and (max-width: 980px) {
@@ -162,6 +162,17 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .nav-content > div {width: fit-content;}
 }
  */
+@media screen and (max-width: 1440px) {
+    .nav-content > div:first-child {width: 30%;}
+    .nav-content > div:nth-child(2) {width: 39%;}
+    .nav-content > div:last-child {width: 30%;}
+}
+@media screen and (max-width: 1226px) {
+    .nav-content > div:first-child {width: 20%;}
+    .nav-content > div:nth-child(2) {width: 50%;}
+    .nav-content > div:last-child {width: 30%;}
+    .nav-content .nav-menu {justify-content: end;}
+}
 @media screen and (max-width: 980px) {
     .nav-content > div {width: fit-content;}
 }
@@ -169,13 +180,14 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .nav-center {display: none;}
     .nav-content {padding: 20px;}
     .nav-content .logo-container a figure {width: 63px;}
+    .nav-content > div:last-child {width: 80%;}
     .nav-content .nav-right {column-gap: 8px;}
     .nav-content .nav-right a figure {width: 36px; height: 36px;}
 
 }
 
 /* ============================== [ 푸터 footer ] ========================================================================================== */
-.main-footer {max-width: 133.2rem; width: 100%; margin: 0 auto;}
+.main-footer {max-width: 120rem; width: 100%; margin: 0 auto;}
 .footer-content {display: flex; align-items: flex-end; justify-content: space-between; padding: 12rem 4rem;}
 .footer-content .footer-left {display: flex; flex-direction: column; row-gap: 3.2rem;}
 .footer-content .footer-links {display: flex; align-items: center; column-gap: 3.2rem;}
@@ -249,6 +261,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* 로그인 - 이메일 인증 모달 */
+.email-modal.modal {width: 51rem;}
 .email-modal.modal .inner {row-gap: 0;}
 .auth-container {display: flex; flex-direction: column; row-gap: 4rem;}
 .email-box {margin-top: 0.8rem;}
@@ -400,7 +413,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .search-select-box a {display: flex; align-items: center; column-gap: 1.2rem;}
 .search-select-box a .logo {width: 5rem; height: 5rem;}
 .search-select-box a .arrow {width: 2.4rem; height: 2.4rem;}
-.notification-popup {position: absolute; top: -71%; left: -28%;}
+.notification-popup {position: absolute; top: -58%; left: -28%;}
 .notification-popup p {padding: 2rem; border-radius: 3.2rem 3.2rem 0.2rem 3.2rem; background-color: #3182F6; box-shadow: 4px 4px 120px 0 rgba(0, 0, 0, 0.25); backdrop-filter: blur(32px); color: #F4F5F7; font-size: 1.6rem; font-weight: 600; line-height: normal;}
 
 @media screen and (max-width: 980px) {
@@ -414,7 +427,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .search-input {width: 100%; font-size: 12px;}
 }
 
-.sub {max-width: 133.2rem; margin: 0 auto; width: 100%; margin-bottom: 12rem;}
+.sub {max-width: 120rem; margin: 0 auto; width: 100%; margin-bottom: 12rem;}
 .section-title {margin-bottom: 4.8rem; display: flex; align-items: center; justify-content: space-between;}
 .section-title a figure {width: 2.4rem; height: 2.4rem;}
 .section-title h2 {color: #F4F5F7; font-size: 3.2rem; font-weight: 600; line-height: 140%;}
@@ -713,6 +726,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .join-form .login-button-container {margin-top: 0;}
 }
 
+@media screen and (max-width: 392px) {
+    .exp-box .exp-row {align-items: flex-start;}
+}
+
 /* ============================== [ 회원가입 완료 & 제휴 문의 ] ========================================================================================== */
 .success-container {display: flex; flex-direction: column; row-gap: 4rem; margin-bottom: 8.8rem;}
 .success-container .success-txt-box {position: relative;}
@@ -838,7 +855,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 마이페이지 ] ========================================================================================== */
-.mypage-content {max-width: 133.2rem; width: 100%; margin: 20rem auto; display: flex; flex-direction: column; row-gap: 4rem;}
+.mypage-content {max-width: 120rem; width: 100%; margin: 20rem auto; display: flex; flex-direction: column; row-gap: 4rem;}
 .user-info-container {display: flex; align-items: center; column-gap: 1.2rem;}
 .user-info-container > figure {width: 5.6rem; height: 5.6rem;}
 .user-info-container .user-info-txt {display: flex; flex-direction: column;}
@@ -962,7 +979,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 /* ============================== [ 제휴거래소 전체 ] ========================================================================================== */
 /* 메인 페이지 상속받아 사용 */
-.visual-section {max-width: 133.2rem; margin: 12.6rem auto; width: 100%; margin-bottom: 12rem;}
+.visual-section {max-width: 120rem; margin: 12.6rem auto; width: 100%; margin-bottom: 12rem;}
 .visual-section .img-box {width: 100%; height: 47rem; border-radius: 2rem; background-color: #1B202A; padding: 4rem;}
 .visual-section .img-box figure {width: 100%; height: 100%;}
 
@@ -997,7 +1014,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 뉴스 페이지 메인 + 상세 ] ========================================================================================== */
-.news-content {max-width: 133.2rem; margin: 20rem auto; width: 100%; margin-bottom: 12rem;}
+.news-content {max-width: 120rem; margin: 20rem auto; width: 100%; margin-bottom: 12rem;}
 .date-container {margin-bottom: 20px;}
 .date-container .date {padding: 4rem; border-radius: 2rem; background-color: #3182F6;}
 .date-container .date p {color: #FFF; font-size: 2.4rem; font-weight: 600; line-height: 87.5%;}
@@ -1031,7 +1048,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 서비스 소개 페이지 ] ========================================================================================== */
-.service-main {max-width: 133.2rem; width: 100%; margin: 0 auto;}
+.service-main {max-width: 120rem; width: 100%; margin: 0 auto;}
 .service-main .section-title {display: flex; flex-direction: column; row-gap: 2rem;}
 .service-main .section-title p {color: #F4F5F7; text-align: center; font-size: 2rem; font-weight: 600; line-height: 150%; }
 .service-main .section-title h2 {text-align: center; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
@@ -1187,7 +1204,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .bot-main .hero-content .section-title h2 {color: #F4F5F7; text-align: center; font-size: 4.8rem; font-weight: 900; line-height: 150%;}
 
 .bot-main .explain-section {background-color: #121721; position: relative; z-index: 1; width: 100%;}
-.bot-main .explain-wrapper {display: flex; flex-direction: column; row-gap: 8rem; margin-bottom: 20rem; max-width: 133.2rem; width: 100%; margin: 0 auto; margin-bottom: 20rem;}
+.bot-main .explain-wrapper {display: flex; flex-direction: column; row-gap: 8rem; margin-bottom: 20rem; max-width: 120rem; width: 100%; margin: 0 auto; margin-bottom: 20rem;}
 .bot-main .explain-wrapper .explain-box:first-child {margin-top: 8rem;}
 .bot-main .explain-wrapper .explain-list {display: flex; align-items: flex-start; justify-content: center; column-gap: 4rem;}
 .bot-main .explain-wrapper .explain-list li {width: 33%;}
@@ -1234,7 +1251,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .self-main .banner-section .banner-wrapper {display: flex; align-items: center; justify-content: center;}
 .self-main .banner-section .banner-wrapper figure {width: 37.8rem; height: 37.8rem;}
 
-.self-main .top-section {max-width: 133.2rem; width: 100%; margin: 8rem auto 20rem;}
+.self-main .top-section {max-width: 120rem; width: 100%; margin: 8rem auto 20rem;}
 .self-main .top-section .top-wrapper {display: flex; flex-direction: column; row-gap: 4rem;}
 .self-main .top-section .section-title {display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; row-gap: 2rem; margin-bottom: 0;}
 .self-main .top-section .section-title h2 {color: #F4F5F7; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
@@ -1250,13 +1267,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .self-main .top-section .progress-box .progress-bar .progress-label span {color: #A09FA5; text-align: center; font-size: 1.2rem; font-weight: 500; line-height: 140%;}
 .self-main .top-section .progress-box .progress-bar .progress-label span.rate:after {content: '%'; padding-left: 0.3rem;}
 
-.self-main .fee-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .fee-section {max-width: 120rem; width: 100%; margin: 0 auto 20rem;}
 .self-main .fee-section .fee-wrapper {display: flex; flex-direction: column; row-gap: 4rem;}
 .self-main .fee-section .section-title {margin-bottom: 0; font-weight: 700;}
 .self-main .fee-section .fee-content {display: flex; flex-direction: column;}
 .self-main .fee-section .fee-content p {color: #A09FA5; font-size: 2.4rem; font-weight: 600; line-height: 186%;}
 
-.self-main .policy-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .policy-section {max-width: 120rem; width: 100%; margin: 0 auto 20rem;}
 .self-main .policy-section .section-title {margin-bottom: 0;}
 .self-main .policy-section .section-title h2 {font-weight: 700;}
 .self-main .policy-section .policy-wrapper {display: flex; flex-direction: column; row-gap: 4rem;}
@@ -1277,21 +1294,21 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .self-main .policy-section .policy-content .policy-box .policy-table td.blue {color: #0084FF;}
 .self-main .policy-section .policy-content .policy-box .policy-table td.white {color: #F4F5F7;}
 
-.self-main .analytics-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .analytics-section {max-width: 120rem; width: 100%; margin: 0 auto 20rem;}
 .self-main .analytics-section .section-title {margin-bottom: 4rem;}
 .self-main .analytics-section .section-title h2 {font-weight: 700;}
 .self-main .analytics-section .section-sub-title {display: flex; flex-direction: column; margin-bottom: 8rem;}
 .self-main .analytics-section .section-sub-title h3 {color: #A09FA5; font-size: 3.2rem; font-weight: 700; line-height: 150%;}
 .self-main .analytics-section .section-sub-title p {color: #A09FA5; font-size: 2rem; font-weight: 400; line-height: 150%;}
 
-.self-main .themeone-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .themeone-section {max-width: 120rem; width: 100%; margin: 0 auto 20rem;}
 .self-main .themeone-section .section-title {margin-bottom: 4rem;}
 .self-main .themeone-section .section-title h2 {font-weight: 700;}
 .self-main .themeone-section .themeone-list {display: flex; align-items: center; justify-content: center; width: 100%; column-gap: 2rem;}
 .self-main .themeone-section .themeone-list li {width: 33%;}
 .self-main .themeone-section .themeone-list li a {padding: 3.2rem 2rem; border-radius: 3.2rem; background-color: #1B202A; display: block; width: 100%; height: 35rem;}
 
-.self-main .event-section {max-width: 133.2rem; width: 100%; margin: 0 auto 20rem;}
+.self-main .event-section {max-width: 120rem; width: 100%; margin: 0 auto 20rem;}
 .self-main .event-section .section-title {margin-bottom: 4rem;}
 .self-main .event-section .section-title h2 {font-weight: 700;}
 .self-main .event-section .event-list {display: flex; align-items: center; justify-content: center; width: 100%; column-gap: 2rem;}
@@ -1429,7 +1446,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 거래소 페이백 ] ========================================================================================== */
-.payback-content {max-width: 133.2rem; width: 100%;}
+.payback-content {max-width: 120rem; width: 100%;}
 .payback-content .payback-wrapper {display: flex; flex-direction: column; row-gap: 40px; margin-bottom: 20rem;}
 .payback-content .exchange-info {display: flex; flex-direction: column; row-gap: 20px; align-items: center; justify-content: center;}
 .payback-content .exchange-info .exchange-logo {width: 50px; height: 50px;}
