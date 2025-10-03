@@ -274,6 +274,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .message-container p .time {font-weight: 500;}
 
 @media screen and (max-width: 768px) {
+    .auth-container {row-gap: 40px;}
     .email-modal.modal {max-width: 370px; width: 100%; padding: 28px;}
     .email-modal .modal-header h5 {font-size: 20px;}
     .email-modal .modal-header .close figure {width: 24px; height: 24px;}
