@@ -845,13 +845,24 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .connect-content .connect-wrapper.step .section-title {row-gap: 12px;}
     .connect-content .connect-wrapper.step .section-title p {display: none;}
     .connect-content .connect-wrapper.step.s2 .section-title p {display: block;}
+    .connect-content .connect-wrapper .section-title {row-gap: 8px;}
     .connect-content .connect-wrapper .section-title a figure {width: 24px; height: 24px;}
     .connect-content .connect-wrapper .section-title h2 {font-size: 20px;}
     .connect-content .connect-wrapper .section-title p {font-size: 12px;}
+    .connect-content .connect-wrapper .section-title p.ft-10 {font-size: 10px;}
     .connect-content .connect-wrapper .section-title p.ft-14 {font-size: 14px;}
     .connect-content .connect-wrapper .btn-group a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
+    .connect-content .connect-wrapper .btn-group a.ft-14 {font-size: 14px;}
     .connect-content .connect-wrapper.step .btn-group.btn-one .blue-btn.withdrawal-btn {font-size: 14px;}
     .connect-wrapper.step .input-field-line {font-size: 10px; padding: 12px; height: auto;}
+}
+
+@media screen and (max-width: 363px) {
+    .connect-content .connect-wrapper .section-title p {font-size: 11px;}
+}
+@media screen and (max-width: 342px) {
+    .connect-content .connect-wrapper .section-title h2 {font-size: 18px;}
+    .connect-content .connect-wrapper .section-title p {font-size: 10px;}
 }
 
 /* step2-1 : 예 누르면 나오는 페이지 */
