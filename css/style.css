@@ -858,6 +858,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .connect-content .connect-wrapper.step .section-title {row-gap: 12px;}
     .connect-content .connect-wrapper.step .section-title p {display: none;}
     .connect-content .connect-wrapper.step.s2 .section-title p {display: block;}
+    .connect-content .connect-wrapper.step.s2 .input-group {margin-bottom: 40px;}
     .connect-content .connect-wrapper .section-title {row-gap: 8px;}
     .connect-content .connect-wrapper .section-title a figure {width: 24px; height: 24px;}
     .connect-content .connect-wrapper .section-title h2 {font-size: 20px;}
@@ -867,7 +868,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .connect-content .connect-wrapper .btn-group a {padding: 12px 0; font-size: 12px; border-radius: 12px;}
     .connect-content .connect-wrapper .btn-group a.ft-14 {font-size: 14px;}
     .connect-content .connect-wrapper.step .btn-group.btn-one .blue-btn.withdrawal-btn {font-size: 14px;}
-    .connect-wrapper.step .input-field-line {font-size: 10px; padding: 12px; height: auto;}
+    .connect-wrapper.step .input-field-line {font-size: 12px; padding: 12px; height: auto; border-radius: 12px;}
 }
 
 @media screen and (max-width: 363px) {
@@ -988,13 +989,20 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 페이백 테스트 ] ========================================================================================== */
+/* payback 메인 */
+@media screen and (max-width: 768px) {
+    .connect-content.payback {margin-top: 100px;}
+    .connect-content.payback .connect-wrapper .section-title p {font-size: 10px;}
+    .connect-content.payback .connect-wrapper .btn-group a {font-size: 14px;}
+}
 /* payback step2 */
 .leverage .input-group #delBtn {display: none; width: 2.4rem; height: 2.4rem;}
 .leverage .input-group #delBtn.active {display: block;}
 .leverage .input-group .input-field-line:focus {border: 1px solid #3182F6;}
 .input-group .unit {position: absolute; top: 50%; transform:translateY(-50%); right: 2rem; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1;}
+
 @media screen and (max-width: 768px) {
-    .leverage .input-group #delBtn {width: 12px; height: 12px;}
+    .leverage .input-group #delBtn {width: 14px; height: 14px;}
 }
 
 /* payback step4 */
