@@ -77,7 +77,7 @@
                     </div>
                 </div>
                 <div class="btn-group btn-one">
-                    <button type="button" class="blue-btn" id="nextBtn" disabled>다음</button>
+                    <button type="button" class="blue-btn withdrawal-btn" id="nextBtn" disabled>다음</button>
                 </div>
             </div>
         </main>
@@ -185,18 +185,34 @@
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const uidValue = document.getElementById('uidValue');
-            const nextBtn = document.getElementById('nextBtn');
+    const uidValue = document.getElementById('uidValue');
+    const nextBtn = document.getElementById('nextBtn');
+    const exchangeBtns = document.querySelectorAll('.exchange-btn');
+    const selectedLogo = document.querySelector('.ex-select-box .logo img');
 
-            // UID 입력값 변경 시 버튼 활성화/비활성화
-            uidValue.addEventListener('input', function() {
-                if (this.value.trim()) {
-                    nextBtn.disabled = false;
-                } else {
-                    nextBtn.disabled = true;
-                }
-            });
+    // UID 입력값 변경 시 버튼 활성화/비활성화
+    uidValue.addEventListener('input', function() {
+        if (this.value.trim()) {
+            nextBtn.disabled = false;
+        } else {
+            nextBtn.disabled = true;
+        }
+    });
+
+    // 거래소 선택 시 로고 변경
+    exchangeBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const logoImg = this.querySelector('figure img');
+            const logoSrc = logoImg.src;
+            
+            // 선택된 거래소 로고로 변경
+            selectedLogo.src = logoSrc;
+            
+            // 모달 닫기 (modal.js의 함수 사용)
+            closeTopModal();
         });
+    });
+});
     </script>
 </body>
 </html>
