@@ -57,8 +57,8 @@ figure img {width: 100%; height: 100%; object-fit: contain; display: block;}
 .line-btn.bold-btn {font-weight: 900; color: #0084FF; color: #A09FA5;}
 .line-btn.normal {border: 1px solid #313335; border-radius: 2.4rem;}
 .line-btn.gray {border: 1px solid #313335; color: #A09FA5;}
-.yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 3rem;}
-.sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 3rem;}
+.yellow-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #FFEB3B; color: #3E2723; font-size: 2rem; font-weight: 700; line-height: 150%;}
+.sky-btn {display: block; text-align: center; border-radius: 1.6rem; padding: 2rem 0; background-color: #33AAE0; color: #F4F5F7; font-size: 2rem; font-weight: 700; line-height: 150%;}
 .max-btn {background-color: transparent; color: #F4F5F7; font-size: 1.6rem; font-weight: 700; line-height: 1; position: absolute; top: 50%; transform:translateY(-50%); right: 2rem;}
 .dark-btn {padding: 2rem 0; border-radius: 2rem; background-color: #121721; font-size: 2rem; font-weight: 700; line-height: 3rem; color: #F4F5F7; display: flex; align-items: center; justify-content: center; text-align: center;}
 .trans-btn {background-color: transparent; width: 12px; height: 12px; margin-bottom: 5px;}
@@ -120,8 +120,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .blue-btn.paste-btn {font-size: 12px; line-height: 18px; padding: 8px 12px; border-radius: 12px;}
     .blue-btn.withdrawal-btn {font-size: 16px; padding: 12px 0;}
     .line-btn.help-btn {font-size: 14px; padding: 8px 12px;}
-    .yellow-btn {padding: 12px 0; font-size: 14px; line-height: 24px; border-radius: 12px;}
-    .sky-btn {padding: 12px 0; font-size: 14px; line-height: 24px; border-radius: 12px;}
+    .yellow-btn {padding: 12px 0; font-size: 14px; border-radius: 12px;}
+    .sky-btn {padding: 12px 0; font-size: 14px; border-radius: 12px;}
     .max-btn {font-size: 12px;}
     .dark-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
     .red-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
@@ -143,6 +143,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 400px) {
     .s-mobile {display: block;}
+    .trans-btn {margin-bottom: 3px;}
 }
 
 /* ============================== [ 헤더 header ] ========================================================================================== */
@@ -219,6 +220,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .modal-header .close figure {width: 3.2rem; height: 3.2rem;}
 
 @media screen and (max-width: 768px) {
+    .modal .inner {row-gap: 40px;}
     .modal-header h5 {font-size: 20px;}
     .modal-header .close figure {width: 24px; height: 24px;}
 }
@@ -275,6 +277,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 370px) {
     .req-modal {max-width: 90%; width: 100%;}
+    .req-modal .modal-buttons a.yellow-btn {font-size: 12px;}
+    .req-modal .modal-buttons a.sky-btn {font-size: 12px;}
 }
 
 /* 로그인 - 이메일 인증 모달 */
@@ -301,7 +305,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 @media screen and (max-width: 370px) {
-    .email-modal {max-width: 90%; width: 100%;}
+    .email-modal.modal {max-width: 90%; width: 100%; padding: 20px;}
 }
 
 @media screen and (max-width: 333px) {
@@ -332,30 +336,39 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* 구글 otp 모달 */
-.connect-modal {max-width: 39.6rem; padding: 40px;}
+.connect-modal {width: 396px; padding: 40px;}
 .connect-modal .modal-header h5 {font-size: 20px;}
 .connect-modal .modal-header .close figure {width: 24px; height: 24px;}
 .connect-modal .otp-container {display: flex; flex-direction: column; row-gap: 40px;}
 .connect-modal .otp-step-box {display: flex; flex-direction: column; row-gap: 20px;}
 .connect-modal .otp-step-box span {color: #F4F5F7; font-size: 12px; font-weight: 600; line-height: 150%;}
 .connect-modal .link-group {display: flex; align-items: center; column-gap: 0.8rem;}
-.connect-modal .link-group .dark-btn {width: 50%; border-radius: 1.2rem; display: flex; align-items: center; column-gap: 0.8rem;}
-.connect-modal .link-group .dark-btn.apple figure {width: 1.6rem; height: 2rem;}
-.connect-modal .link-group .dark-btn.google figure {width: 2rem; height: 2rem;}
-.connect-modal .link-group .dark-btn span {font-size: 1.6rem; line-height: 150%;}
+.connect-modal .link-group .dark-btn {width: fit-content; border-radius: 12px; display: flex; align-items: center; column-gap: 8px; padding: 12px;}
+.connect-modal .link-group .dark-btn.apple figure {width: 16px; height: 20px;}
+.connect-modal .link-group .dark-btn.google figure {width: 20px; height: 20px;}
+.connect-modal .link-group .dark-btn span {font-size: 16px; line-height: 150%;}
 .connect-modal .qr-code-box {padding: 12px; border-radius: 20px; border: 1px solid #313335; width: fit-content;}
-.connect-modal .qr-code-box figure {background-color: #fff; border-radius: 0.8rem; width: 9.5rem; height: 9.4rem;}
+.connect-modal .qr-code-box figure {background-color: #fff; border-radius: 08px; width: 95px; height: 94px;}
 .connect-modal .code-input-group {margin-bottom: 4rem;}
-.connect-modal .input-code-digit {width: 42px; font-size: 32px;}
+.connect-modal .input-code-digit {max-width: 42px; width: 100%; font-size: 32px;}
 
 @media screen and (max-width: 768px) {
+    .connect-modal {max-width: 396px; width: 100%;}
     .connect-modal .link-group .dark-btn {padding: 12px; column-gap: 8px;}
     .connect-modal .link-group .dark-btn span {padding-top: 4px;}
     .connect-modal .paste-container {margin: 0;}
 }
 
+@media screen and (max-width: 440px) {
+    .connect-modal {max-width: 90%;}
+}
+
 @media screen and (max-width: 370px) {
-    .connect-modal {max-width: 90%; width: 100%;}
+    .connect-modal {padding: 20px;}
+}
+
+@media screen and (max-width: 341px) {
+    .connect-modal .link-group .dark-btn span {font-size: 14px;}
 }
 
 /* 구글 otp 연동해제 모달 */
@@ -944,7 +957,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 @media screen and (max-width: 768px) {
-    .mypage-content {margin: 120px auto; padding: 0 20px;}
+    .mypage-content {margin: 120px auto; padding: 0 20px; row-gap: 40px;}
     .user-info-container > figure {width: 56px; height: 56px;}
     .mypage-menu-list li a figure {width: 24px; height: 24px;}
     .mypage-menu-list li a span {font-size: 14px;}
