@@ -64,9 +64,26 @@
                     <figure class="cloud c-01"><img src="img/icon/cloud.svg" alt=""></figure>
                     <figure class="cloud c-02"><img src="img/icon/cloud.svg" alt=""></figure>
                 </div>
-                <a href="#" class="blue-btn inquiry">문의하기</a>
+                <a href="#" class="blue-btn inquiry" data-modal="reqModal">문의하기</a>
             </div>
         </main>
+
+        <!-- 문의하기 모달 -->
+        <div class="bg"></div>
+        <div class="modal req-modal" id="reqModal">
+            <div class="inner">
+                <div class="modal-header">
+                    <h5>고객센터 문의</h5>
+                    <a href="#" class="close"><figure><img src="img/icon/close.svg" alt=""></figure></a>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-buttons">
+                        <a href="#" class="yellow-btn">카카오톡으로 문의하기</a>
+                        <a href="#" class="sky-btn">텔레그램으로 문의하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="main-footer">
@@ -101,6 +118,7 @@
         </footer>
     </div>
 
+    <script src="js/modal.js"></script>
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

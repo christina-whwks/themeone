@@ -786,7 +786,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 768px) {
     .sub-content {min-height: 32vh;}
-    .success-content {margin-top: 280px;}
+    .success-content {margin-top: 180px;}
     .success-container p {font-size: 20px; line-height: 28px;}
     .success-container figure.point {width: 40px; height: 40px; top: -110%; right: -12%;}
     .success-container figure.cloud {width: 51px; height: 32px;}
