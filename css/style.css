@@ -957,7 +957,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 @media screen and (max-width: 768px) {
-    .mypage-content {margin: 120px auto; padding: 0 20px; row-gap: 40px;}
+    .mypage-content {margin: 100px auto 120px; padding: 0 20px; row-gap: 40px;}
     .user-info-container > figure {width: 56px; height: 56px;}
     .mypage-menu-list li a figure {width: 24px; height: 24px;}
     .mypage-menu-list li a span {font-size: 14px;}
@@ -969,8 +969,8 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 /* ============================== [ 회원탈퇴 ] ========================================================================================== */
 /* 모달 레이아웃 상속받아 사용 */
-.sub-content.leave {}
-.fixed-modal {display: block; position: relative; max-width: 90.4rem; width: 90.4rem; top: auto; left: auto; transform: none; margin-bottom: 10rem;}
+.sub-content.leave {max-width: 120rem; width: 100%;}
+.fixed-modal {display: block; position: relative; max-width: 90.4rem; width: 90.4rem; top: auto; left: 50%; transform: none; transform: translateX(-50%); margin-bottom: 10rem;}
 .fixed-modal .inner {row-gap: 80px;}
 .fixed-modal .modal-header {align-items: flex-start;}
 .fixed-modal .modal-buttons {align-items: stretch;}
@@ -978,14 +978,14 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 768px) {
     .sub-content.leave {margin-top: 120px; margin-bottom: 200px;}
-    .fixed-modal {max-width: 370px;}
+    .fixed-modal {max-width: 90%; width: 100%;}
     .fixed-modal .modal-header .close figure {width: 20px; height: 20px;}
     .fixed-modal .modal-buttons .blue-btn {padding: 12px 0; border-radius: 12px; font-size: 14px;}
 }
 
-/* @media screen and (max-width: 370px) {
-    .fixed-modal {max-width: 90%;}
-} */
+@media screen and (max-width: 390px) {
+    .fixed-modal .modal-header h5 {font-size: 18px;}
+}
 
 /* ============================== [ 페이백 테스트 ] ========================================================================================== */
 /* payback step2 */
@@ -1048,9 +1048,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .pw-form .btn-group button {padding: 20px 0; border-radius: 20px;}
 
 @media screen and (max-width: 768px) {
-    .pw-content {margin-top: 80px; padding: 0 20px;}
+    .pw-content {margin-top: 60px; padding: 0 20px; margin-bottom: 200px;}
     .pw-wrapper .pw-title-box {row-gap: 4px;}
     .pw-form .btn-group button {font-size: 16px;}
+}
+
+@media screen and (max-width: 390px) {
+    .pw-wrapper .pw-title-box p {font-size: 1.6rem;}
 }
 
 /* ============================== [ 제휴거래소 전체 ] ========================================================================================== */
