@@ -378,6 +378,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .modal-header-v2 h5 {color: #F4F5F7; text-align: center; font-size: 2.4rem; font-weight: 700; line-height: 150%;}
 .modal-buttons button {width: calc(50% - 1rem);}
 .dis-modal .modal-buttons button.dark-btn {border-radius: 1.6rem;}
+.dis-modal .modal-buttons.btn-one button {width: 100%;}
 
 @media screen and (max-width: 768px) {
     .dis-modal.modal .inner {row-gap: 40px;}
@@ -400,7 +401,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .coupon-modal .coupon-list li .exchange-btn.selected {outline: 1px solid #3182F6; background-color: #203453;}
 .coupon-modal .coupon-list li .exchange-btn figure {width: 3.2rem; height: 3.2rem; border-radius: 100%; overflow: hidden;}
 .coupon-modal .coupon-list li .exchange-btn figure.heat {width: 2rem; height: 2rem;}
-.coupon-modal .coupon-list li .exchange-btn span {color: #F4F5F7; font-size: 1.6rem; font-weight: 600;}
+.coupon-modal .coupon-list li .exchange-btn span {color: #F4F5F7; font-size: 1.6rem; font-weight: 600; line-height: 1;}
 .coupon-modal .modal-buttons {margin-top: 2.4rem;}
 .coupon-modal .modal-buttons .dark-btn {border-radius: 1.6rem; color: #A09FA5;}
 .coupon-modal .modal-buttons .blue-btn {padding: 2rem 0; border-radius: 1.6rem; font-size: 2rem;}
@@ -411,12 +412,12 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .coupon-modal .modal-header h5 {font-size: 16px;}
     .coupon-modal .modal-header .close figure {width: 20px; height: 20px;}
     .coupon-modal .coupon-list {row-gap: 12px; padding: 2px 1px;}
-    .coupon-modal .coupon-list li .exchange-btn {padding: 12px; column-gap: 12px;}
-    .coupon-modal .coupon-list li .exchange-btn figure {width: 20px; height: 20px;}
-    .coupon-modal .coupon-list li .exchange-btn span {font-size: 12px; line-height: 18px;}
+    .coupon-modal .coupon-list li .exchange-btn {padding: 20px; column-gap: 12px;}
+    .coupon-modal .coupon-list li .exchange-btn figure {width: 32px; height: 32px;}
+    .coupon-modal .coupon-list li .exchange-btn span {font-size: 16px;}
     .coupon-modal .coupon-list li .exchange-btn figure.heat {width: 12px; height: 12px;}
-    .coupon-modal .modal-buttons .dark-btn {font-size: 16px;}
-    .coupon-modal .modal-buttons .blue-btn {font-size: 16px;}
+    .coupon-modal .modal-buttons .dark-btn {font-size: 16px; padding: 16px 0;}
+    .coupon-modal .modal-buttons .blue-btn {font-size: 16px; padding: 16px 0;}
 }
 
 @media screen and (max-width: 370px) {
@@ -461,7 +462,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 .hero-section {}
 .hero-content {display: flex; flex-direction: column; margin: 22.4rem auto; align-items: center; row-gap: 6.4rem;}
-.hero-title {text-align: center; color: #F4F5F7; font-size: 4.8rem; font-weight: 700; line-height: 7.2rem;}
+.hero-title {text-align: center; color: #F4F5F7; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
 .search-container {position: relative;}
 .search-box {padding: 1.2rem 2rem; display: flex; align-items: center; column-gap: 1.2rem; width: 100%; max-width: 59.6rem; border-radius: 8.8rem; border: 1px solid #3182F6; background-color: #1B202A;}
 .search-select-box a {display: flex; align-items: center; column-gap: 1.2rem;}
@@ -476,7 +477,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 
 @media screen and (max-width: 768px) {
     .hero-content {margin: 124px auto; row-gap: 32px;}
-    .hero-title {font-size: 24px; line-height: 36px;}
+    .hero-title {font-size: 24px;}
     .search-box {max-width: 300px; padding: 8px;}
     .search-input {width: 100%; font-size: 12px;}
 }
@@ -645,6 +646,10 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .tab-buttons {display: flex; align-items: center; column-gap: 0.8rem;}
 .tab-buttons .tab-btn {padding: 0.8rem 2rem; border-radius: 2.4rem; background-color: #1B202A; color: #858585; font-size: 1.4rem; font-weight: 500; line-height: 2.1rem; cursor: pointer;}
 .tab-buttons .tab-btn.active {background-color: #3182F6; color: #F4F5F7;}
+.tab-buttons {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
+.tab-buttons::-webkit-scrollbar {display: none;}
+.tab-buttons:active {cursor: grabbing;}
+.tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap;}
 .tab-content {display: none;}
 
 .exchange-table {width: 100%;}
@@ -661,10 +666,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 @media screen and (max-width: 768px) {
     .exchange-section {padding-right: 20px;}
     .exchange-section .tab-buttons .tab-btn {padding: 8px 20px; font-size: 12px;}
-    .exchange-section .tab-buttons {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
-    .exchange-section .tab-buttons::-webkit-scrollbar {display: none;}
-    .exchange-section .tab-buttons:active {cursor: grabbing;}
-    .exchange-section .tab-buttons .tab-btn {flex-shrink: 0; white-space: nowrap;}
     .exchange-table thead th {font-size: 12px; line-height: 18px; padding: 12px 0;}
     .exchange-table thead th:first-child {padding: 12px 0 12px 12px;}
     .exchange-table tbody td {padding: 12px 0; font-size: 10px; line-height: 15px;}
@@ -1154,6 +1155,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .service-main .features-section {display: flex; align-items: center; justify-content: center; margin-bottom: 20rem;}
 .service-main .features-container {display: flex; align-items: center; column-gap: 2rem; width: 100%; justify-content: center;}
 .service-main .features-container .feature-card {width: 33%; border-radius: 4rem; display: flex; flex-direction: column; align-items: center; justify-content: center; row-gap: 4rem; padding: 4rem 0; width: 31rem; height: 37rem;}
+.service-main .features-container .feature-card > figure {width: 168px; height: 168px;}
 .service-main .features-container .feature-card.feature-card-green {background-color: #56AF31;}
 .service-main .features-container .feature-card.feature-card-blue {background-color: #0084FF;}
 .service-main .features-container .feature-card.feature-card-purple {background-color: #7F5BFB;}
@@ -1232,13 +1234,17 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 @media screen and (max-width: 768px) {
-    .service-main .hero-content {margin: 183px auto 103px; row-gap: 12px;}
+    .service-main .hero-content {margin: 163px auto 103px; row-gap: 12px;}
     .service-main .hero-content .hero-subtitle {font-size: 14px;}
-    .service-main .hero-content .hero-title-text {font-size: 32px;}
+    .service-main .hero-content .hero-title-text {font-size: 32px; line-height: 150%;}
 
-    .service-main .features-section {margin-bottom: 120px; overflow: hidden; padding-left: 20px;}
-    .service-main .features-section .features-container {overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none;}
-    .service-main .features-container .feature-card {padding: 4rem; width: 248px; height: 378px; flex-shrink: 0;}
+    .service-main .features-section {margin-bottom: 120px; overflow: visible;}
+    .service-main .features-section .features-container {justify-content: flex-start; overflow-x: auto; overflow-y: hidden; cursor: grab; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; padding-left: 20px; padding-right: 20px;}
+    .service-main .features-section .features-container::-webkit-scrollbar {display: none;}
+    .service-main .features-section .features-container:active {cursor: grabbing;}
+    .service-main .features-container .feature-card {padding: 40px 30px; width: 248px; height: 378px; flex-shrink: 0; row-gap: 40px; pointer-events: none;}
+    .service-main .features-container .feature-card .feature-txt-box p {font-size: 20px;}
+    .service-main .features-container .feature-card .feature-txt-box h3 {font-size: 40px;}
     .service-main .section-title {row-gap: 12px; margin-bottom: 40px;}
     .service-main .section-title p {font-size: 12px;}
     .service-main .section-title h2 {font-size: 24px;}
@@ -1251,7 +1257,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .differentiators-section .stats-list .stat-item .stat-txt-box p {font-size: 12px;}
     .differentiators-section .stats-list .stat-item .stat-txt-box .stat-number {font-size: 24px;}
 
-    .partnership-container {}
+    .partnership-section {padding: 0 20px;}
     .partnership-container figure {width: 160px; height: 160px;}
     .partnership-container .partnership-text h2 {font-size: 24px;}
 
@@ -1310,14 +1316,20 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .bot-main .explain-section {padding: 0 2rem;}
 }
 
+@media screen and (min-width: 769px) and (max-width: 1195px) {
+    .bot-main .hero-banner .bg-blur {left: 0;}
+}
+
 @media screen and (max-width: 768px) {
-    .bot-main .hero-banner {margin: 80px auto 120px;}
-    .bot-main .hero-banner .bg-blur {width: 233px; height: 325px; transform: rotate(-90deg); top: -90%; border-radius: 325px; background: rgba(49, 130, 246, 0.50); filter: blur(179.10000610351562px);}
+    .bot-main .hero-banner {margin: 80px auto 100px;}
+    .bot-main .hero-banner .bg-blur {width: 233px; height: 325px; transform: rotate(-90deg); top: -80%; border-radius: 325px; background: rgba(49, 130, 246, 0.50); filter: blur(179.10000610351562px);}
+    .bot-main .explain-section {padding-top: 20px;}
     .bot-main .hero-content {row-gap: 40px;}
-    .bot-main .hero-content .bot-image-box {padding: 20px; width: 140px; height: 115px;}
+    .bot-main .hero-content .bot-image-box {padding: 20px; width: 140px; height: 115px; border-radius: 20px;}
     .bot-main .hero-content .section-title {margin-bottom: 0;}
     .bot-main .hero-content .section-title h2 {font-size: 24px;}
 
+    .bot-main .explain-section {margin-bottom: 80px;}
     .bot-main .explain-wrapper {row-gap: 80px;}
     .bot-main .explain-wrapper .explain-box:first-child {margin-top: 0;}
     .bot-main .explain-wrapper .explain-list {flex-direction: column; align-items: center; row-gap: 80px;}
@@ -1524,11 +1536,13 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .coupon-empty span {font-size: 20px;}
 
     .coupon-container .coupon-box {width: 100%;}
-    .coupon-list li .coupon-content {padding: 32px 40px;}
+    .coupon-list li .coupon-content {padding: 32px 40px; height: fit-content;}
     .coupon-list li .coupon-content .coupon-title {font-size: 12px;}
-    .coupon-list li .coupon-content .coupon-value {font-size: 32px;}
+    .coupon-list li .coupon-content .coupon-value {font-size: 24px;}
     .coupon-list li .coupon-content .coupon-date {font-size: 12px;}
     .coupon-list li .blue-btn.coupon-btn {padding: 0; font-size: 14px;}
+
+    .coupon-box .blue-btn {padding: 12px 20px; border-radius: 24px; font-weight: 600;}
 
     .issued-coupon .section-title {margin-bottom: 60px;}
     .issued-coupon-list li {padding: 20px; border-radius: 20px;}
