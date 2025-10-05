@@ -123,7 +123,7 @@
                             <p>기본 페이백 혜택</p>
                         </div>
                         <div class="policy-box">
-                            <h5><span class="highlight-blue">VIP7</span>수수료와 유사한 혜택</h5>
+                            <h5><span class="highlight-blue">VIP7</span> 수수료와 유사한 혜택</h5>
                             <p>페이백 혜택</p>
                         </div>
                         <div class="policy-box">
@@ -163,7 +163,7 @@
                     <h2>Bitget 통계 데이터를 알아볼까요?</h2>
                 </div>
                 <div class="section-sub-title">
-                    <h3>30일 기준 평균 환급액 <span class="highlight-blue">210 만원</span></h3>
+                    <h3>평균 환급액 <span class="highlight-blue">210 만원</span></h3>
                     <p>평균 환급액은 아래 표시된 기간 동안의 모든 환급액을 가입한 인원 수로 나눈 금액이에요</p>
                 </div>
                 <!-- 모바일에서는 첫번째와 두번째 .chart-bar는 보이지 않도록 css로 조정함 -->
@@ -327,7 +327,28 @@
     <script src="js/mobile_menu.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const floatingSection = document.querySelector('.floating-section');
+            const modalTriggers = document.querySelectorAll('.floating-section .btn-group a[data-modal]');
+            const closeButtons = document.querySelectorAll('.modal .close');
+            const bg = document.querySelector('.bg');
             
+            // 모달이 열릴 때 floating-section 숨기기
+            modalTriggers.forEach(trigger => {
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (floatingSection) {
+                        floatingSection.style.display = 'none';
+                    }
+                });
+            });
+            // 배경 클릭시에도 floating-section 다시 보이기
+            if (bg) {
+                bg.addEventListener('click', function() {
+                    if (floatingSection) {
+                        floatingSection.style.display = 'block';
+                    }
+                });
+            }
         });
     </script>
 </body>

@@ -1505,7 +1505,19 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .floating-section .floating-wrapper .section-title h2 {font-size: 16px;}
     .floating-section .floating-wrapper .btn-group {column-gap: 4px;}
     .floating-section .floating-wrapper .btn-group a {padding: 8px 0; border-radius: 8px; font-size: 12px;}
+}
 
+@media screen and (max-width: 365px) {
+    .self-main .notification-box {padding: 12px;}
+    .self-main .fee-section .fee-wrapper .section-title h2 {font-size: 20px;}
+    .self-main .policy-section .section-title h2 {font-size: 20px;}
+    .self-main .analytics-section .section-title h2 {font-size: 20px;}
+    .self-main .analytics-section .section-sub-title h3 {font-size: 18px;}
+
+    .self-main .policy-section .policy-content .policy-box .policy-table {padding: 14px 5px 14px 10px;}
+
+    .self-main .themeone-section .section-title h2 {font-size: 20px;}
+    .self-main .event-section .section-title h2 {font-size: 20px;}
 }
 
 /* ============================== [ 마이페이지 - 쿠폰 ] ========================================================================================== */
