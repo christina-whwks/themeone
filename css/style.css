@@ -673,6 +673,11 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .exchange-table .exchange span {font-size: 10px;}
     .exchange-table tbody tr.active td:first-child {padding-right: 10px;}
     .exchange-table tbody td:last-child {padding-right: 0;}
+
+    .exchange-table thead th:first-child {width: 25%;}
+    .exchange-table thead th:nth-child(3) {width: 23%;}
+    .exchange-table thead th:nth-child(4),
+    .exchange-table thead th:last-child {width: 16%;}
 }
 
 @media screen and (max-width: 449px) {
