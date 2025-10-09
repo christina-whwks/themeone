@@ -160,10 +160,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 .nav-content .nav-right .auth-buttons {display: flex; align-items: center; column-gap: 1.2rem;}
 .nav-content .nav-right a figure {width: 3.2rem; height: 3.2rem;}
 
-/* @media screen and (max-width: 1290px) {
-    .nav-content > div {width: fit-content;}
-}
- */
 @media screen and (max-width: 1440px) {
     .nav-content > div:first-child {width: 30%;}
     .nav-content > div:nth-child(2) {width: 39%;}
@@ -461,7 +457,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .top-banner .banner-content .banner-right a figure {width: 16px; height: 16px;}
 }
 
-.hero-section {}
 .hero-content {display: flex; flex-direction: column; margin: 22.4rem auto; align-items: center; row-gap: 6.4rem;}
 .hero-title {text-align: center; color: #F4F5F7; font-size: 4.8rem; font-weight: 700; line-height: 150%;}
 .search-container {position: relative;}
@@ -588,7 +583,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .events-list li {width: 240px; height: 200px; flex-shrink: 0; pointer-events: none;}
 }
 
-.news-section {}
 .news-section .news-list {display: flex; align-items: stretch; column-gap: 2rem;}
 .news-section .news-list li.news-card {background-color: #1B202A; width: 33%; border-radius: 3.2rem;}
 .news-section .news-list li.news-card a {display: flex; flex-direction: column; }
@@ -610,7 +604,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .news-section .news-list li.news-card a .schedule-list .schedule-item p {font-size: 14px;}
 }
 
-.widthrawal-status-section {}
 .withdrawal-table {width: 100%;}
 .withdrawal-table thead {background-color: #3182F6;}
 .withdrawal-table thead th {padding: 2rem 0; width: 25%; color: #F4F5F7; font-size: 2rem; font-weight: 600; line-height: 2.8rem;}
@@ -645,7 +638,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .status-badge {padding: 4px 8px; font-size: 10px; line-height: 15px;}
 }
 
-.exchange-section {}
 .tab-container {margin-bottom: 2rem;}
 .tab-buttons {display: flex; align-items: center; column-gap: 0.8rem;}
 .tab-buttons .tab-btn {padding: 0.8rem 2rem; border-radius: 2.4rem; background-color: #1B202A; color: #858585; font-size: 1.4rem; font-weight: 500; line-height: 2.1rem; cursor: pointer;}
@@ -1303,7 +1295,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 }
 
 /* ============================== [ 봇 소개 페이지 ] ========================================================================================== */
-.bot-main {}
 .bot-main .hero-banner {position: relative; margin: 13rem 0;}
 .bot-main .hero-banner .bg-blur {width: 75rem; height: 104rem; transform: rotate(-90deg); position: absolute; left: 25%; top: -100%; border-radius: 1047px; background: rgba(49, 130, 246, 0.50); filter: blur(297.29998779296875px); z-index: 0;}
 .bot-main .hero-content {display: flex; flex-direction: column; row-gap: 4rem; position: relative; z-index: 1; margin: 0 auto;}
