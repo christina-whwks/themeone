@@ -633,7 +633,6 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
     .withdrawal-table tbody td {font-size: 12px;}
     .withdrawal-table tbody td:first-child {font-size: 12px; padding-left: 0;}
     .withdrawal-table tbody td:last-child {padding-right: 0;}
-    .withdrawal-table tbody tr:nth-child(n+4) {display: none;}
     .exchange figure {width: 16px; height: 16px;}
     .status-badge {padding: 4px 8px; font-size: 10px; line-height: 15px;}
 }
