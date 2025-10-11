@@ -392,7 +392,7 @@ input[type="checkbox"].block-chk:checked + label::before {background-image: url(
 /* 쿠폰함에서 거래소 선택 모달 */
 .coupon-modal {max-width: 54.1rem; width: 100%; padding: 4rem; border-radius: 3.2rem 3.2rem 0 0; top: auto; bottom: 0; transform: translateX(-50%);}
 .coupon-modal .inner {row-gap: 2.4rem;}
-.coupon-modal .coupon-list {display: flex; align-items: center; flex-direction: column; flex-wrap: wrap; gap: 1.2rem; width: 100%; min-height: fit-content; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 0 1px;}
+.coupon-modal .coupon-list {display: flex; align-items: center; flex-direction: column; flex-wrap: wrap; gap: 1.2rem; width: 100%; min-height: fit-content; overflow-y: auto; scrollbar-width: none; -ms-overflow-style: none; padding: 1px;}
 .coupon-modal .coupon-list li {width: 100%;}
 .coupon-modal .coupon-list li .exchange-btn {width: 100%; display: flex; align-items: center; column-gap: 1.6rem; background-color: #121721; padding: 2rem; border-radius: 1.2rem;}
 .coupon-modal .coupon-list li .exchange-btn.selected {outline: 1px solid #3182F6; background-color: #203453;}
